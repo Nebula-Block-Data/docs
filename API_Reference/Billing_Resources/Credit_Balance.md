@@ -1,3 +1,5 @@
+---
+
 # User Credit Balance
 
 This API endpoint allows you to retrieve the user's current credit balance. The request requires authentication using a bearer token, which can be obtained from the login API.
@@ -45,3 +47,5 @@ curl -X GET '{API_URL}/api/v1/users/credits'
     "status": "success"
 }
 ```
+
+---
