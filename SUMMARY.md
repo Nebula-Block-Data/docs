@@ -19,6 +19,6 @@
         * [Invoices](API_Reference/Billing_Resources/Invoices.md)
         * [Payment History](API_Reference/Billing_Resources/Payment_History.md)
     * Instance
-        * [List Images](API_Reference/Instance/List_images.md)
-        * [List Regions](API_Reference/Instance/List_region.md)
+        * [List Images](API_Reference/Instance/List_Images.md)
+        * [List Regions](API_Reference/Instance/List_Region.md)
 
