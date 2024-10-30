@@ -4,10 +4,7 @@ Lists the currently available regions, each representing a distinct geographic l
 
 ## HTTP Request
 
-curl -X GET '{API_URL}/api/v1/cloud/regions' \
--H 'Authorization: Bearer {ACCESS_TOKEN}' \
--H 'refresh-token: {REFRESH_TOKEN}' \
--H 'Content-Type: application/json'
+{API_URL}/api/v1/cloud/regions
 
 ## Response Attributes
 
@@ -36,6 +33,7 @@ curl -X GET '{API_URL}/api/v1/cloud/regions' \
 
 ```bash
 curl -X GET '{API_URL}/api/v1/cloud/regions' \
+-H 'Authorization: Bearer {ACCESS_TOKEN}' \
 -H 'Content-Type: application/json'
 ```
 
