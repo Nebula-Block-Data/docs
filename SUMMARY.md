@@ -1,6 +1,6 @@
 # Table of contents
 
-<!-- * [Nebula Block Cloud](README.md) -->
+* [Nebula Block Cloud](README.md)
 * Home
     * [Project Introduction](Home/Project_Introduction.md)
 * Getting Started
