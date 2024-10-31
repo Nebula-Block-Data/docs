@@ -232,8 +232,6 @@ curl -X GET '{API_URL}/api/v1/cloud/images/{product_type}' \
                     "coin_type": ""
                 }
             ],
-
----
             "coin_type": ""
         }
     ],
@@ -241,3 +239,5 @@ curl -X GET '{API_URL}/api/v1/cloud/images/{product_type}' \
     "status": "success"
 }
 ```
+
+---
