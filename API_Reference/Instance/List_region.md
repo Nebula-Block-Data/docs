@@ -1,3 +1,5 @@
+---
+
 # List Regions
 
 Lists the currently available regions, each representing a distinct geographic location housing a data center.
@@ -53,3 +55,5 @@ curl -X GET '{API_URL}/api/v1/cloud/regions' \
     "status": "success"
 }
 ```
+
+---
