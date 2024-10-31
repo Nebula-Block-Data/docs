@@ -8,11 +8,10 @@ Returns a list of all available operating system (OS) images, providing details 
 
 `{API_URL}/api/v1/cloud/images/{product_type}`
 
-`product_type` has 3 values: `vm`, `vm-gpu` and `rpc`
-
-- `vm` is a CPU virtual machine.
-- `vm-gpu` is a GPU virtual machine.
-- `rpc` is a web3 RPC virtual machine.
+- `product_type` has 3 values: 
+  - `vm`: a CPU virtual machine
+  - `vm-gpu`: a GPU virtual machine
+  - `rpc`: a web3 RPC virtual machine
 
 ## Response Attributes
 
@@ -23,10 +22,10 @@ Returns a list of all available operating system (OS) images, providing details 
 An array containing information about operating system images:
 
 - **image_name**: Name of the operating system image.
-- **image_detail**: Detail information of the image.
-- **id**: Id of the operating system image.
+- **image_detail**: Detailed information of the image.
+- **id**: ID of the operating system image.
 - **version**: Version of the operating system image.
-- **coin_type**: Coin name of Web3 virtual machine.
+- **coin_type**: Coin name for Web3 virtual machine.
 
 ### `message`
 
@@ -37,7 +36,7 @@ A message confirming the successful retrieval of images.
 
 **Type**: String  
 Indicates the result of the request.  
-**success** signifies success, while **failed** indicates an error.
+**"success"** signifies success, while **"failed"** indicates an error.
 
 ## Example
 
@@ -47,7 +46,6 @@ Indicates the result of the request.
 curl -X GET '{API_URL}/api/v1/cloud/images/{product_type}' \
 -H 'Authorization: Bearer {ACCESS_TOKEN}' \
 -H 'Content-Type: application/json'
-```
 
 ### Response
 
