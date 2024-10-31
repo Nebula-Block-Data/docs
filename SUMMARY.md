@@ -15,9 +15,9 @@
     * [Crypto Payment](Payment_and_Billing/Crypto_Payment.md)
 * API Reference
     * Billing
-        * [Credit Balance](API_Reference/Billing_Resources/Credit_Balance.md)
-        * [Invoices](API_Reference/Billing_Resources/Invoices.md)
-        * [Payment History](API_Reference/Billing_Resources/Payment_History.md)
+        * [Credit Balance](API_Reference/Billing/Credit_Balance.md)
+        * [Invoices](API_Reference/Billing/Invoices.md)
+        * [Payment History](API_Reference/Billing/Payment_History.md)
     * Instance
         * [List Images](API_Reference/Instance/List_Images.md)
-        * [List Regions](API_Reference/Instance/List_Region.md)
+        * [List Regions](API_Reference/Instance/List_Regions.md)
