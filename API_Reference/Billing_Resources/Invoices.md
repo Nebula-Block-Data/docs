@@ -1,11 +1,11 @@
 ---
-title: User Invoices Download
-description: Retrieve the user's current credit balance.
+title: User Invoices List
+description: Get invoice list fot the current user.
 ---
 
-# User Credit Balance
+# User Invoices List
 
-This API endpoint allows you to retrieve the user's current credit balance. The request requires authentication using a bearer token, which can be obtained from the login API.
+This API retrieves a paginated list of user invoices, including details like invoice ID, price, invoiced time, and download URL.
 
 ## HTTP Request
 
