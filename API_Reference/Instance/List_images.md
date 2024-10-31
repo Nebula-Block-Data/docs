@@ -4,6 +4,7 @@
 
 Returns a list of all available operating system (OS) images, providing details about each image's corresponding virtual machine operating system.
 
+## HTTP Request
 
 `{API_URL}/api/v1/cloud/images/{product_type}`
 
