@@ -1,4 +1,7 @@
 ---
+title: List Available OS Images
+description: List Available OS Images.
+---
 
 # List Images
 
@@ -6,7 +9,7 @@ Returns a list of all available operating system (OS) images, providing details 
 
 ## HTTP Request
 
-`{API_URL}/api/v1/cloud/images/{product_type}`
+{API_URL}/api/v1/cloud/images/{product_type}
 
 - `product_type` has 3 values: 
   - `vm`: a CPU virtual machine
@@ -49,7 +52,7 @@ curl -X GET '{API_URL}/api/v1/cloud/images/{product_type}' \
 
 ### Response
 
-{API_URL}/api/v1/cloud/images/vm
+'{API_URL}/api/v1/cloud/images/vm'
 
 ```json
 {
@@ -109,7 +112,7 @@ curl -X GET '{API_URL}/api/v1/cloud/images/{product_type}' \
 }
 ```
 
-{API_URL}/api/v1/cloud/images/rpc
+'{API_URL}/api/v1/cloud/images/rpc'
 
 ```json
 {
@@ -216,7 +219,7 @@ curl -X GET '{API_URL}/api/v1/cloud/images/{product_type}' \
 }
 ```
 
-{API_URL}/api/v1/cloud/images/vm-gpu
+'{API_URL}/api/v1/cloud/images/vm-gpu'
 
 ```json
 {
@@ -237,5 +240,3 @@ curl -X GET '{API_URL}/api/v1/cloud/images/{product_type}' \
     "status": "success"
 }
 ```
-
----

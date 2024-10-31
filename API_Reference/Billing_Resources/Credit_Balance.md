@@ -1,4 +1,7 @@
 ---
+title: User Credit Balance
+description: Retrieve the user's current credit balance.
+---
 
 # User Credit Balance
 
@@ -48,4 +51,4 @@ curl -X GET '{API_URL}/api/v1/users/credits'
 }
 ```
 
----
+

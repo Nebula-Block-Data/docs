@@ -1,4 +1,7 @@
 ---
+title: List Available Regions
+description: List Available Regions.
+---
 
 # List Regions
 
@@ -56,4 +59,3 @@ curl -X GET '{API_URL}/api/v1/cloud/regions' \
 }
 ```
 
----
