@@ -21,4 +21,3 @@
     * Instance
         * [List Images](API_Reference/Instance/List_Images.md)
         * [List Regions](API_Reference/Instance/List_Region.md)
-
