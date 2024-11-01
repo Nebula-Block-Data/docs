@@ -5,9 +5,9 @@ description: Retrieve the user's transaction history.
 
 # User Credit Balance
 
-This API will retrieve all user's transaction including 
-credits purchase payment (money payment and crypto payment), 
-credits consume(update once an hour).
+This API retrieves all user transactions, including 
+credit purchases (both money and crypto payments) and 
+credit consumption (updated hourly).
 
 ## HTTP Request
 
@@ -27,7 +27,7 @@ credits consume(update once an hour).
 ### `message`
 
 - **Type**: String
-  A message confirming the successful retrieval of user credit.
+  A message confirming the successful retrieval of user transactions.
 
 ### `status`
 
