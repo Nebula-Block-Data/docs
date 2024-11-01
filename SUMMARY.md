@@ -21,4 +21,5 @@
         * [Payment History](API_Reference/Billing_Resources/Payment_History.md)
     * Instance
         * [List Images](API_Reference/Instance/List_images.md)
-        * [List Regions](API_Reference/Instance/List_region.md)
+        * [List Products](API_Reference/Instance/List_Products.md)
+        * [Create GPU Instance](API_Reference/Instance/Create_GPU_Instance.md)

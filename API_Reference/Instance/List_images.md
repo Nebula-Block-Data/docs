@@ -9,12 +9,7 @@ Returns a list of all available operating system (OS) images, providing details 
 
 ## HTTP Request
 
-{API_URL}/api/v1/cloud/images/{product_type}
-
-- `product_type` has 3 values: 
-  - `vm`: a CPU virtual machine
-  - `vm-gpu`: a GPU virtual machine
-  - `rpc`: a web3 RPC virtual machine
+`GET` `{API_URL}/api/v1/computing/images`
 
 ## Response Attributes
 
@@ -24,11 +19,13 @@ Returns a list of all available operating system (OS) images, providing details 
 
 An array containing information about operating system images:
 
-- **image_name**: Name of the operating system image.
-- **image_detail**: Detailed information of the image.
-- **id**: ID of the operating system image.
-- **version**: Version of the operating system image.
-- **coin_type**: Coin name for Web3 virtual machine.
+- **id** `number`: ID of the operating system image.
+- **dc_id** `number`: ID of the Data center.
+- **dc_region_id** `string`: ID of the Data center region.
+- **os_id** `string`: ID of the operating system image.
+- **os_name** `string`: Name of the operating system.
+- **os_type** `string`: The operating system brand.
+- **region** `string`: Name of the region associated with the operating system image.
 
 ### `message`
 
@@ -46,197 +43,249 @@ Indicates the result of the request.
 ### Request
 
 ```bash
-curl -X GET '{API_URL}/api/v1/cloud/images/{product_type}' \
+curl -X GET '{API_URL}/api/v1/computing/images' \
 -H 'Authorization: Bearer {ACCESS_TOKEN}' \
 -H 'Content-Type: application/json'
 ```
+
 ### Response
 
-'{API_URL}/api/v1/cloud/images/vm'
-
 ```json
+
 {
-    "data": [
-        {
-            "image_type": "Ubuntu",
-            "image_list": [
-                {
-                    "id": 1,
-                    "name": "22.04 LTS x64",
-                    "coin_type": ""
-                },
-                {
-                    "id": 2,
-                    "name": "20.04 LTS x64",
-                    "coin_type": ""
-                }
-            ],
-            "coin_type": ""
-        },
-        {
-            "image_type": "Centos",
-            "image_list": [
-                {
-                    "id": 3,
-                    "name": "9 x64",
-                    "coin_type": ""
-                }
-            ],
-            "coin_type": ""
-        },
-        {
-            "image_type": "Fedora",
-            "image_list": [
-                {
-                    "id": 4,
-                    "name": "40.1.14 x64",
-                    "coin_type": ""
-                }
-            ],
-            "coin_type": ""
-        },
-        {
-            "image_type": "Debian",
-            "image_list": [
-                {
-                    "id": 5,
-                    "name": "12.5.0 x64",
-                    "coin_type": ""
-                }
-            ],
-            "coin_type": ""
-        }
-    ],
-    "message": "Fetch all images success",
+    "data": {
+        "CANADA": [
+            {
+                "id": 1,
+                "dc_id": 1,
+                "dc_region_id": "66d566ba6a7771001256d6e2",
+                "os_id": "987766c93a9501001256d804",
+                "os_name": "Ubuntu Server 22.04 LTS",
+                "os_type": "Ubuntu",
+                "region": "CANADA"
+            },
+            {
+                "id": 42654,
+                "dc_id": 2,
+                "dc_region_id": "66d566ba3a9501001256d6e4",
+                "os_id": "66d566c93a9501001256d810",
+                "os_name": "Ubuntu Server 22.04 LTS R535 CUDA 12.2",
+                "os_type": "Ubuntu",
+                "region": "CANADA"
+            },
+            {
+                "id": 42655,
+                "dc_id": 2,
+                "dc_region_id": "66d566ba3a9501001256d6e4",
+                "os_id": "66d566c93a9501001256d812",
+                "os_name": "Ubuntu Server 22.04 LTS (Jammy Jellyfish)",
+                "os_type": "Ubuntu",
+                "region": "CANADA"
+            },
+            {
+                "id": 42656,
+                "dc_id": 2,
+                "dc_region_id": "66d566ba3a9501001256d6e4",
+                "os_id": "66d566c93a9501001256d814",
+                "os_name": "Ubuntu Server 20.04 LTS R535 CUDA 12.2",
+                "os_type": "Ubuntu",
+                "region": "CANADA"
+            },
+            {
+                "id": 42657,
+                "dc_id": 2,
+                "dc_region_id": "66d566ba3a9501001256d6e4",
+                "os_id": "66d566c93a9501001256d816",
+                "os_name": "Ubuntu Server 20.04 LTS (Focal Fossa)",
+                "os_type": "Ubuntu",
+                "region": "CANADA"
+            },
+            {
+                "id": 42658,
+                "dc_id": 2,
+                "dc_region_id": "66d566ba3a9501001256d6e4",
+                "os_id": "66d566c93a9501001256d81c",
+                "os_name": "Windows Server 2022",
+                "os_type": "Windows",
+                "region": "CANADA"
+            },
+            {
+                "id": 42659,
+                "dc_id": 2,
+                "dc_region_id": "66d566ba3a9501001256d6e4",
+                "os_id": "66d566c93a9501001256d81e",
+                "os_name": "Windows Server 2019",
+                "os_type": "Windows",
+                "region": "CANADA"
+            },
+            {
+                "id": 42660,
+                "dc_id": 2,
+                "dc_region_id": "66d566ba3a9501001256d6e4",
+                "os_id": "66d566c93a9501001256d822",
+                "os_name": "Windows 10 Pro",
+                "os_type": "Windows",
+                "region": "CANADA"
+            },
+            {
+                "id": 42661,
+                "dc_id": 2,
+                "dc_region_id": "66d566ba3a9501001256d6e4",
+                "os_id": "66fb14345c85bc0011042734",
+                "os_name": "Ubuntu Server 22.04 LTS R550 CUDA 12.4",
+                "os_type": "Ubuntu",
+                "region": "CANADA"
+            },
+            {
+                "id": 42662,
+                "dc_id": 2,
+                "dc_region_id": "66d566ba3a9501001256d6e4",
+                "os_id": "66fb14345c85bc0011042736",
+                "os_name": "Ubuntu Server 22.04 LTS R535 CUDA 12.2 with Docker",
+                "os_type": "Ubuntu",
+                "region": "CANADA"
+            },
+            {
+                "id": 42663,
+                "dc_id": 2,
+                "dc_region_id": "66d566ba3a9501001256d6e4",
+                "os_id": "66fb14345c85bc0011042738",
+                "os_name": "Ubuntu Server 20.04 LTS R550 CUDA 12.4 with Docker",
+                "os_type": "Ubuntu",
+                "region": "CANADA"
+            },
+            {
+                "id": 42664,
+                "dc_id": 2,
+                "dc_region_id": "66d566ba3a9501001256d6e4",
+                "os_id": "66fb14345c85bc001104273a",
+                "os_name": "Ubuntu Server 22.04 LTS R550 CUDA 12.4 with Docker",
+                "os_type": "Ubuntu",
+                "region": "CANADA"
+            },
+            {
+                "id": 42665,
+                "dc_id": 2,
+                "dc_region_id": "66d566ba3a9501001256d6e4",
+                "os_id": "66fb14345c85bc001104273c",
+                "os_name": "Ubuntu Server 20.04 LTS R550 CUDA 12.4",
+                "os_type": "Ubuntu",
+                "region": "CANADA"
+            },
+            {
+                "id": 42666,
+                "dc_id": 2,
+                "dc_region_id": "66d566ba3a9501001256d6e4",
+                "os_id": "66fb14345c85bc001104273e",
+                "os_name": "Ubuntu Server 20.04 LTS R535 CUDA 12.2 with Docker",
+                "os_type": "Ubuntu",
+                "region": "CANADA"
+            }
+        ],
+        "NORWAY": [
+            {
+                "id": 42643,
+                "dc_id": 2,
+                "dc_region_id": "66d566ba3a9501001256d6e2",
+                "os_id": "66d566c93a9501001256d804",
+                "os_name": "Windows Server 2022",
+                "os_type": "Windows",
+                "region": "NORWAY"
+            },
+            {
+                "id": 42644,
+                "dc_id": 2,
+                "dc_region_id": "66d566ba3a9501001256d6e2",
+                "os_id": "66d566c93a9501001256d806",
+                "os_name": "Windows Server 2019",
+                "os_type": "Windows",
+                "region": "NORWAY"
+            },
+            {
+                "id": 42645,
+                "dc_id": 2,
+                "dc_region_id": "66d566ba3a9501001256d6e2",
+                "os_id": "66d566c93a9501001256d808",
+                "os_name": "Windows 11 Pro",
+                "os_type": "Windows",
+                "region": "NORWAY"
+            },
+            {
+                "id": 42646,
+                "dc_id": 2,
+                "dc_region_id": "66d566ba3a9501001256d6e2",
+                "os_id": "66d566c93a9501001256d80a",
+                "os_name": "Windows 10 Pro",
+                "os_type": "Windows",
+                "region": "NORWAY"
+            },
+            {
+                "id": 42647,
+                "dc_id": 2,
+                "dc_region_id": "66d566ba3a9501001256d6e2",
+                "os_id": "66d566c93a9501001256d80c",
+                "os_name": "Debian 10",
+                "os_type": "Debian",
+                "region": "NORWAY"
+            },
+            {
+                "id": 42648,
+                "dc_id": 2,
+                "dc_region_id": "66d566ba3a9501001256d6e2",
+                "os_id": "66d566c93a9501001256d80e",
+                "os_name": "CentOS 9",
+                "os_type": "CentOS",
+                "region": "NORWAY"
+            },
+            {
+                "id": 42649,
+                "dc_id": 2,
+                "dc_region_id": "66d566ba3a9501001256d6e2",
+                "os_id": "66d566c93a9501001256d818",
+                "os_name": "Ubuntu Server 22.04 LTS R535 CUDA 12.2",
+                "os_type": "Ubuntu",
+                "region": "NORWAY"
+            },
+            {
+                "id": 42650,
+                "dc_id": 2,
+                "dc_region_id": "66d566ba3a9501001256d6e2",
+                "os_id": "66d566c93a9501001256d81a",
+                "os_name": "Ubuntu Server 22.04 LTS",
+                "os_type": "Ubuntu",
+                "region": "NORWAY"
+            },
+            {
+                "id": 42651,
+                "dc_id": 2,
+                "dc_region_id": "66d566ba3a9501001256d6e2",
+                "os_id": "66d566c93a9501001256d820",
+                "os_name": "Fedora 36",
+                "os_type": "Fedora",
+                "region": "NORWAY"
+            },
+            {
+                "id": 42652,
+                "dc_id": 2,
+                "dc_region_id": "66d566ba3a9501001256d6e2",
+                "os_id": "66d566c93a9501001256d824",
+                "os_name": "Ubuntu Server 20.04 LTS R535 CUDA 12.2",
+                "os_type": "Ubuntu",
+                "region": "NORWAY"
+            },
+            {
+                "id": 42653,
+                "dc_id": 2,
+                "dc_region_id": "66d566ba3a9501001256d6e2",
+                "os_id": "66d566c93a9501001256d826",
+                "os_name": "Ubuntu Server 20.04 LTS",
+                "os_type": "Ubuntu",
+                "region": "NORWAY"
+            }
+        ]
+    },
+    "message": "All OS retrieved successfully",
     "status": "success"
 }
-```
 
-'{API_URL}/api/v1/cloud/images/rpc'
-
-```json
-{
-    "data": [
-        {
-            "image_type": "Swan Chain",
-            "image_list": [
-                {
-                    "id": 7,
-                    "name": "Mainnet",
-                    "coin_type": "SWAN"
-                },
-                {
-                    "id": 9,
-                    "name": "Proxima",
-                    "coin_type": "SWAN"
-                }
-            ],
-            "coin_type": "SWAN"
-        },
-        {
-            "image_type": "Ethereum",
-            "image_list": [
-                {
-                    "id": 13,
-                    "name": "Mainnet",
-                    "coin_type": "ETH"
-                },
-                {
-                    "id": 14,
-                    "name": "Sepolia",
-                    "coin_type": "ETH"
-                }
-            ],
-            "coin_type": "ETH"
-        },
-        {
-            "image_type": "Optimism",
-            "image_list": [
-                {
-                    "id": 15,
-                    "name": "Mainnet",
-                    "coin_type": "OP"
-                },
-                {
-                    "id": 16,
-                    "name": "Sepolia",
-                    "coin_type": "OP"
-                }
-            ],
-            "coin_type": "OP"
-        },
-        {
-            "image_type": "Zksync",
-            "image_list": [
-                {
-                    "id": 17,
-                    "name": "Mainnet",
-                    "coin_type": "ZK"
-                },
-                {
-                    "id": 18,
-                    "name": "Sepolia",
-                    "coin_type": "ZK"
-                }
-            ],
-            "coin_type": "ZK"
-        },
-        {
-            "image_type": "Base",
-            "image_list": [
-                {
-                    "id": 19,
-                    "name": "Mainnet",
-                    "coin_type": "BASE"
-                },
-                {
-                    "id": 20,
-                    "name": "Sepolia",
-                    "coin_type": "BASE"
-                }
-            ],
-            "coin_type": "BASE"
-        },
-        {
-            "image_type": "opBNB",
-            "image_list": [
-                {
-                    "id": 21,
-                    "name": "Mainnet",
-                    "coin_type": "OPBNB"
-                },
-                {
-                    "id": 22,
-                    "name": "Testnet",
-                    "coin_type": "OPBNB"
-                }
-            ],
-            "coin_type": "OPBNB"
-        }
-    ],
-    "message": "Fetch all images success",
-    "status": "success"
-}
-```
-
-'{API_URL}/api/v1/cloud/images/vm-gpu'
-
-```json
-{
-    "data": [
-        {
-            "image_type": "Ubuntu",
-            "image_list": [
-                {
-                    "id": 6,
-                    "name": "22.04 LTS x64",
-                    "coin_type": ""
-                }
-            ],
-            "coin_type": ""
-        }
-    ],
-    "message": "Fetch all images success",
-    "status": "success"
-}
 ```

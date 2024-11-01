@@ -9,7 +9,7 @@ Lists the currently available regions, each representing a distinct geographic l
 
 ## HTTP Request
 
-{API_URL}/api/v1/cloud/regions
+`GET` `{API_URL}/api/v1/cloud/regions`
 
 ## Response Attributes
 
