@@ -9,7 +9,7 @@ This API endpoint allows you to retrieve the user's current credit balance. The 
 
 ## HTTP Request
 
-{API_URL}/api/v1/users/credits
+`GET` `{API_URL}/api/v1/users/credits`
 
 ## Response Attributes
 

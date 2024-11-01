@@ -58,4 +58,3 @@ curl -X GET '{API_URL}/api/v1/cloud/regions' \
     "status": "success"
 }
 ```
-

@@ -49,7 +49,7 @@ Indicates the result of the request.
 curl -X GET '{API_URL}/api/v1/cloud/images/{product_type}' \
 -H 'Authorization: Bearer {ACCESS_TOKEN}' \
 -H 'Content-Type: application/json'
-
+```
 ### Response
 
 '{API_URL}/api/v1/cloud/images/vm'
