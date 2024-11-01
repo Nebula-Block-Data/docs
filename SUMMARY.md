@@ -17,6 +17,7 @@
     * Billing
         * [Credit Balance](API_Reference/Billing_Resources/Credit_Balance.md)
         * [Invoices](API_Reference/Billing_Resources/Invoices.md)
+        * [Download Invoices](API_Reference/Billing_Resources/Download_Invoice.md)
         * [Payment History](API_Reference/Billing_Resources/Payment_History.md)
     * Instance
         * [List Images](API_Reference/Instance/List_images.md)
