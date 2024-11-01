@@ -62,14 +62,8 @@ curl -X GET '{API_URL}/api/v1/computing/products' \
             "Nvidia H100": [
                 {
                     "id": 1,
-                    "vendor_id": 1,
-                    "external_product_id": "59",
-                    "name": "T2az.8xlarge",
-                    "product_type": "AI GPU",
-                    "description": "Nvidia H100 · 12 vCPU · 128 GiB",
-                    "nbfs_region": "CANADA",
-                    "vendor_region_id": "66d777c93a9501001256d804",
-                    "vendor_region_name": "CANADA-1",
+                    "dc_id": 1,
+                    "region": "CANADA",
                     "price_per_hour": 1.0,
                     "cpu": 16,
                     "ram": 200,
@@ -79,20 +73,15 @@ curl -X GET '{API_URL}/api/v1/computing/products' \
                     "disk_size": 200,
                     "ephemeral": 1500,
                     "stock": 1,
-                    "bandwidth": 300,
-                    "is_available": true,
-                    "created_at": "1729085500"
+                    "cycle": null,
+                    "is_available": true
                 }
             ],
             "A100": [
                 {
-                    "id": 58401,
-                    "vendor_id": 2,
-                    "external_product_id": "66d566c43a9501001256d7ab",
-                    "name": "n3-A100x1",
-                    "nbfs_region": "CANADA",
-                    "vendor_region_id": "66d566ba3a9501001256d6e4",
-                    "vendor_region_name": "CANADA-1",
+                    "id": 59556,
+                    "dc_id": 2,
+                    "region": "CANADA",
                     "price_per_hour": 1.867,
                     "cpu": 28,
                     "ram": 120,
@@ -103,17 +92,12 @@ curl -X GET '{API_URL}/api/v1/computing/products' \
                     "ephemeral": 750,
                     "stock": 99,
                     "cycle": "hourly",
-                    "is_available": true,
-                    "created_at": "1730479999"
+                    "is_available": true
                 },
                 {
-                    "id": 58402,
-                    "vendor_id": 2,
-                    "external_product_id": "66d566c43a9501001256d7ad",
-                    "name": "n3-A100x2",
-                    "nbfs_region": "CANADA",
-                    "vendor_region_id": "66d566ba3a9501001256d6e4",
-                    "vendor_region_name": "CANADA-1",
+                    "id": 59557,
+                    "dc_id": 2,
+                    "region": "CANADA",
                     "price_per_hour": 3.727,
                     "cpu": 60,
                     "ram": 240,
@@ -124,17 +108,12 @@ curl -X GET '{API_URL}/api/v1/computing/products' \
                     "ephemeral": 1500,
                     "stock": 99,
                     "cycle": "hourly",
-                    "is_available": true,
-                    "created_at": "1730479999"
+                    "is_available": true
                 },
                 {
-                    "id": 58403,
-                    "vendor_id": 2,
-                    "external_product_id": "66d566c43a9501001256d7af",
-                    "name": "n3-A100x4",
-                    "nbfs_region": "CANADA",
-                    "vendor_region_id": "66d566ba3a9501001256d6e4",
-                    "vendor_region_name": "CANADA-1",
+                    "id": 59558,
+                    "dc_id": 2,
+                    "region": "CANADA",
                     "price_per_hour": 7.447,
                     "cpu": 124,
                     "ram": 480,
@@ -145,17 +124,12 @@ curl -X GET '{API_URL}/api/v1/computing/products' \
                     "ephemeral": 3200,
                     "stock": 99,
                     "cycle": "hourly",
-                    "is_available": true,
-                    "created_at": "1730479999"
+                    "is_available": true
                 },
                 {
-                    "id": 58404,
-                    "vendor_id": 2,
-                    "external_product_id": "66d566c43a9501001256d7b1",
-                    "name": "n3-A100x8",
-                    "nbfs_region": "CANADA",
-                    "vendor_region_id": "66d566ba3a9501001256d6e4",
-                    "vendor_region_name": "CANADA-1",
+                    "id": 59559,
+                    "dc_id": 2,
+                    "region": "CANADA",
                     "price_per_hour": 14.887,
                     "cpu": 252,
                     "ram": 1440,
@@ -166,17 +140,12 @@ curl -X GET '{API_URL}/api/v1/computing/products' \
                     "ephemeral": 6500,
                     "stock": 99,
                     "cycle": "hourly",
-                    "is_available": true,
-                    "created_at": "1730479999"
+                    "is_available": true
                 },
                 {
-                    "id": 58405,
-                    "vendor_id": 2,
-                    "external_product_id": "66d566c43a9501001256d7c1",
-                    "name": "n2-A100x8-NVLink-v2",
-                    "nbfs_region": "CANADA",
-                    "vendor_region_id": "66d566ba3a9501001256d6e4",
-                    "vendor_region_name": "CANADA-1",
+                    "id": 59560,
+                    "dc_id": 2,
+                    "region": "CANADA",
                     "price_per_hour": 15.447,
                     "cpu": 252,
                     "ram": 1920,
@@ -187,19 +156,14 @@ curl -X GET '{API_URL}/api/v1/computing/products' \
                     "ephemeral": 6500,
                     "stock": 99,
                     "cycle": "hourly",
-                    "is_available": true,
-                    "created_at": "1730479999"
+                    "is_available": true
                 }
             ],
             "H100": [
                 {
-                    "id": 58406,
-                    "vendor_id": 2,
-                    "external_product_id": "66d566c43a9501001256d7b7",
-                    "name": "n3-H100x8-NVLink",
-                    "nbfs_region": "CANADA",
-                    "vendor_region_id": "66d566ba3a9501001256d6e4",
-                    "vendor_region_name": "CANADA-1",
+                    "id": 59561,
+                    "dc_id": 2,
+                    "region": "CANADA",
                     "price_per_hour": 21.527,
                     "cpu": 252,
                     "ram": 1440,
@@ -210,19 +174,14 @@ curl -X GET '{API_URL}/api/v1/computing/products' \
                     "ephemeral": 6500,
                     "stock": 99,
                     "cycle": "hourly",
-                    "is_available": true,
-                    "created_at": "1730479999"
+                    "is_available": true
                 }
             ],
             "L40": [
                 {
-                    "id": 58407,
-                    "vendor_id": 2,
-                    "external_product_id": "66d566c43a9501001256d7b9",
-                    "name": "n3-L40x1",
-                    "nbfs_region": "CANADA",
-                    "vendor_region_id": "66d566ba3a9501001256d6e4",
-                    "vendor_region_name": "CANADA-1",
+                    "id": 59562,
+                    "dc_id": 2,
+                    "region": "CANADA",
                     "price_per_hour": 1.387,
                     "cpu": 28,
                     "ram": 58,
@@ -233,17 +192,12 @@ curl -X GET '{API_URL}/api/v1/computing/products' \
                     "ephemeral": 725,
                     "stock": 99,
                     "cycle": "hourly",
-                    "is_available": true,
-                    "created_at": "1730479999"
+                    "is_available": true
                 },
                 {
-                    "id": 58408,
-                    "vendor_id": 2,
-                    "external_product_id": "66d566c43a9501001256d7bb",
-                    "name": "n3-L40x2",
-                    "nbfs_region": "CANADA",
-                    "vendor_region_id": "66d566ba3a9501001256d6e4",
-                    "vendor_region_name": "CANADA-1",
+                    "id": 59563,
+                    "dc_id": 2,
+                    "region": "CANADA",
                     "price_per_hour": 2.767,
                     "cpu": 60,
                     "ram": 116,
@@ -254,17 +208,12 @@ curl -X GET '{API_URL}/api/v1/computing/products' \
                     "ephemeral": 1550,
                     "stock": 99,
                     "cycle": "hourly",
-                    "is_available": true,
-                    "created_at": "1730479999"
+                    "is_available": true
                 },
                 {
-                    "id": 58409,
-                    "vendor_id": 2,
-                    "external_product_id": "66d566c43a9501001256d7bd",
-                    "name": "n3-L40x4",
-                    "nbfs_region": "CANADA",
-                    "vendor_region_id": "66d566ba3a9501001256d6e4",
-                    "vendor_region_name": "CANADA-1",
+                    "id": 59564,
+                    "dc_id": 2,
+                    "region": "CANADA",
                     "price_per_hour": 5.527,
                     "cpu": 124,
                     "ram": 232,
@@ -275,17 +224,12 @@ curl -X GET '{API_URL}/api/v1/computing/products' \
                     "ephemeral": 3200,
                     "stock": 99,
                     "cycle": "hourly",
-                    "is_available": true,
-                    "created_at": "1730479999"
+                    "is_available": true
                 },
                 {
-                    "id": 58410,
-                    "vendor_id": 2,
-                    "external_product_id": "66d566c43a9501001256d7bf",
-                    "name": "n3-L40x8",
-                    "nbfs_region": "CANADA",
-                    "vendor_region_id": "66d566ba3a9501001256d6e4",
-                    "vendor_region_name": "CANADA-1",
+                    "id": 59565,
+                    "dc_id": 2,
+                    "region": "CANADA",
                     "price_per_hour": 11.047,
                     "cpu": 252,
                     "ram": 464,
@@ -296,19 +240,14 @@ curl -X GET '{API_URL}/api/v1/computing/products' \
                     "ephemeral": 6500,
                     "stock": 99,
                     "cycle": "hourly",
-                    "is_available": true,
-                    "created_at": "1730479999"
+                    "is_available": true
                 }
             ],
             "RTX": [
                 {
-                    "id": 58411,
-                    "vendor_id": 2,
-                    "external_product_id": "66d566c43a9501001256d7e1",
-                    "name": "n3-RTX-A6000x1",
-                    "nbfs_region": "CANADA",
-                    "vendor_region_id": "66d566ba3a9501001256d6e4",
-                    "vendor_region_name": "CANADA-1",
+                    "id": 59566,
+                    "dc_id": 2,
+                    "region": "CANADA",
                     "price_per_hour": 0.697,
                     "cpu": 28,
                     "ram": 58,
@@ -319,17 +258,12 @@ curl -X GET '{API_URL}/api/v1/computing/products' \
                     "ephemeral": 0,
                     "stock": 99,
                     "cycle": "hourly",
-                    "is_available": true,
-                    "created_at": "1730479999"
+                    "is_available": true
                 },
                 {
-                    "id": 58412,
-                    "vendor_id": 2,
-                    "external_product_id": "66d566c43a9501001256d7e3",
-                    "name": "n3-RTX-A6000x2",
-                    "nbfs_region": "CANADA",
-                    "vendor_region_id": "66d566ba3a9501001256d6e4",
-                    "vendor_region_name": "CANADA-1",
+                    "id": 59567,
+                    "dc_id": 2,
+                    "region": "CANADA",
                     "price_per_hour": 1.387,
                     "cpu": 60,
                     "ram": 116,
@@ -340,17 +274,12 @@ curl -X GET '{API_URL}/api/v1/computing/products' \
                     "ephemeral": 200,
                     "stock": 99,
                     "cycle": "hourly",
-                    "is_available": true,
-                    "created_at": "1730479999"
+                    "is_available": true
                 },
                 {
-                    "id": 58413,
-                    "vendor_id": 2,
-                    "external_product_id": "66d566c43a9501001256d7e5",
-                    "name": "n3-RTX-A6000x4",
-                    "nbfs_region": "CANADA",
-                    "vendor_region_id": "66d566ba3a9501001256d6e4",
-                    "vendor_region_name": "CANADA-1",
+                    "id": 59568,
+                    "dc_id": 2,
+                    "region": "CANADA",
                     "price_per_hour": 2.767,
                     "cpu": 124,
                     "ram": 232,
@@ -361,17 +290,12 @@ curl -X GET '{API_URL}/api/v1/computing/products' \
                     "ephemeral": 650,
                     "stock": 99,
                     "cycle": "hourly",
-                    "is_available": true,
-                    "created_at": "1730479999"
+                    "is_available": true
                 },
                 {
-                    "id": 58414,
-                    "vendor_id": 2,
-                    "external_product_id": "66d566c43a9501001256d7e7",
-                    "name": "n3-RTX-A6000x8",
-                    "nbfs_region": "CANADA",
-                    "vendor_region_id": "66d566ba3a9501001256d6e4",
-                    "vendor_region_name": "CANADA-1",
+                    "id": 59569,
+                    "dc_id": 2,
+                    "region": "CANADA",
                     "price_per_hour": 5.527,
                     "cpu": 252,
                     "ram": 464,
@@ -382,8 +306,7 @@ curl -X GET '{API_URL}/api/v1/computing/products' \
                     "ephemeral": 1400,
                     "stock": 99,
                     "cycle": "hourly",
-                    "is_available": true,
-                    "created_at": "1730479999"
+                    "is_available": true
                 }
             ]
         }
