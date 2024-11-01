@@ -1,5 +1,8 @@
 {
   "devDependencies": {
     "honkit": "^6.0.2"
+  },
+  "dependencies": {
+    "graceful-fs": "^4.2.11"
   }
 }
