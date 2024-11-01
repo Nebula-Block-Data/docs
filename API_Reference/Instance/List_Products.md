@@ -48,7 +48,7 @@ Returns a list of available GPU virtual machine hardware configurations, compris
 ### Request
 
 ```bash
-curl -X GET '{API_URL}/api/v1/vendor-product/products' \
+curl -X GET '{API_URL}/api/v1/computing/products' \
 -H 'Authorization: Bearer {ACCESS_TOKEN}' \
 -H 'Content-Type: application/json'
 ```
