@@ -23,6 +23,7 @@ docker-compose.yml
 nginx.conf
 
 # Editor directories and files
+.vscode
 .vscode/*
 !.vscode/extensions.json
 .idea
