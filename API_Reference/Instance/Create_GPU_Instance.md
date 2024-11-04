@@ -9,7 +9,7 @@ Creates one virtual machines with the specified custom configuration and feature
 
 ## HTTP Request
 
-`POST` `{API_URL}/computing/instance/{product_id}`
+`POST` `{API_URL}/computing/instance`
 
 `product_id comes from <List Products API>`
 
@@ -39,11 +39,12 @@ Creates one virtual machines with the specified custom configuration and feature
 ### Request
 
 ```bash
-curl -X POST '{API_URL}/computing/instance/{product_id}' \
+curl -X POST '{API_URL}/computing/instance' \
 -H 'Authorization: Bearer {ACCESS_TOKEN}' \
 -H 'Content-Type: application/json' \
 -d '{
     "instance_name":"testname",
+    "product_id":5335
     "image_id":1,
     "ssh_key_id":2 (your ssh key id of Nebulablock portal)
 }'
