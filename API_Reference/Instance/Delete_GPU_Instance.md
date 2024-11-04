@@ -11,13 +11,11 @@ Permanently deletes a virtual machine. Supply the virtual machine ID in the path
 
 `Delete` `{API_URL}/computing/instance/{id}`
 
-`{id} comes from <List User Instances API>`
-
 ## Path parameters
 
 | Parameters     | Requirements      | Type       | Description      |
 |---------------|--------------------|----------------|----------------|
-| id      | Required    | `number`       | The unique identifier of the virtual machine for which to retrieve details.  |
+| id      | Required    | `number`       | The unique identifier of the instance. `{id} comes from <List User Instances API>` |
 
 ## Response Attributes
 

@@ -11,7 +11,11 @@ Return user instance detail information, like cpu, gpu, ram, total running time 
 
 `GET` `{API_URL}/computing/instance/{id}`
 
-`{id} comes from <List User Instances API>`
+## Path parameters
+
+| Parameters     | Requirements      | Type       | Description      |
+|---------------|--------------------|----------------|----------------|
+| id      | Required    | `number`       | The unique identifier of the instance. `{id} comes from <List User Instances API>` |
 
 ## Response Attributes
 
