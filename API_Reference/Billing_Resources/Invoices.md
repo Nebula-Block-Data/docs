@@ -1,5 +1,5 @@
 ---
-title: User Invoices List
+# title: User Invoices List
 description: Get invoice list fot the current user.
 ---
 

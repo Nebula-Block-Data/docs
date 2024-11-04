@@ -1,5 +1,5 @@
 ---
-title: List Available Products By Product Type
+# title: List Available Products By Product Type
 description: List Available Products By Product Type.
 ---
 

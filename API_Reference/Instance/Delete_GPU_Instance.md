@@ -1,5 +1,5 @@
 ---
-title: Delete GPU Instance
+# title: Delete GPU Instance
 description: Delete GPU Instance.
 ---
 

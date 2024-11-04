@@ -1,5 +1,5 @@
 ---
-title: User Credit Balance
+# title: User Credit Balance
 description: Retrieve the user's current credit balance.
 ---
 
