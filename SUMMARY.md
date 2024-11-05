@@ -27,6 +27,9 @@
         * [List User Instances](API_Reference/Instance/List_User_Instances.md)
         * [User Instance Detail](API_Reference/Instance/User_Instance_Detail.md)
         * [Delete GPU Instance](API_Reference/Instance/Delete_GPU_Instance.md)
+        * [Start GPU Instance](API_Reference/Instance/Start_GPU_Instance.md)
+        * [Stop GPU Instance](API_Reference/Instance/Stop_GPU_Instance.md)
+        * [Reboot GPU Instance](API_Reference/Instance/Reboot_GPU_Instance.md)
     * API Key
         * [Create API Key](API_Reference/API_Key/Create_API_Key.md)
         * [List API Keys](API_Reference/API_Key/List_API_Keys.md)
