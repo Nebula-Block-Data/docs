@@ -29,6 +29,7 @@ Return a list user instances including virtual machine and serverless products.
   - **disk_size** `number`: The root disk size of the GPU instance in gigabytes.
   - **ephemeral** `number`: The ephemeral disk size of the GPU instance in gigabytes.
   - **public_ipv4** `string`: New billing cycle, the default is hourly.
+  - **price_per_hour** `string`: The price per hour of the instance.
   - **os** `string`: The operation system of the instance.
   - **status** `string`: The status of the instance.
 
@@ -69,6 +70,7 @@ curl -X GET '{API_URL}/computing/instances' \
             "gpu_count": 1,
             "disk_size": 100,
             "public_ipv4": "62.169.158.214",
+            "price_per_hour": 0.679,
             "os": "Ubuntu Server 20.04 LTS (Focal Fossa)",
             "vm_name": "mike-1001",
             "vm_password": "qZ3!Xukz=I-Xv_ya",
