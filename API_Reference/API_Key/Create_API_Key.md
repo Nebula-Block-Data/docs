@@ -13,7 +13,7 @@
 
 ## Response Attributes
 
-### data `dict`
+#### data `dict`
 
 Returns the `data` object, containing details of the new API key.
 
