@@ -5,7 +5,7 @@ description: Stop Instance.
 
 # User Instance Details
 
-Stop User Instance.
+Shuts down a virtual machine. Provide the virtual machine ID in the path to initiate the shutdown process for the specified virtual machine.
 
 ## HTTP Request
 

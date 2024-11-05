@@ -5,7 +5,7 @@ description: Reboot Instance.
 
 # User Instance Details
 
-Reboot User Instance.
+Initiates a hard reboot for a virtual machine, simulating the process of unplugging and rebooting a physical machine. Provide the virtual machine ID in the path to execute a hard reboot for the specified virtual machine.
 
 ## HTTP Request
 

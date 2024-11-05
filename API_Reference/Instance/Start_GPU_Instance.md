@@ -5,7 +5,7 @@ description: Start Instance.
 
 # User Instance Details
 
-Start User Instance.
+Initiates the startup of a virtual machine. Supply the virtual machine ID in the path to initiate the starting of the specified virtual machine.
 
 ## HTTP Request
 
