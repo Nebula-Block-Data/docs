@@ -1,14 +1,14 @@
-# Delete API Key
+# Delete SSH Key
 
 ## HTTP Request
 
-`DELETE` `{API_URL}/api-keys/{id}`
+`DELETE` `{API_URL}/ssh-keys/{id}`
 
 ## Path Parameters
 
 | Parameters | Requirements | Type  | Description                                        |
 |------------|--------------|-------|----------------------------------------------------|
-| id         | Required     | `int` | The unique identifier of the API key to be deleted |
+| id         | Required     | `int` | The unique identifier of the SSH key to be deleted |
 
 ## Response Attributes
 
@@ -18,7 +18,7 @@ Empty `data` object
 
 ### status `string`
 
-Indicates the result of the request to delete an API key. `success` signifies success, while `failed` indicates an error.
+Indicates the result of the request to delete a SSH key. `success` signifies success, while `failed` indicates an error.
 
 ### message `string`
 
@@ -29,7 +29,7 @@ A description of the status of the request.
 ### Request
 
 ```bash
-curl -X DELETE '{API_URL}/api-keys/5' \
+curl -X DELETE '{API_URL}/ssh-keys/5' \
 -H 'Authorization: Bearer {token/key}'
 ```
 
@@ -38,7 +38,7 @@ curl -X DELETE '{API_URL}/api-keys/5' \
 ```json
 {
     "data": {},
-    "message": "API key successfully deleted",
+    "message": "SSH key deleted successfully",
     "status": "success"
 }
 ```

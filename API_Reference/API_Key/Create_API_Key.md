@@ -1,4 +1,4 @@
-# Create API Token
+# Create API Key
 
 ## HTTP Request
 

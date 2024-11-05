@@ -20,6 +20,11 @@
         * [Invoices](API_Reference/Billing_Resources/Invoices.md)
         * [Download Invoices](API_Reference/Billing_Resources/Download_Invoice.md)
         * [Payment History](API_Reference/Billing_Resources/Payment_History.md)
+    * SSH Key
+      * [Create SSH Key](API_Reference/SSH_Key/Create_SSH_Key.md)
+      * [List SSH Keys](API_Reference/SSH_Key/List_SSH_Keys.md)
+      * [Rename SSH Key](API_Reference/SSH_Key/Rename_SSH_Key.md)
+      * [Delete SSH Key](API_Reference/SSH_Key/Delete_SSH_Key.md)
     * Instance
         * [List Images](API_Reference/Instance/List_images.md)
         * [List Products](API_Reference/Instance/List_Products.md)
