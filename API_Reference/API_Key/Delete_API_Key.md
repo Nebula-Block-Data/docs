@@ -1,4 +1,4 @@
-## Delete API Token
+# Delete API Token
 
 ## HTTP Request
 
