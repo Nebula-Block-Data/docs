@@ -71,13 +71,13 @@ Authorization: Bearer ak_W4KL0Rw8Rv6Mp7h7fY77dFgHDl_EMAojslklxhMI9-0
 
 A dictionary that contains the access token (`jwtToken`)
 
-### message `string`
-
-A description of the status of the request.
-
 ### status `string`
 
 Indicates the result of the request to log in. `success` signifies success, while `failed` indicates an error.
+
+### message `string`
+
+A description of the status of the request.
 
 ## Example
 
