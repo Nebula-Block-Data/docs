@@ -6,7 +6,7 @@
 
 ## Response Attributes
 
-### data `list`
+#### data `list`
 
 Returns the `data` array of objects, each containing details about your API keys.
 
@@ -16,24 +16,24 @@ Each API key has the following properties:
 - `description`: An optional description of the API key.
 - `partial_key_data`: The prefix of each API key. This is the same across all API keys and doesn't show the raw API key value for security reasons.
 
-### status `string`
+#### status `string`
 
 Indicates the result of the request to list your API keys. `success` signifies success, while `failed` indicates an error.
 
-### message `string`
+#### message `string`
 
 A description of the status of the request.
 
 ## Example
 
-### Request
+#### Request
 
 ```bash
 curl -X GET '{API_URL}/api-keys' \
 -H 'Authorization: Bearer {token/key}'
 ```
 
-### Response
+#### Response
 
 ```json
 {

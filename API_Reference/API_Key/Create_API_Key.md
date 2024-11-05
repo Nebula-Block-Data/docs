@@ -27,17 +27,17 @@ Each API key specifies the following properties:
 > It can't be viewed again for security reasons. The [List API Keys](List_API_Keys.md) endpoint shows only the IDs + 
 > names of your API keys for deletion. If you lose your API key, create a new one and delete the old one.
 
-### status `string`
+#### status `string`
 
 Indicates the result of the request to create an API key. `success` signifies success, while `failed` indicates an error.
 
-### message `string`
+#### message `string`
 
 A description of the status of the request.
 
 ## Example
 
-### Request
+#### Request
 
 ```bash
 curl -X POST '{API_URL}/api-keys' \
@@ -48,7 +48,7 @@ curl -X POST '{API_URL}/api-keys' \
 }'
 ```
 
-### Response
+#### Response
 
 ```json
 {

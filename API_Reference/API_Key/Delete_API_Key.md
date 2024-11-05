@@ -12,28 +12,28 @@
 
 ## Response Attributes
 
-### data `dict`
+#### data `dict`
 
 Empty `data` object
 
-### status `string`
+#### status `string`
 
 Indicates the result of the request to delete an API key. `success` signifies success, while `failed` indicates an error.
 
-### message `string`
+#### message `string`
 
 A description of the status of the request.
 
 ## Example
 
-### Request
+#### Request
 
 ```bash
 curl -X DELETE '{API_URL}/api-keys/5' \
 -H 'Authorization: Bearer {token/key}'
 ```
 
-### Response
+#### Response
 
 ```json
 {
