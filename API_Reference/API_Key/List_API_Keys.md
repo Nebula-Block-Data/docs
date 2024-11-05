@@ -14,7 +14,7 @@ Each API key has the following properties:
 - `id`: The ID of the API key. This is the ID field that is used for the [Delete API Key](Delete_API_Key.md) endpoint.
 - `name`: The name of the API key.
 - `description`: An optional description of the API key.
-- `partial_key_data`: The prefix of each API key. This is the same across all API keys and doesn't show the raw API value for security reasons.
+- `partial_key_data`: The prefix of each API key. This is the same across all API keys and doesn't show the raw API key value for security reasons.
 
 ### status `string`
 
@@ -29,7 +29,7 @@ A description of the status of the request.
 ### Request
 
 ```bash
-curl -X GET '{API_URL}/api-keys/5' \
+curl -X GET '{API_URL}/api-keys' \
 -H 'Authorization: Bearer {token/key}'
 ```
 

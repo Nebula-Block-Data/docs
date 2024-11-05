@@ -1,8 +1,3 @@
----
-title: Authentication
-description: This page contains info on how to authenticate requests to the Nebula Block API.
----
-
 # Authentication
 
 All endpoints under the Nebula Block API require user authentication to validate a user's identity 
