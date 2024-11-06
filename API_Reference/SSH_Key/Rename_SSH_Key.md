@@ -2,7 +2,7 @@
 
 ## HTTP Request
 
-`POST` `{API_URL}/ssh-keys/{id}`
+`PUT` `{API_URL}/ssh-keys/{id}`
 
 ## Path Parameters
 
