@@ -20,6 +20,8 @@ Creates one virtual machines with the specified custom configuration and feature
 | image_id      | Required    | `number`       | The unique identifier of the operating system image to be installed on your virtual machine. Use the GET /images endpoint to retrieve a list of images offered by API.  |
 | ssh_key_id    | Required    | `number`       | The unique identifier of the SSH keypair to be used in gaining secure access to the virtual machine.|
 
+**NOTE:**  image_id and product_id must be from the same data center(dc_id) and region; otherwise, creation will fail. 
+
 ## Response Attributes
 
 ### `message`
