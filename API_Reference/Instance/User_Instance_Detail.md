@@ -25,7 +25,7 @@ Return user instance detail information, like cpu, gpu, ram, total running time 
   An array containing information about products organized by GPU model and region:
   - **id** `number`: The unique identifier for the product.
   - **region** `string`: The region where the GPU product is available.
-  - **instance_type** `string`: The type of instance,like GPU and CPU.
+  - **product_type** `string`: The type of instance,like GPU and CPU.
   - **host_name** `string`: The user defined name of the instance.
   - **cpu_cores** `number`: The number of CPU cores in the product.
   - **ram** `number`: The amount of RAM in gigabytes for the product.
@@ -75,7 +75,7 @@ curl -X GET '{API_URL}/computing/instances' \
         {
             "id": 41,
             "region": "CANADA",
-            "instance_type": "GPU",
+            "product_type": "Virtual Machine",
             "host_name": "mike-1001",
             "cpu_cores": "28",
             "ram": "58",

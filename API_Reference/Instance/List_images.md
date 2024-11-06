@@ -19,10 +19,10 @@ Returns a list of all available operating system (OS) images, providing details 
 
 An array containing information about operating system images:
 
-- **id** `number`: ID of the operating system image.
-- **dc_id** `number`: ID of the Data center.
-- **dc_region_id** `string`: ID of the Data center region.
-- **os_id** `string`: ID of the operating system image.
+- **id** `number`: The unique identifier of the operating system image.
+- **dc_id** `number`: The unique identifier of data center.
+- **dc_region_id** `string`: The unique identifier of the data center region.
+- **os_id** `string`: The unique identifier of the operating system image.
 - **os_name** `string`: Name of the operating system.
 - **os_type** `string`: The operating system brand.
 - **region** `string`: Name of the region associated with the operating system image.

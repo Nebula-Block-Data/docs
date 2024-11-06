@@ -18,7 +18,7 @@ Returns a list of available GPU virtual machine hardware configurations, compris
 - **Type**: Array  
   An array containing information about products organized by GPU model and region:
   - **id** `number`: The unique identifier for the product.
-  - **dc_id** `number`: The unique identifier for the vendor.
+  - **dc_id** `number`: The unique identifier of data center.
   - **region** `string`: The region where the GPU product is available.
   - **price_per_hour** `decimal`: Price value for the GPU per hour.
   - **cpu** `number`: The number of CPU cores in the product.
