@@ -1,5 +1,7 @@
 # List API Keys
 
+Retrieves a list of your API keys.
+
 ## HTTP Request
 
 `GET` `{API_URL}/api-keys`

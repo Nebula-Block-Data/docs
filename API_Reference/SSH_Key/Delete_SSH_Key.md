@@ -1,5 +1,8 @@
 # Delete SSH Key
 
+Deletes a specified SSH key by including the ID of the SSH key in the endpoint path.
+To retrieve your SSH key IDs, see the [List SSH Keys API](List_SSH_Keys.md).
+
 ## HTTP Request
 
 `DELETE` `{API_URL}/ssh-keys/{id}`

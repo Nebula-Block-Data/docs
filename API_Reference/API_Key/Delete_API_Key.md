@@ -1,5 +1,8 @@
 # Delete API Key
 
+Delete a specified API key by including the ID of the API key in the endpoint path.
+To retrieve your API key IDs, see the [List API Keys API](List_API_Keys.md).
+
 ## HTTP Request
 
 `DELETE` `{API_URL}/api-keys/{id}`

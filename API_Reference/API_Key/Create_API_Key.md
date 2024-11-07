@@ -1,5 +1,8 @@
 # Create API Key
 
+Create a new API key for use in authenticating API requests. To learn how to authenticate requests with API keys,
+see the [Authentication section](../../Getting_Started/Authentication.md).
+
 ## HTTP Request
 
 `POST` `{API_URL}/api-keys`
@@ -23,9 +26,11 @@ Each API key specifies the following properties:
 - `name`: The name of the API key.
 - `description`: An optional description of the API key.
 
+
 > **Important:** The API key value `key` is shown only once in the response body when creating an API key.
 > It can't be viewed again for security reasons. The [List API Keys](List_API_Keys.md) endpoint shows only the IDs + 
 > names of your API keys for deletion. If you lose your API key, create a new one and delete the old one.
+
 
 #### status `string`
 

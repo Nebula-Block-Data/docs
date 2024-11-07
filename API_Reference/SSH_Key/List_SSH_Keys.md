@@ -1,5 +1,7 @@
 # List SSH Keys
 
+Retrieves a list of your SSH keys.
+
 ## HTTP Request
 
 `GET` `{API_URL}/ssh-keys`

@@ -1,5 +1,7 @@
 # Create SSH Key
 
+Creates an SSH key for use in your instances.
+
 ## HTTP Request
 
 `POST` `{API_URL}/ssh-keys`

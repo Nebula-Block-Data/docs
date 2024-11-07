@@ -1,5 +1,8 @@
 # Rename SSH Key
 
+Updates the name of a specified SSH key. Include the ID of the SSH key in the endpoint path
+and the new name in the body of the request. To retrieve your SSH key IDs, see the [List SSH Keys API](List_SSH_Keys.md).
+
 ## HTTP Request
 
 `PUT` `{API_URL}/ssh-keys/{id}`
