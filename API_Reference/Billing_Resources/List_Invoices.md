@@ -50,7 +50,6 @@ curl -X GET '{API_URL}/users/invoices?limit=2&offset=0'
                 "invoice_id": "#NB-20241030102751-266",
                 "price": 0.0,
                 "invoiced_time": "1730298491",
-                "download_url": "PDF_File_PATH",
                 "id": 3703,
                 "user_id": 266
             },
@@ -58,7 +57,6 @@ curl -X GET '{API_URL}/users/invoices?limit=2&offset=0'
                 "invoice_id": "#NB-20241029140714-266",
                 "price": 141.94,
                 "invoiced_time": "1730225240",
-                "download_url": "PDF_File_PATH",
                 "id": 3702,
                 "user_id": 266
             }

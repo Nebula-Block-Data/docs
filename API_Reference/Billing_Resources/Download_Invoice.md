@@ -5,8 +5,9 @@ description: User download invoice by id.
 
 # Download Invoice
 
-This API endpoint enables users to download a specific invoice by including the invoice ID in the URL path. 
-Authentication is required via a Bearer token obtained through user login.
+This API endpoint allows users to download a specific invoice by including the invoice_id in the URL path. 
+The `invoice_id` can be obtained from the response of the List_Invoices endpoint, where it is returned as the `id` field. 
+Authentication is required via a Bearer token, which is obtained through user login.
 
 ## HTTP Request
 
