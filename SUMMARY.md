@@ -16,10 +16,10 @@
     * [Crypto Payment](Payment_and_Billing/Crypto_Payment.md)
 * API Reference
     * Billing
-        * [Get Credit Balance](API_Reference/Billing_Resources/Get_Credit_Balance)
-        * [List Invoices](API_Reference/Billing_Resources/List_Invoices)
+        * [Get Credit Balance](API_Reference/Billing_Resources/Get_Credit_Balance.md)
+        * [List Invoices](API_Reference/Billing_Resources/List_Invoices.md)
         * [Download Invoice](API_Reference/Billing_Resources/Download_Invoice.md)
-        * [Get Payment History](API_Reference/Billing_Resources/Get_Payment_History)
+        * [Get Payment History](API_Reference/Billing_Resources/Get_Payment_History.md)
     * SSH Key
       * [Create SSH Key](API_Reference/SSH_Key/Create_SSH_Key.md)
       * [List SSH Keys](API_Reference/SSH_Key/List_SSH_Keys.md)
