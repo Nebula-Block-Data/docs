@@ -32,7 +32,7 @@ A description of the status of the request.
 
 ```bash
 curl -X GET '{API_URL}/ssh-keys' \
--H 'Authorization: Bearer {token/key}'
+-H 'Authorization: Bearer {TOKEN/KEY}'
 ```
 
 #### Response

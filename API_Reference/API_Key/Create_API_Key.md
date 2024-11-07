@@ -46,7 +46,7 @@ A description of the status of the request.
 
 ```bash
 curl -X POST '{API_URL}/api-keys' \
--H 'Authorization: Bearer {token/key}' \
+-H 'Authorization: Bearer {TOKEN/KEY}' \
 -d '{
     "name": "test-api-key",
     "description": "This is a test API key",

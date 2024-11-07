@@ -45,7 +45,7 @@ A description of the status of the request.
 
 ```bash
 curl -X PUT '{API_URL}/ssh-keys/76' \
--H 'Authorization: Bearer {token/key}' \
+-H 'Authorization: Bearer {TOKEN/KEY}' \
 -d '{
     "key_name": "Test user was here",
 }'

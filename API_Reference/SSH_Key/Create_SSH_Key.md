@@ -39,7 +39,7 @@ A description of the status of the request.
 
 ```bash
 curl -X POST '{API_URL}/ssh-keys' \
--H 'Authorization: Bearer {token/key}' \
+-H 'Authorization: Bearer {TOKEN/KEY}' \
 -d '{
     "name": "My Personal SSH Key",
     "key_data": "ssh-rsa AAADB3NzaC1yc2EBBACCAQABAAABAQD5",
