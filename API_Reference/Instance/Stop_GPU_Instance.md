@@ -19,20 +19,18 @@ Shuts down a virtual machine. Provide the virtual machine ID in the path to init
 
 ## Response Attributes
 
-### `message`
+#### message `string`
 
-- **Type**: String  
   A message confirming the successful retrieval of regions.
 
-### `status`
+#### status `string`
 
-- **Type**: String  
   Indicates the result of the request.  
   **success** signifies success, while **failed** indicates an error.
 
 ## Example
 
-### Request
+#### Request
 
 ```bash
 curl -X GET '{API_URL}/api/v1/computing/instance/{id}/stop' \
@@ -41,7 +39,7 @@ curl -X GET '{API_URL}/api/v1/computing/instance/{id}/stop' \
 
 ```
 
-### Response
+#### Response
 
 ```json
 {

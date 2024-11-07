@@ -19,9 +19,8 @@ Return user instance detail information, like cpu, gpu, ram, total running time 
 
 ## Response Attributes
 
-### `data`
+#### data `array`
 
-- **Type**: Array  
   An array containing information about products organized by GPU model and region:
   - **id** `number`: The unique identifier for the product.
   - **region** `string`: The region where the GPU product is available.
@@ -45,20 +44,18 @@ Return user instance detail information, like cpu, gpu, ram, total running time 
   - **running_time** `string`: The total running time of the instance.
   - **total_cost** `string`: The total cost of the instance.
 
-### `message`
+#### message `string`
 
-- **Type**: String  
   A message confirming the successful retrieval of regions.
 
-### `status`
+#### status `string`
 
-- **Type**: String  
   Indicates the result of the request.  
   **success** signifies success, while **failed** indicates an error.
 
 ## Example
 
-### Request
+#### Request
 
 ```bash
 curl -X GET '{API_URL}/computing/instances' \
@@ -67,7 +64,7 @@ curl -X GET '{API_URL}/computing/instances' \
 
 ```
 
-### Response
+#### Response
 
 ```json
 {

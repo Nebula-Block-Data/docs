@@ -19,20 +19,18 @@ Initiates a hard reboot for a virtual machine, simulating the process of unplugg
 
 ## Response Attributes
 
-### `message`
+#### message `string`
 
-- **Type**: String  
   A message confirming the successful retrieval of regions.
 
-### `status`
+#### status `string`
 
-- **Type**: String  
   Indicates the result of the request.  
   **success** signifies success, while **failed** indicates an error.
 
 ## Example
 
-### Request
+#### Request
 
 ```bash
 curl -X GET '{API_URL}/api/v1/computing/instance/{id}/reboot' \
@@ -41,7 +39,7 @@ curl -X GET '{API_URL}/api/v1/computing/instance/{id}/reboot' \
 
 ```
 
-### Response
+#### Response
 
 ```json
 {

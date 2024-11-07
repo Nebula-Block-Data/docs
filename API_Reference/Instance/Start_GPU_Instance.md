@@ -19,20 +19,18 @@ Initiates the startup of a virtual machine. Supply the virtual machine ID in the
 
 ## Response Attributes
 
-### `message`
+#### message `string`
 
-- **Type**: String  
   A message confirming the successful retrieval of regions.
 
-### `status`
+#### status `string`
 
-- **Type**: String  
   Indicates the result of the request.  
   **success** signifies success, while **failed** indicates an error.
 
 ## Example
 
-### Request
+#### Request
 
 ```bash
 curl -X GET '{API_URL}/api/v1/computing/instance/{id}/start' \
@@ -41,7 +39,7 @@ curl -X GET '{API_URL}/api/v1/computing/instance/{id}/start' \
 
 ```
 
-### Response
+#### Response
 
 ```json
 {

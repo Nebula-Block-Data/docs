@@ -13,9 +13,8 @@ Return a list user instances including virtual machine and serverless products.
 
 ## Response Attributes
 
-### `data`
+#### data `array`
 
-- **Type**: Array  
   An array containing information about products organized by GPU model and region:
   - **id** `number`: The unique identifier for the product.
   - **region** `string`: The region where the GPU product is available.
@@ -33,20 +32,18 @@ Return a list user instances including virtual machine and serverless products.
   - **os** `string`: The operation system of the instance.
   - **status** `string`: The status of the instance.
 
-### `message`
+#### message `string`
 
-- **Type**: String  
   A message confirming the successful retrieval of regions.
 
-### `status`
+#### status `string`
 
-- **Type**: String  
   Indicates the result of the request.  
   **success** signifies success, while **failed** indicates an error.
 
 ## Example
 
-### Request
+#### Request
 
 ```bash
 curl -X GET '{API_URL}/computing/instances' \
@@ -54,7 +51,7 @@ curl -X GET '{API_URL}/computing/instances' \
 -H 'Content-Type: application/json' \
 ```
 
-### Response
+#### Response
 
 ```json
 {
