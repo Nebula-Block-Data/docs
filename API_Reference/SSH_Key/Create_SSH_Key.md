@@ -13,7 +13,7 @@
 
 ## Response Attributes
 
-### data `dict`
+#### data `dict`
 
 Returns the `data` object, containing details of the new SSH Key.
 
@@ -23,17 +23,17 @@ Each SSH key specifies the following properties:
 - `key_data`: The SSH key value.
 - `create_time`: The UNIX timestamp of when the SSH Key was created.
 
-### status `string`
+#### status `string`
 
 Indicates the result of the request to create a SSH key. `success` signifies success, while `failed` indicates an error.
 
-### message `string`
+#### message `string`
 
 A description of the status of the request.
 
 ## Example
 
-### Request
+#### Request
 
 ```bash
 curl -X POST '{API_URL}/ssh-keys' \
@@ -44,7 +44,7 @@ curl -X POST '{API_URL}/ssh-keys' \
 }'
 ```
 
-### Response
+#### Response
 
 ```json
 {

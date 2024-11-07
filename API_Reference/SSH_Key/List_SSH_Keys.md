@@ -6,7 +6,7 @@
 
 ## Response Attributes
 
-### data `list`
+#### data `array`
 
 Returns the `data` array of objects, each containing details about your SSH keys.
 
@@ -16,24 +16,24 @@ Each SSH key has the following properties:
 - `key_data`: The SSH key value.
 - `create_time`: The UTC time of when the SSH Key was created.
 
-### status `string`
+#### status `string`
 
 Indicates the result of the request to list your SSH keys. `success` signifies success, while `failed` indicates an error.
 
-### message `string`
+#### message `string`
 
 A description of the status of the request.
 
 ## Example
 
-### Request
+#### Request
 
 ```bash
 curl -X GET '{API_URL}/ssh-keys' \
 -H 'Authorization: Bearer {token/key}'
 ```
 
-### Response
+#### Response
 
 ```json
 {
