@@ -1,5 +1,8 @@
 # Delete API Key
 
+Delete a specified API key by including the ID of the API key in the endpoint path.
+To retrieve your API key IDs, see the [List API Keys API](List_API_Keys.md).
+
 ## HTTP Request
 
 `DELETE` `{API_URL}/api-keys/{id}`
@@ -30,7 +33,7 @@ A description of the status of the request.
 
 ```bash
 curl -X DELETE '{API_URL}/api-keys/5' \
--H 'Authorization: Bearer {token/key}'
+-H 'Authorization: Bearer {TOKEN/KEY}'
 ```
 
 #### Response

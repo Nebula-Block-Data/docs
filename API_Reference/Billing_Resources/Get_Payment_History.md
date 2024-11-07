@@ -3,49 +3,44 @@
 description: Retrieve the user's transaction history.
 ---
 
-# User Credit Balance
+# Get Payment History
 
-This API retrieves all user transactions, including 
-credit purchases (both money and crypto payments) and 
-credit consumption (updated hourly).
+This API retrieves your payment history/transactions, including 
+purchased credits (using card or crypto) and 
+consumed credits (updated hourly).
 
 ## HTTP Request
 
-`GET` `{API_URL}/api/v1/users/credits/history?limit={limit}&offset={offset}`
+`GET` `{API_URL}/users/credits/history`
   - `limit`: Specifies the number of records to display per page.
   - `offset`: Specifies the starting point for record retrieval (i.e., how many records to skip before starting to display).
 
 ## Response Attributes
 
-### `data`
+#### data `dict`
 
-- **Type**: Dict
   - **credit_balance**: User available credit amount.
   - **credit_history**: List of credits transaction history.
   - **total_credit_histories**: Total history count.
 
-### `message`
+#### status `string`
 
-- **Type**: String
-  A message confirming the successful retrieval of user transactions.
+Indicates the result of the request. **success** signifies success, while **failed** indicates an error.
 
-### `status`
+#### message `string`
 
-- **Type**: String
-  Indicates the result of the request.
-  **success** signifies success, while **failed** indicates an error.
+A message confirming the successful retrieval of user transactions.
 
 ## Example
 
-### Request
+#### Request
 
 ```bash
-curl -X GET '{API_URL}/api/v1/users/credits/history?limit=2&offset=0'
--H 'Authorization: Bearer {ACCESS_TOKEN}'
--H 'Content-Type: application/json'
+curl -X GET '{API_URL}/users/credits/history?limit=2&offset=0'
+-H 'Authorization: Bearer {TOKEN/KEY}'
 ```
 
-### Response
+#### Response
 
 ```json
 {

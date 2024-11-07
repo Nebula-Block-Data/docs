@@ -1,5 +1,7 @@
 # List API Keys
 
+Retrieves a list of your API keys.
+
 ## HTTP Request
 
 `GET` `{API_URL}/api-keys`
@@ -30,7 +32,7 @@ A description of the status of the request.
 
 ```bash
 curl -X GET '{API_URL}/api-keys' \
--H 'Authorization: Bearer {token/key}'
+-H 'Authorization: Bearer {TOKEN/KEY}'
 ```
 
 #### Response

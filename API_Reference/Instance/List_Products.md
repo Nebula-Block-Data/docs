@@ -5,55 +5,52 @@ description: List Available Products By Product Type.
 
 # List Products
 
-Returns a list of available GPU virtual machine hardware configurations, comprising combinations of GPUs, CPUs, RAM, and system disk. These virtual machine configurations are referred to as products.
+Returns a list of available GPU virtual machine hardware configurations, which include GPUs, CPUs, RAM, and system disk.
+These virtual machine configurations are referred to as products.
 
 ## HTTP Request
 
-`GET` `{API_URL}/api/v1/computing/products`
+`GET` `{API_URL}/computing/products`
 
 ## Response Attributes
 
-### `data`
+#### data `array`
 
-- **Type**: Array  
-  An array containing information about products organized by GPU model and region:
-  - **id** `number`: The unique identifier for the product.
-  - **dc_id** `number`: The unique identifier of data center.
-  - **region** `string`: The region where the GPU product is available.
-  - **price_per_hour** `decimal`: Price value for the GPU per hour.
-  - **cpu** `number`: The number of CPU cores in the product.
-  - **ram** `number`: The amount of RAM in gigabytes for the product.
-  - **gpu** `string`: The GPU model name for the GPU product.
-  - **gpu_type** `string`: The GPU serial name for the GPU product.
-  - **gpu_count**: The number of GPUs included in the GPU product.
-  - **disk_size** `number`: The root disk size of the GPU flavor in gigabytes.
-  - **ephemeral** `number`: The ephemeral disk storage capacity for the product in gigabytes. Ephemeral storage is a temporary drive that is attached to a virtual machine (VM) during its runtime for storage of the active workload.
-  - **stock** `number`: The number of GPU product is currently in stock.
-  - **cycle** `string`: New billing cycle, the default is hourly.
-  - **is_available** `boolean`: Indicates whether the GPU product is currently available. True indicates that the product is available.
+An array containing information about products organized by GPU model and region:
+  - `id`: The unique identifier for the product.
+  - `dc_id`: The unique identifier of data center.
+  - `region`: The region where the GPU product is available.
+  - `price_per_hour`: Price value for the GPU per hour.
+  - `cpu`: The number of CPU cores in the product.
+  - `ram`: The amount of RAM in gigabytes for the product.
+  - `gpu`: The GPU model name for the GPU product.
+  - `gpu_type`: The GPU serial name for the GPU product.
+  - `gpu_count`: The number of GPUs included in the GPU product.
+  - `disk_size`: The root disk size of the GPU flavor in gigabytes.
+  - `ephemeral`: The ephemeral disk storage capacity for the product in gigabytes. Ephemeral storage is a temporary drive that is attached to a virtual machine (VM) during its runtime for storage of the active workload.
+  - `stock`: The number of GPU product is currently in stock.
+  - `cycle`: New billing cycle, the default is hourly.
+  - `is_available`: Indicates whether the GPU product is currently available. True indicates that the product is available.
 
-### `message`
+#### status `string`
 
-- **Type**: String  
-  A message confirming the successful retrieval of regions.
+Indicates the result of the request. `success` signifies success, while `failed` indicates an error.
 
-### `status`
+#### message `string`
 
-- **Type**: String  
-  Indicates the result of the request.  
-  **success** signifies success, while **failed** indicates an error.
+A message confirming the successful retrieval of regions.
 
 ## Example
 
-### Request
+#### Request
 
 ```bash
 curl -X GET '{API_URL}/api/v1/computing/products' \
--H 'Authorization: Bearer {ACCESS_TOKEN}' \
+-H 'Authorization: Bearer {TOKEN/KEY}' \
 -H 'Content-Type: application/json'
 ```
 
-### Response
+#### Response
 
 ```json
 {

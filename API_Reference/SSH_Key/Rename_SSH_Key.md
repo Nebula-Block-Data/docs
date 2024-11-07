@@ -1,5 +1,8 @@
 # Rename SSH Key
 
+Updates the name of a specified SSH key. Include the ID of the SSH key in the endpoint path
+and the new name in the body of the request. To retrieve your SSH key IDs, see the [List SSH Keys API](List_SSH_Keys.md).
+
 ## HTTP Request
 
 `PUT` `{API_URL}/ssh-keys/{id}`
@@ -18,7 +21,7 @@
 
 ## Response Attributes
 
-### data `dict`
+#### data `dict`
 
 Returns the `data` object, containing details of the updated SSH Key.
 
@@ -28,27 +31,27 @@ Each updated SSH key specifies the following properties:
 - `key_data`: The SSH key value.
 - `create_time`: The UNIX timestamp of when the SSH Key was created.
 
-### status `string`
+#### status `string`
 
 Indicates the result of the request to rename a SSH key. `success` signifies success, while `failed` indicates an error.
 
-### message `string`
+#### message `string`
 
 A description of the status of the request.
 
 ## Example
 
-### Request
+#### Request
 
 ```bash
 curl -X PUT '{API_URL}/ssh-keys/76' \
--H 'Authorization: Bearer {token/key}' \
+-H 'Authorization: Bearer {TOKEN/KEY}' \
 -d '{
     "key_name": "Test user was here",
 }'
 ```
 
-### Response
+#### Response
 
 ```json
 {

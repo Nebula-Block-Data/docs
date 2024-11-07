@@ -9,37 +9,32 @@ This API endpoint allows you to retrieve the user's current credit balance. The 
 
 ## HTTP Request
 
-`GET` `{API_URL}/api/v1/users/credits`
+`GET` `{API_URL}/users/credits`
 
 ## Response Attributes
 
-### `data`
+#### data `dict`
 
-- **Type**: Dict
-  - **available_balance**: User credit amount.
+Returns the `data` object, containing the user credit balance in the field `available_balance`.
 
-### `message`
+#### status `string`
 
-- **Type**: String
-  A message confirming the successful retrieval of user credit.
+Indicates the result of the request to get your credit balance. success signifies success, while failed indicates an error.
 
-### `status`
+#### message `string`
 
-- **Type**: String
-  Indicates the result of the request.
-  **success** signifies success, while **failed** indicates an error.
+A description of the status of the request.
 
 ## Example
 
-### Request
+#### Request
 
 ```bash
-curl -X GET '{API_URL}/api/v1/users/credits'
--H 'Authorization: Bearer {ACCESS_TOKEN}'
--H 'Content-Type: application/json'
+curl -X GET '{API_URL}/users/credits'
+-H 'Authorization: Bearer {TOKEN/KEY}'
 ```
 
-### Response
+#### Response
 
 ```json
 {
