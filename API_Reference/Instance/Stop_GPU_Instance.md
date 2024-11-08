@@ -9,7 +9,7 @@ Shuts down a virtual machine. Provide the virtual machine ID in the path to init
 
 ## HTTP Request
 
-`GET` `{API_URL}/api/v1/computing/instance/{id}/stop`
+`GET` `{API_URL}/computing/instance/{id}/stop`
 
 ## Path parameters
 
@@ -33,7 +33,7 @@ Shuts down a virtual machine. Provide the virtual machine ID in the path to init
 #### Request
 
 ```bash
-curl -X GET '{API_URL}/api/v1/computing/instance/{id}/stop' \
+curl -X GET '{API_URL}/computing/instance/{id}/stop' \
 -H 'Authorization: Bearer {ACCESS_TOKEN}' \
 -H 'Content-Type: application/json' \
 

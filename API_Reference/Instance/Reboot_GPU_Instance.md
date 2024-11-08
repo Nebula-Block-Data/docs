@@ -9,7 +9,7 @@ Initiates a hard reboot for a virtual machine, simulating the process of unplugg
 
 ## HTTP Request
 
-`GET` `{API_URL}/api/v1/computing/instance/{id}/reboot`
+`GET` `{API_URL}/computing/instance/{id}/reboot`
 
 ## Path parameters
 
@@ -33,7 +33,7 @@ Initiates a hard reboot for a virtual machine, simulating the process of unplugg
 #### Request
 
 ```bash
-curl -X GET '{API_URL}/api/v1/computing/instance/{id}/reboot' \
+curl -X GET '{API_URL}/computing/instance/{id}/reboot' \
 -H 'Authorization: Bearer {ACCESS_TOKEN}' \
 -H 'Content-Type: application/json' \
 

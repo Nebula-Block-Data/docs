@@ -45,7 +45,7 @@ A message confirming the successful retrieval of regions.
 #### Request
 
 ```bash
-curl -X GET '{API_URL}/api/v1/computing/products' \
+curl -X GET '{API_URL}/computing/products' \
 -H 'Authorization: Bearer {TOKEN/KEY}' \
 -H 'Content-Type: application/json'
 ```

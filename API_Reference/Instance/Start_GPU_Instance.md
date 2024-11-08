@@ -9,7 +9,7 @@ Initiates the startup of a virtual machine. Supply the virtual machine ID in the
 
 ## HTTP Request
 
-`GET` `{API_URL}/api/v1/computing/instance/{id}/start`
+`GET` `{API_URL}/computing/instance/{id}/start`
 
 ## Path parameters
 
@@ -33,7 +33,7 @@ Initiates the startup of a virtual machine. Supply the virtual machine ID in the
 #### Request
 
 ```bash
-curl -X GET '{API_URL}/api/v1/computing/instance/{id}/start' \
+curl -X GET '{API_URL}/computing/instance/{id}/start' \
 -H 'Authorization: Bearer {ACCESS_TOKEN}' \
 -H 'Content-Type: application/json' \
 
