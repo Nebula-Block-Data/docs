@@ -6,13 +6,21 @@ Retrieves a list of your SSH keys.
 
 `GET` `{API_URL}/ssh-keys`
 
+## Query Parameters
+
+| Parameters | Requirements | Type  | Description                                                   |
+|------------|--------------|-------|---------------------------------------------------------------|
+| limit      | Optional     | `int` | The limit to the number of SSH keys returned. Defaults to 100 |
+| offset     | Optional     | `int` | The offset of the returned SSH key response. Defaults to 0    |
+
 ## Response Attributes
 
-#### data `array`
+#### data `dict`
 
-Returns the `data` array of objects, each containing details about your SSH keys.
+Returns the `data` dictionary containing the total number of your SSH keys `total_ssh_keys` and the details of each SSH
+key as per your `limit` and `offset` in `ssh_keys`.
 
-Each SSH key has the following properties:
+Each SSH key in `ssh_keys` has the following properties:
 - `id`: The ID of the SSH key. This is the ID field that is used for the [Delete SSH Key](Delete_SSH_Key.md) endpoint.
 - `key_name`: The name of the SSH key.
 - `key_data`: The SSH key value.
