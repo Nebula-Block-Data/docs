@@ -49,34 +49,34 @@ Authorization: Bearer ak_W4KL0Rw8Rv6Mp7h7fY77dFgHDl_EMAojslklxhMI9-0
 
 ## Login
 
-## HTTP Request
+### HTTP Request
 
 `POST` `{API_URL}/login`
 
-## Body Parameters
+### Body Parameters
 
 | Parameters | Requirements      | Type     | Description          |
 |------------|--------------------|----------|----------------------|
 | username   | Required    | `string` | Login username/email |
 | password   | Required| `string` | Login password       |
 
-## Response Attributes
+### Response Attributes
 
-### data `dict`
+#### data `dict`
 
 A dictionary that contains the access token (`jwtToken`)
 
-### status `string`
+#### status `string`
 
 Indicates the result of the request to log in. `success` signifies success, while `failed` indicates an error.
 
-### message `string`
+#### message `string`
 
 A description of the status of the request.
 
-## Example
+### Example
 
-### Request
+#### Request
 
 ```bash
 curl -X POST '{API_URL}/login' \
@@ -87,7 +87,7 @@ curl -X POST '{API_URL}/login' \
 }'
 ```
 
-### Response
+#### Response
 
 ```json
 {

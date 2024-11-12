@@ -1,4 +1,7 @@
-## Create API Token
+# Create API Key
+
+Create a new API key for use in authenticating API requests. To learn how to authenticate requests with API keys,
+see the [Authentication section](../../Getting_Started/Authentication.md).
 
 ## HTTP Request
 
@@ -13,7 +16,7 @@
 
 ## Response Attributes
 
-### data `dict`
+#### data `dict`
 
 Returns the `data` object, containing details of the new API key.
 
@@ -23,32 +26,34 @@ Each API key specifies the following properties:
 - `name`: The name of the API key.
 - `description`: An optional description of the API key.
 
+
 > **Important:** The API key value `key` is shown only once in the response body when creating an API key.
 > It can't be viewed again for security reasons. The [List API Keys](List_API_Keys.md) endpoint shows only the IDs + 
 > names of your API keys for deletion. If you lose your API key, create a new one and delete the old one.
 
-### status `string`
+
+#### status `string`
 
 Indicates the result of the request to create an API key. `success` signifies success, while `failed` indicates an error.
 
-### message `string`
+#### message `string`
 
 A description of the status of the request.
 
 ## Example
 
-### Request
+#### Request
 
 ```bash
 curl -X POST '{API_URL}/api-keys' \
--H 'Authorization: Bearer {token/key}' \
+-H 'Authorization: Bearer {TOKEN/KEY}' \
 -d '{
     "name": "test-api-key",
     "description": "This is a test API key",
 }'
 ```
 
-### Response
+#### Response
 
 ```json
 {
