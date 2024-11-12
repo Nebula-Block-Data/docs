@@ -9,7 +9,7 @@ This API retrieves a paginated list of user invoices, including details such as 
 
 ## HTTP Request
 
-`GET` `{API_URL}/users/invoices`
+`GET` `{API_URL}/users/invoices?limit=limit&offset=offset`
 
 | Parameters | Requirements | Type  | Description                                                                                         |
 |------------|--------------|-------|-----------------------------------------------------------------------------------------------------|
@@ -47,21 +47,31 @@ curl -X GET '{API_URL}/users/invoices?limit=2&offset=0'
     "data": {
         "invoices": [
             {
-                "invoice_id": "#NB-20241030102751-266",
-                "price": 0.0,
-                "invoiced_time": "1730298491",
-                "id": 3703,
+                "invoiced_time": "EST 2024-10-29 14:19:32",
+                "invoice_id": "#NB-20241029181932-266",
+                "price": 229.95,
+                "type": "Reload",
+                "id": 3688,
                 "user_id": 266
             },
             {
-                "invoice_id": "#NB-20241029140714-266",
-                "price": 141.94,
-                "invoiced_time": "1730225240",
-                "id": 3702,
+                "invoiced_time": "EST 2024-10-29 14:18:54",
+                "invoice_id": "#NB-20241029181853-266",
+                "price": 11.5,
+                "type": "Reload",
+                "id": 3687,
+                "user_id": 266
+            },
+            {
+                "invoiced_time": "EST 2024-10-29 14:15:29",
+                "invoice_id": "#NB-20241029181528-266",
+                "price": 114.98,
+                "type": "Reload",
+                "id": 3686,
                 "user_id": 266
             }
         ],
-        "total_invoices": 18
+        "total_invoices": 3
     },
     "message": "User invoices retrieved successfully",
     "status": "success"
