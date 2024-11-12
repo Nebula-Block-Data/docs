@@ -5,7 +5,7 @@ description: List User Instances.
 
 # List User Instances
 
-Return a list user instances.
+Return a list of all active instances.
 
 ## HTTP Request
 

@@ -5,7 +5,7 @@ description: Start Instance.
 
 # User Instance Details
 
-Initiates the startup of an instance. Provide the instance ID in the path to start the specified instance.
+Initiate the startup of an instance. Provide the instance ID in the path to start the specified instance.
 
 ## HTTP Request
 

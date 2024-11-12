@@ -5,7 +5,7 @@ description: User Instance Details.
 
 # User Instance Details
 
-Return user instance detail information, like cpu, gpu, ram, total running time and etc.
+Return instance detail information, like cpu, gpu, ram, total running time and etc.
 
 ## HTTP Request
 

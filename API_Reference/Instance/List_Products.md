@@ -5,7 +5,7 @@ description: List Available Products By Product Type.
 
 # List Products
 
-Returns a list of available GPU instance hardware configurations, which include GPUs, CPUs, RAM, and system disk.
+Return a list of available GPU instance hardware configurations, which include GPUs, CPUs, RAM, and system disk.
 These instance configurations are referred to as products.
 
 ## HTTP Request

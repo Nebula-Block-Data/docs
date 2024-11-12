@@ -5,7 +5,7 @@ description: List Available OS Images.
 
 # List Images
 
-Returns a list of all available operating system images, including details about each image's version and driver, if applicable.
+Return a list of all available operating system images, including details about each image's version and driver, if applicable.
 
 ## HTTP Request
 

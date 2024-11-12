@@ -5,7 +5,7 @@ description: Create GPU Instance.
 
 # Create GPU Instance
 
-Creates an instance with the specified custom configuration and features provided in the request body.
+Create an instance with the specified custom configuration and features provided in the request body.
 
 ## HTTP Request
 
