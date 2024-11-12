@@ -15,7 +15,7 @@ Initiates a hard reboot for a virtual machine, simulating the process of unplugg
 
 | Parameters     | Requirements      | Type       | Description      |
 |---------------|--------------------|----------------|----------------|
-| id      | Required    | `number`       | The unique identifier of the instance. `{id} comes from <List User Instances API>` |
+| id      | Required    | `string`       | The unique identifier of the instance. `{id} comes from <List User Instances API>` |
 
 ## Response Attributes
 

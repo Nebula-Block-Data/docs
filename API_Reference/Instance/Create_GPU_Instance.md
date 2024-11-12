@@ -16,8 +16,8 @@ Creates one virtual machine with the specified custom configuration and features
 | Parameters     | Requirements      | Type       | Description      |
 |---------------|--------------------|----------------|----------------|
 | instance_name | Required    | `string`       | Name of the virtual machine being deployed.  |
-|product_id| Required| `number`| The unique identifier of products. `The product_id comes from <List Products API>`.|
-| image_id      | Required    | `number`       | The unique identifier of the operating system image to be installed on your virtual machine. Use the GET /images endpoint to retrieve a list of images offered by API.  |
+|product_id| Required| `string`| The unique identifier of products. `The product_id comes from <List Products API>`.|
+| image_id      | Required    | `string`       | The unique identifier of the operating system image to be installed on your virtual machine. Use the GET /images endpoint to retrieve a list of images offered by API.  |
 | ssh_key_id    | Required    | `number`       | The unique identifier of the SSH keypair to be used in gaining secure access to the virtual machine.|
 
 > **NOTE:** `image_id` and `product_id` must be from the same data center (`dc_id`) and region. Otherwise, this API will fail. 

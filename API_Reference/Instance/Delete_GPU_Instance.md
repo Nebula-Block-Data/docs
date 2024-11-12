@@ -15,7 +15,7 @@ Permanently deletes a virtual machine. Supply the virtual machine ID in the path
 
 | Parameters     | Requirements      | Type  | Description      |
 |---------------|--------------------|-------|----------------|
-| id      | Required    | `int` | The unique identifier of the instance. `{id} comes from <List User Instances API>` |
+| id      | Required    | `string` | The unique identifier of the instance. `{id} comes from <List User Instances API>` |
 
 ## Response Attributes
 

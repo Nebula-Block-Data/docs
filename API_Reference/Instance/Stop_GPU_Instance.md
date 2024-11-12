@@ -15,7 +15,7 @@ Shuts down a virtual machine. Provide the virtual machine ID in the path to init
 
 | Parameters     | Requirements      | Type       | Description      |
 |---------------|--------------------|----------------|----------------|
-| id      | Required    | `number`       | The unique identifier of the instance. `{id} comes from <List User Instances API>` |
+| id      | Required    | `string`       | The unique identifier of the instance. `{id} comes from <List User Instances API>` |
 
 ## Response Attributes
 
