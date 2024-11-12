@@ -9,7 +9,7 @@ This API retrieves your payment history and transaction details related to consu
 
 ## HTTP Request
 
-`GET` `{API_URL}/users/credits/history?limit=limit&offset=offset`
+`GET` `{API_URL}/users/credits/history?limit={limit}&offset={offset}`
   - `limit`: Specifies the number of records to display per page.
   - `offset`: Specifies the starting point for record retrieval (i.e., how many records to skip before starting to display).
 

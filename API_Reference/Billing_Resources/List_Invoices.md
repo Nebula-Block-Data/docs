@@ -9,7 +9,7 @@ This API retrieves a paginated list of user invoices, including details such as 
 
 ## HTTP Request
 
-`GET` `{API_URL}/users/invoices?limit=limit&offset=offset`
+`GET` `{API_URL}/users/invoices?limit={limit}&offset={offset}`
 
 | Parameters | Requirements | Type  | Description                                                                                         |
 |------------|--------------|-------|-----------------------------------------------------------------------------------------------------|
