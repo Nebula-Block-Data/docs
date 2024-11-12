@@ -47,20 +47,23 @@ curl -X GET '{API_URL}/ssh-keys' \
 
 ```json
 {
-    "data": [
-        {
-            "id": 76,
-            "key_name": "My Personal SSH Key",
-            "key_data": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQD5",
-            "create_time": "UTC: 2024-11-05 23:05:56"
-        },
-        {
-            "id": 77,
-            "key_name": "My Personal SSH Keys",
-            "key_data": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQD5",
-            "create_time": "UTC: 2024-11-05 23:05:56"
-        }
-    ],
+    "data": {
+        "total_ssh_keys": 1,
+        "ssh_keys": [
+            {
+                "id": 75,
+                "key_name": "My Personal SSH Key 1",
+                "key_data": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQD5",
+                "create_time": "EST 2024-10-23 10:24:21"
+            },
+            {
+                "id": 76,
+                "key_name": "My Personal SSH Key 2",
+                "key_data": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQD5",
+                "create_time": "EST 2024-10-24 10:24:21"
+            }
+        ]
+    },
     "message": "SSH keys retrieved successfully",
     "status": "success"
 }
