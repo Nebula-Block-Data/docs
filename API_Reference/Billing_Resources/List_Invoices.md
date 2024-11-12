@@ -5,7 +5,8 @@ description: Get invoice list fot the current user.
 
 # List Invoices
 
-This API retrieves a paginated list of user invoices, including details such as the invoice ID, price, invoiced time, and download URL.
+This API retrieves a paginated list of user invoices, 
+including details such as the invoice ID, price, invoiced time, and invoice type (Bonus or Reload).
 
 ## HTTP Request
 
