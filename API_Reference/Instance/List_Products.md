@@ -5,8 +5,8 @@ description: List Available Products By Product Type.
 
 # List Products
 
-Returns a list of available GPU virtual machine hardware configurations, which include GPUs, CPUs, RAM, and system disk.
-These virtual machine configurations are referred to as products.
+Returns a list of available GPU instance hardware configurations, which include GPUs, CPUs, RAM, and system disk.
+These instance configurations are referred to as products.
 
 ## HTTP Request
 
@@ -40,7 +40,7 @@ Indicates the result of the request. `success` signifies success, while `failed`
 
 #### message `string`
 
-A message confirming the successful retrieval of regions.
+A description of the status of the request.
 
 ## Example
 
@@ -66,14 +66,14 @@ curl -X GET '{API_URL}/api/v1/computing/products' \
                     "product_type": "Container",
                     "region": "CANADA",
                     "price_per_hour": 1.0,
-                    "cpu": 16,
+                    "cpu": 24,
                     "ram": 200,
-                    "gpu": "H100",
+                    "gpu": "H100-80G-SXM",
                     "gpu_type": "H100",
                     "gpu_count": 1,
                     "disk_size": 200,
                     "ephemeral": 1500,
-                    "stock": 1,
+                    "stock": 99,
                     "cycle": "hourly",
                     "is_available": true
                 },
@@ -93,57 +93,6 @@ curl -X GET '{API_URL}/api/v1/computing/products' \
                     "stock": 99,
                     "cycle": "hourly",
                     "is_available": true
-                },
-                {
-                    "id": "expd0939da10-8ad6-4edd-9d2d-5d1acb49f136",
-                    "dc_id": 2,
-                    "product_type": "Virtual Machine",
-                    "region": "CANADA",
-                    "price_per_hour": 5.247,
-                    "cpu": 60,
-                    "ram": 360,
-                    "gpu": "H100-80G-PCIe",
-                    "gpu_type": "H100",
-                    "gpu_count": 2,
-                    "disk_size": 100,
-                    "ephemeral": 1500,
-                    "stock": 99,
-                    "cycle": "hourly",
-                    "is_available": true
-                },
-                {
-                    "id": "expddc5af4c0-8d62-42e1-8970-a76a72db3acc",
-                    "dc_id": 2,
-                    "product_type": "Virtual Machine",
-                    "region": "CANADA",
-                    "price_per_hour": 21.527,
-                    "cpu": 252,
-                    "ram": 1440,
-                    "gpu": "H100-80G-PCIe-NVLink",
-                    "gpu_type": "H100",
-                    "gpu_count": 8,
-                    "disk_size": 100,
-                    "ephemeral": 6500,
-                    "stock": 99,
-                    "cycle": "hourly",
-                    "is_available": true
-                },
-                {
-                    "id": "expd170c4fe5-7bf4-431b-a9d3-dd42f77cc19b",
-                    "dc_id": 2,
-                    "product_type": "Virtual Machine",
-                    "region": "CANADA",
-                    "price_per_hour": 27.607,
-                    "cpu": 192,
-                    "ram": 1800,
-                    "gpu": "H100-80G-SXM5",
-                    "gpu_type": "H100",
-                    "gpu_count": 8,
-                    "disk_size": 100,
-                    "ephemeral": 32000,
-                    "stock": 99,
-                    "cycle": "hourly",
-                    "is_available": true
                 }
             ],
             "A100": [
@@ -160,110 +109,6 @@ curl -X GET '{API_URL}/api/v1/computing/products' \
                     "gpu_count": 1,
                     "disk_size": 100,
                     "ephemeral": 750,
-                    "stock": 99,
-                    "cycle": "hourly",
-                    "is_available": true
-                },
-                {
-                    "id": "expde1bf5c0b-83d2-44f9-bb5f-0064f949e7eb",
-                    "dc_id": 2,
-                    "product_type": "Virtual Machine",
-                    "region": "CANADA",
-                    "price_per_hour": 3.727,
-                    "cpu": 60,
-                    "ram": 240,
-                    "gpu": "A100-80G-PCIe",
-                    "gpu_type": "A100",
-                    "gpu_count": 2,
-                    "disk_size": 100,
-                    "ephemeral": 1500,
-                    "stock": 99,
-                    "cycle": "hourly",
-                    "is_available": true
-                },
-                {
-                    "id": "expdd5499bbf-07b8-45e2-9756-d9cd8ec52c0f",
-                    "dc_id": 2,
-                    "product_type": "Virtual Machine",
-                    "region": "CANADA",
-                    "price_per_hour": 7.447,
-                    "cpu": 124,
-                    "ram": 480,
-                    "gpu": "A100-80G-PCIe",
-                    "gpu_type": "A100",
-                    "gpu_count": 4,
-                    "disk_size": 100,
-                    "ephemeral": 3200,
-                    "stock": 99,
-                    "cycle": "hourly",
-                    "is_available": true
-                }
-            ],
-            "L40": [
-                {
-                    "id": "expdc33ebb4d-07bc-4e3b-b719-727cd3456629",
-                    "dc_id": 2,
-                    "product_type": "Virtual Machine",
-                    "region": "CANADA",
-                    "price_per_hour": 1.387,
-                    "cpu": 28,
-                    "ram": 58,
-                    "gpu": "L40",
-                    "gpu_type": "L40",
-                    "gpu_count": 1,
-                    "disk_size": 100,
-                    "ephemeral": 725,
-                    "stock": 99,
-                    "cycle": "hourly",
-                    "is_available": true
-                },
-                {
-                    "id": "expdb61aafcd-a09f-48a9-b267-cedc57f57d50",
-                    "dc_id": 2,
-                    "product_type": "Virtual Machine",
-                    "region": "CANADA",
-                    "price_per_hour": 2.767,
-                    "cpu": 60,
-                    "ram": 116,
-                    "gpu": "L40",
-                    "gpu_type": "L40",
-                    "gpu_count": 2,
-                    "disk_size": 100,
-                    "ephemeral": 1550,
-                    "stock": 99,
-                    "cycle": "hourly",
-                    "is_available": true
-                },
-                {
-                    "id": "expd49281edf-6ba4-4c42-b1d9-a05faa9e6233",
-                    "dc_id": 2,
-                    "product_type": "Virtual Machine",
-                    "region": "CANADA",
-                    "price_per_hour": 5.527,
-                    "cpu": 124,
-                    "ram": 232,
-                    "gpu": "L40",
-                    "gpu_type": "L40",
-                    "gpu_count": 4,
-                    "disk_size": 100,
-                    "ephemeral": 3200,
-                    "stock": 99,
-                    "cycle": "hourly",
-                    "is_available": true
-                },
-                {
-                    "id": "expd039a5631-1247-4dec-8bb5-04e77dc6aa96",
-                    "dc_id": 2,
-                    "product_type": "Virtual Machine",
-                    "region": "CANADA",
-                    "price_per_hour": 11.047,
-                    "cpu": 252,
-                    "ram": 464,
-                    "gpu": "L40",
-                    "gpu_type": "L40",
-                    "gpu_count": 8,
-                    "disk_size": 100,
-                    "ephemeral": 6500,
                     "stock": 99,
                     "cycle": "hourly",
                     "is_available": true

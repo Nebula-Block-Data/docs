@@ -5,7 +5,7 @@ description: Stop Instance.
 
 # User Instance Details
 
-Shuts down a virtual machine. Provide the virtual machine ID in the path to initiate the shutdown process for the specified virtual machine.
+Shut down an instance. Provide the instance ID in the path to initiate the shutdown process for that instance.
 
 ## HTTP Request
 
@@ -21,12 +21,11 @@ Shuts down a virtual machine. Provide the virtual machine ID in the path to init
 
 #### message `string`
 
-  A message confirming the successful retrieval of regions.
+A description of the status of the request.
 
 #### status `string`
 
-  Indicates the result of the request.  
-  **success** signifies success, while **failed** indicates an error.
+Indicates the result of the request. `success` signifies success, while `failed` indicates an error.
 
 ## Example
 

@@ -5,7 +5,7 @@ description: Delete GPU Instance.
 
 # Delete GPU Instance
 
-Permanently deletes a virtual machine. Supply the virtual machine ID in the path to delete that specified virtual machine.
+Permanently delete an instance by specifying the instance ID in the path to delete the selected instance.
 
 ## HTTP Request
 
@@ -25,7 +25,7 @@ Indicates the result of the request. `success` signifies success, while `failed`
 
 #### message `string`
 
-A message confirming the successful retrieval of regions.
+A description of the status of the request.
 
 ## Example
 

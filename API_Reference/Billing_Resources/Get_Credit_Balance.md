@@ -5,7 +5,7 @@ description: Retrieve the user's current credit balance.
 
 # User Credit Balance
 
-This API endpoint allows you to retrieve the user's current credit balance. The request requires authentication using a bearer token, which can be obtained from the login API.
+Retrieve the current credit balance for your account. 
 
 ## HTTP Request
 

@@ -5,7 +5,7 @@ description: Retrieve the user's transaction history.
 
 # Get Payment History
 
-This API retrieves your payment history and transaction details related to consumed credits, updated every hour.
+Retrieve your credit payment history for different products.
 
 ## HTTP Request
 
@@ -27,7 +27,7 @@ Indicates the result of the request. **success** signifies success, while **fail
 
 #### message `string`
 
-A message confirming the successful retrieval of user transactions.
+A description of the status of the request.
 
 ## Example
 
@@ -49,16 +49,16 @@ curl -X GET '{API_URL}/users/credits/history?limit=2&offset=0'
                 "user_id": 266,
                 "computing_amount": 2.004,
                 "serverless_amount": 0.0,
-                "create_time": "EST 2024-11-10 06:54:58",
-                "update_time": "EST 2024-11-10 07:54:58",
+                "create_time": "EST 2024-10-10 06:54:58",
+                "update_time": "EST 2024-10-10 07:54:58",
                 "total": 2.004
             },
             {
                 "user_id": 266,
                 "computing_amount": 2.004,
                 "serverless_amount": 0.0,
-                "create_time": "EST 2024-11-10 05:54:58",
-                "update_time": "EST 2024-11-10 06:54:58",
+                "create_time": "EST 2024-10-10 05:54:58",
+                "update_time": "EST 2024-10-10 06:54:58",
                 "total": 2.004
             }
         ],

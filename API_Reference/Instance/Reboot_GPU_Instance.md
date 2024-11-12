@@ -5,7 +5,7 @@ description: Reboot Instance.
 
 # User Instance Details
 
-Initiates a hard reboot for a virtual machine, simulating the process of unplugging and rebooting a physical machine. Provide the virtual machine ID in the path to execute a hard reboot for the specified virtual machine.
+Initiate a reboot of an instance. Provide the instance ID in the path to reboot the specified instance.
 
 ## HTTP Request
 
@@ -21,12 +21,11 @@ Initiates a hard reboot for a virtual machine, simulating the process of unplugg
 
 #### message `string`
 
-  A message confirming the successful retrieval of regions.
+A description of the status of the request.
 
 #### status `string`
 
-  Indicates the result of the request.  
-  **success** signifies success, while **failed** indicates an error.
+Indicates the result of the request. `success` signifies success, while `failed` indicates an error.
 
 ## Example
 

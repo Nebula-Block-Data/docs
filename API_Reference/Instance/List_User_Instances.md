@@ -5,7 +5,7 @@ description: List User Instances.
 
 # List User Instances
 
-Return a list user instances including virtual machine and serverless products.
+Return a list user instances.
 
 ## HTTP Request
 
@@ -35,7 +35,7 @@ An array containing information about products organized by GPU model and region
 
 #### message `string`
 
-  A message confirming the successful retrieval of regions.
+A description of the status of the request.
 
 #### status `string`
 
@@ -61,14 +61,14 @@ curl -X GET '{API_URL}/computing/instances' \
             "id": "102cade84ea-e703-4400-b77d-8ed545d198ee",
             "region": "CANADA",
             "product_type": "GPU",
-            "host_name": "mike-1001",
+            "host_name": "demo",
             "cpu_cores": 28,
             "ram": 58,
             "gpu_type": "RTX-A6000",
             "gpu_count": 1,
             "disk_size": 100,
             "ephemeral": 1500,
-            "public_ipv4": "62.169.158.214",
+            "public_ipv4": "38.80.81.128",
             "price_per_hour": 0.679,
             "os": "Ubuntu Server 20.04 LTS (Focal Fossa)",
             "status": "Running"
