@@ -9,9 +9,9 @@ To retrieve your SSH key IDs, see the [List SSH Keys API](List_SSH_Keys.md).
 
 ## Path Parameters
 
-| Parameters | Requirements | Type  | Description                                        |
-|------------|--------------|-------|----------------------------------------------------|
-| id         | Required     | `int` | The unique identifier of the SSH key to be deleted |
+| Parameters | Requirements | Type     | Description                                        |
+|------------|--------------|----------|----------------------------------------------------|
+| id         | Required     | `string` | The unique identifier of the SSH key to be deleted |
 
 ## Response Attributes
 
@@ -32,7 +32,7 @@ A description of the status of the request.
 #### Request
 
 ```bash
-curl -X DELETE '{API_URL}/ssh-keys/5' \
+curl -X DELETE '{API_URL}/ssh-keys/7902904e-48b3-4bc6-8b63-bfbb19ff4ff8' \
 -H 'Authorization: Bearer {TOKEN/KEY}'
 ```
 

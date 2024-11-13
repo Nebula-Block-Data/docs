@@ -51,7 +51,7 @@ curl -X POST '{API_URL}/ssh-keys' \
 ```json
 {
     "data": {
-        "id": 73,
+        "id": "7902904e-48b3-4bc6-8b63-bfbb19ff4ff8",
         "key_name": "My Personal SSH Key",
         "key_data": "ssh-rsa AAADB3NzaC1yc2EBBACCAQABAAABAQD5",
         "create_time": "1730847667"

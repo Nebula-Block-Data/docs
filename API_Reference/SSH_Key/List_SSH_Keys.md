@@ -51,13 +51,13 @@ curl -X GET '{API_URL}/ssh-keys' \
         "total_ssh_keys": 1,
         "ssh_keys": [
             {
-                "id": 75,
+                "id": "7902904e-48b3-4bc6-8b63-bfbb19ff4ff8",
                 "key_name": "My Personal SSH Key 1",
                 "key_data": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQD5",
                 "create_time": "EST 2024-10-23 10:24:21"
             },
             {
-                "id": 76,
+                "id": "9a4d7961-3274-4479-a20b-10f57f9bc75a",
                 "key_name": "My Personal SSH Key 2",
                 "key_data": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQD5",
                 "create_time": "EST 2024-10-24 10:24:21"

@@ -58,7 +58,7 @@ curl -X POST '{API_URL}/api-keys' \
 ```json
 {
     "data": {
-        "id": 5,
+        "id": "9a4d7961-3274-4479-a20b-10f57f9bc75a",
         "key": "ak_WT2l5Rw8Rv8Mp7Q7fLh7dFgEDl_EMAntCsqlxhEsu-0",
         "name": "test-api-key",
         "description": "This is a test API key"

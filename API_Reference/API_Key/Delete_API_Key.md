@@ -9,9 +9,9 @@ To retrieve your API key IDs, see the [List API Keys API](List_API_Keys.md).
 
 ## Path Parameters
 
-| Parameters | Requirements | Type  | Description                                        |
-|------------|--------------|-------|----------------------------------------------------|
-| id         | Required     | `int` | The unique identifier of the API key to be deleted |
+| Parameters | Requirements | Type     | Description                                        |
+|------------|--------------|----------|----------------------------------------------------|
+| id         | Required     | `string` | The unique identifier of the API key to be deleted |
 
 ## Response Attributes
 
@@ -32,7 +32,7 @@ A description of the status of the request.
 #### Request
 
 ```bash
-curl -X DELETE '{API_URL}/api-keys/5' \
+curl -X DELETE '{API_URL}/api-keys/9a4d7961-3274-4479-a20b-10f57f9bc75a' \
 -H 'Authorization: Bearer {TOKEN/KEY}'
 ```
 

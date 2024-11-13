@@ -41,13 +41,13 @@ curl -X GET '{API_URL}/api-keys' \
 {
     "data": [
         {
-            "id": 5,
+            "id": "9a4d7961-3274-4479-a20b-10f57f9bc75a",
             "name": "api-test-key",
             "description": "This is the test API key",
             "partial_key_data": "ak_..."
         },
         {
-            "id": 6,
+            "id": "7902904e-48b3-4bc6-8b63-bfbb19ff4ff8",
             "name": "api-test-key2",
             "description": "This is the test API key #2",
             "partial_key_data": "ak_..."

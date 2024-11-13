@@ -9,9 +9,9 @@ and the new name in the body of the request. To retrieve your SSH key IDs, see t
 
 ## Path Parameters
 
-| Parameters | Requirements | Type  | Description                                        |
-|------------|--------------|-------|----------------------------------------------------|
-| id         | Required     | `int` | The unique identifier of the SSH key to be renamed |
+| Parameters | Requirements | Type     | Description                                        |
+|------------|--------------|----------|----------------------------------------------------|
+| id         | Required     | `string` | The unique identifier of the SSH key to be renamed |
 
 ## Body Parameters
 
@@ -44,7 +44,7 @@ A description of the status of the request.
 #### Request
 
 ```bash
-curl -X PUT '{API_URL}/ssh-keys/76' \
+curl -X PUT '{API_URL}/ssh-keys/9a4d7961-3274-4479-a20b-10f57f9bc75a' \
 -H 'Authorization: Bearer {TOKEN/KEY}' \
 -d '{
     "key_name": "Test user was here",
@@ -56,7 +56,7 @@ curl -X PUT '{API_URL}/ssh-keys/76' \
 ```json
 {
     "data": {
-        "id": 76,
+        "id": "9a4d7961-3274-4479-a20b-10f57f9bc75a",
         "key_name": "Test user was here",
         "key_data": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQD5",
         "create_time": "1730847956"
