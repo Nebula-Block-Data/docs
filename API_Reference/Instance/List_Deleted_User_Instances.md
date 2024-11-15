@@ -1,15 +1,15 @@
 ---
 # title: List User Instances
-description: List User Instances.
+description: List Deleted User Instances.
 ---
 
 # List User Instances
 
-Return a list of all active instances.
+Return a list of all deleted instances.
 
 ## HTTP Request
 
-`GET` `{API_URL}/computing/instances`
+`GET` `{API_URL}/computing/deleted-instances`
 
 ## Query string parameters
 
@@ -54,7 +54,7 @@ A description of the status of the request.
 #### Request
 
 ```bash
-curl -X GET '{API_URL}/computing/instances' \
+curl -X GET '{API_URL}/computing/deleted-instances' \
 -H 'Authorization: Bearer {ACCESS_TOKEN}' \
 -H 'Content-Type: application/json' \
 ```
@@ -78,11 +78,11 @@ curl -X GET '{API_URL}/computing/instances' \
             "public_ipv4": "38.80.81.128",
             "price_per_hour": 0.679,
             "os": "Ubuntu Server 20.04 LTS (Focal Fossa)",
-            "status": "Running"
+            "status": "Deleted"
         }
     ],
     "total_instance": 1,
-    "message": "All instances retrieved successfully",
+    "message": "All deleted instances retrieved successfully",
     "status": "success"
 }
 
