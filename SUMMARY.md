@@ -4,7 +4,6 @@
 * Get Started
   * [Overview](Get_Started/Overview.md)
   * [Manage Accounts](Get_Started/Manage_Accounts.md)
-  * [Authentication](Get_Started/Authentication.md)
   * [Billing Information](Get_Started/Billing_Information.md)
   * [Deploy Products](Get_Started/Deploy_Products.md)
 * Instances
@@ -15,6 +14,7 @@
   * [Overview](Instances/Overview.md)
 * API Reference
   * [Overview](API_Reference/Overview.md)
+  * [Authentication](API_Reference/Authentication.md)
   * Instances
     * [List Images](API_Reference/Instances/List_images.md)
     * [List Products](API_Reference/Instances/List_Products.md)
