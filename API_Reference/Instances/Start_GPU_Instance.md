@@ -1,6 +1,6 @@
 ---
-# title: Create GPU Instance
-description: Start Instance.
+# title: Create GPU Instances
+description: Start Instances.
 ---
 
 # User Instance Details
@@ -42,7 +42,7 @@ curl -X GET '{API_URL}/computing/instance/{id}/start' \
 
 ```json
 {
-    "message": "Instance started successfully",
+    "message": "Instances started successfully",
     "status": "success"
 }
 ```
