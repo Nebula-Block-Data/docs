@@ -1,6 +1,6 @@
 ---
-# title: Create GPU Instance
-description: User Instance Details.
+# title: Create GPU Instances
+description: User Instances Details.
 ---
 
 # User Instance Details

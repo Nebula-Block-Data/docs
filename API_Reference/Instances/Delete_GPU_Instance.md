@@ -1,6 +1,6 @@
 ---
-# title: Delete GPU Instance
-description: Delete GPU Instance.
+# title: Delete GPU Instances
+description: Delete GPU Instances.
 ---
 
 # Delete GPU Instance
@@ -41,7 +41,7 @@ curl -X DELETE '{API_URL}/computing/instance/{id}' \
 
 ```json
 {
-    "message": "Instance deleted successfully",
+    "message": "Instances deleted successfully",
     "status": "success"
 }
 
