@@ -6,12 +6,15 @@
   * [Manage Accounts](Get_Started/Manage_Accounts.md)
   * [Billing Information](Get_Started/Billing_Information.md)
   * [Deploy Products](Get_Started/Deploy_Products.md)
-* Instances
-  * [Overview](Instances/Overview.md)
-* Serverless
-  * [Overview](Instances/Overview.md)
-* SSH Keys
-  * [Overview](Instances/Overview.md)
+* Serverless Endpoints
+  * [Overview](Serverless_Endpoints/Overview.md)
+  * [Quickstart](Serverless_Endpoints/Quickstart.md)
+  * [API Integration](Serverless_Endpoints/API_Integration.md)
+* Dedicated Endpoints
+  * [Overview](Dedicated_Endpoints/Overview.md)
+  * [Quickstart](Dedicated_Endpoints/Quickstart.md)
+* GPU Instance
+  * [Overview](GPU_Instance/Overview.md)
 * API Reference
   * [Overview](API_Reference/Overview.md)
   * [Authentication](API_Reference/Authentication.md)
