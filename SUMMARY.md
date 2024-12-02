@@ -15,6 +15,7 @@
   * [Quickstart](Dedicated_Endpoints/Quickstart.md)
 * GPU Instance
   * [Overview](GPU_Instance/Overview.md)
+  * [Quickstart](GPU_Instance/Quickstart.md)
 * API Reference
   * [Overview](API_Reference/Overview.md)
   * [Authentication](API_Reference/Authentication.md)
