@@ -2,10 +2,9 @@
 
 ## How it Works
 
-At Nebula Block, you pay first then your credits are depleted by your product usage (e.g. hourly usage from
+At Nebula Block, you pay first then your credits are deducted by your product usage (e.g. hourly usage from
 your GPU instances). To get $10 in free credits, you need to [register your first payment card](#adding-a-payment-card)
-on the platform. [Invoices](#invoices) are generated automatically for each transaction and you are charged monthly offline
-using your default payment method. Products can not be used without a payment card set up in the customer portal.
+on the platform. [Invoices](#invoices) are generated automatically for each credit purchase.
 
 All information regarding billing is handled in the [Billing](https://nebulablock.com/billing) tab
 
