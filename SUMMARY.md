@@ -13,9 +13,13 @@
 * Dedicated Endpoints
   * [Overview](Dedicated_Endpoints/Overview.md)
   * [Quickstart](Dedicated_Endpoints/Quickstart.md)
-* GPU Instance
-  * [Overview](GPU_Instance/Overview.md)
-  * [Quickstart](GPU_Instance/Quickstart.md)
+* GPU Instances
+  * [Overview](GPU_Instances/Overview.md)
+  * [Quickstart](GPU_Instances/Quickstart.md)
+* SSH Keys
+  * [Overview](SSH_Keys/Overview.md)
+  * [Quickstart](SSH_Keys/Quickstart.md)
+  * [API Integration](SSH_Keys/API_Integration.md)
 * API Reference
   * [Overview](API_Reference/Overview.md)
   * [Authentication](API_Reference/Authentication.md)

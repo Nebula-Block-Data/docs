@@ -1,11 +1,12 @@
-
 # Overview
+
 Welcome to Nebula Block's GPU Instances, the ideal solution for high-performance computing tasks 
 such as AI model training, data analysis, and complex simulations. With Nebula Block, you can rent 
 GPU-powered virtual machines, containers and bare metal servers tailored to your needs, featuring 
 NVIDIA H100, A100, L40s, and RTX series GPUs.
 
 ## Key Features
+
 - **High-Performance GPUs**
   - Access the latest NVIDIA GPUs, including H200, H100 L40S and B200(coming soon!).
   - Ideal for AI model training, real-time inference, and complex simulations.
@@ -20,4 +21,4 @@ NVIDIA H100, A100, L40s, and RTX series GPUs.
 
 ## Pricing and Billing
 - **Pay-As-You-Go:** Billing is based on the selected hardware and duration of use.
-- Check the [pricing page](https://nebula-block.com/pricing) for details.
+- Check the [pricing page](https://nebulablock.com/pricing) for details.

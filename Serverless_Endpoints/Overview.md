@@ -15,9 +15,9 @@ samples in curl, Python, or JavaScript.
 - **Customizable Configurations:** Tailor endpoints to meet your workload requirements.
 
 ## Prerequisites
-- **Nebula Block Account:** Ensure you have an account on the [Nebula Block](https://nebula-block.com).
+- **Nebula Block Account:** Ensure you have an account on the [Nebula Block](https://nebulablock.com).
 - **Credit Balance:** Ensure you have at least $0.01 credit balance in your account.
 
 ## Pricing and Billing
 - **Pay-As-You-Go:** Charges are based on token usage.
-- Check the [pricing page](https://nebula-block.com/pricing) for details.
+- Check the [pricing page](https://nebulablock.com/pricing) for details.
