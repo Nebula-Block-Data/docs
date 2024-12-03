@@ -11,6 +11,13 @@ Return a list of all active instances.
 
 `GET` `{API_URL}/computing/instances`
 
+## Query string parameters
+
+| Parameters     | Requirements      | Type       | Description      |
+|---------------|--------------------|----------------|----------------|
+|`limit`| Optional | `int` | The number of items to return |
+|`offset`|  Optional | `int` | The number of items to skip before starting to collect the result set|
+
 ## Response Attributes
 
 #### data `array`

@@ -1,15 +1,15 @@
 ---
-# title: Create GPU Instance
-description: Stop Instance.
+# title: Create GPU Instances
+description: Reboot Instances.
 ---
 
 # User Instance Details
 
-Shut down an instance. Provide the instance ID in the path to initiate the shutdown process for that instance.
+Initiate a reboot of an instance. Provide the instance ID in the path to reboot the specified instance.
 
 ## HTTP Request
 
-`GET` `{API_URL}/computing/instance/{id}/stop`
+`GET` `{API_URL}/computing/instance/{id}/reboot`
 
 ## Path parameters
 
@@ -32,7 +32,7 @@ Indicates the result of the request. `success` signifies success, while `failed`
 #### Request
 
 ```bash
-curl -X GET '{API_URL}/computing/instance/{id}/stop' \
+curl -X GET '{API_URL}/computing/instance/{id}/reboot' \
 -H 'Authorization: Bearer {ACCESS_TOKEN}' \
 -H 'Content-Type: application/json' \
 
@@ -42,7 +42,7 @@ curl -X GET '{API_URL}/computing/instance/{id}/stop' \
 
 ```json
 {
-    "message": "Instance stopped successfully",
+    "message": "Instances rebooted successfully",
     "status": "success"
 }
 ```

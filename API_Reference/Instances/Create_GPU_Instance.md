@@ -1,6 +1,6 @@
 ---
-# title: Create GPU Instance
-description: Create GPU Instance.
+# title: Create GPU Instances
+description: Create GPU Instances.
 ---
 
 # Create GPU Instance
@@ -52,7 +52,7 @@ curl -X POST '{API_URL}/computing/instance' \
 
 ```json
 {
-    "message": "Instance created successfully",
+    "message": "Instances created successfully",
     "status": "success"
 }
 

@@ -1,7 +1,7 @@
 # Create API Key
 
 Create a new API key for use in authenticating API requests. To learn how to authenticate requests with API keys,
-see the [Authentication section](../../Getting_Started/Authentication.md).
+see the [Authentication section](../Authentication.md).
 
 ## HTTP Request
 
