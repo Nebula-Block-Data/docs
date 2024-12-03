@@ -15,8 +15,6 @@ Sign up [here](https://nebulablock.com/login) to create an account. One register
 Once an account has been created, you will need to add a payment card in the **Billing** section of the customer portal to get started with using
 our products and also to get $10 in free credits!
 
-Invoices will be billed out every month for your default payment card and can be downloaded as well.
-
 ## Deploy Products
 
 Once a payment card is added, you can use our products. This includes [Serverless Endpoints](../Serverless_Endpoints/Overview.md),
