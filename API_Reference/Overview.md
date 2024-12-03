@@ -4,10 +4,10 @@ For the easiest experience, you can use the [Nebula Block platform](https://nebu
 
 
 ## Prerequisites
-- **Nebula Block Account**: Sign up on [Nebula Block](https://nebula-block.com) and log in to your account.
+- **Nebula Block Account**: Sign up on [Nebula Block](https://nebulablock.com) and log in to your account.
 
 ## API Overview
 
-- **BASE URL**: `https://api.nebula-block.com`
+- **BASE URL**: `https://api.nebulablock.com`
 - **BASE PATH**: `/api/v1`
-- **API_URL**: `https://api.nebula-block.com/api/v1`
+- **API_URL**: `https://api.nebulablock.com/api/v1`
