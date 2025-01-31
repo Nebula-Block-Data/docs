@@ -3,13 +3,13 @@
 This page outlines the different tiers available in the system, their requirements, and the corresponding benefits.
 
 ### **Tier Levels and Benefits**
-| Tier Level          | Requirement            | GPU Access | Request Rate | Token Rate  |
-|---------------------|------------------------|------------|--------------|-------------|
-| **Engineer Tier 1** | Sign Up                | No         | 60 RPM       | 60,000 TPM  |
-| **Engineer Tier 2** | Add Credit Card        | No         | 300 RPM      | 150,000 TPM |
-| **Engineer Tier 3** | Deposit $20            | Yes        | 600 RPM      | 200,000 TPM |
-| **Expert Tier 1**   | Spend $30              | Yes        | 1,500 RPM    | 500,000 TPM |
-| **Expert Tier 2**   | Spend $50              | Yes        | 3,000 RPM    | 800,000 TPM |
+| Tier Level          | Requirement     | GPU Access | Request Rate | Token Rate  |
+|---------------------|-----------------|------------|--------------|-------------|
+| **Engineer Tier 1** | Sign Up         | No         | 60 RPM       | 60,000 TPM  |
+| **Engineer Tier 2** | Add Credit Card | No         | 300 RPM      | 150,000 TPM |
+| **Engineer Tier 3** | Deposit $10     | Yes        | 600 RPM      | 200,000 TPM |
+| **Expert Tier 1**   | Spend $30       | Yes        | 1,500 RPM    | 500,000 TPM |
+| **Expert Tier 2**   | Spend $50       | Yes        | 3,000 RPM    | 800,000 TPM |
 
 
 ### **Tier Descriptions**
@@ -27,7 +27,7 @@ This page outlines the different tiers available in the system, their requiremen
    - No GPU access.
 
 3. **Engineer Tier 3**
-   - Requires a **$20 deposit**.
+   - Requires a **$10 deposit**.
    - Grants GPU access.
    - Increases request rate to **600 RPM**.
    - Token Rate: **200,000 TPM**.
