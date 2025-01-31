@@ -22,6 +22,8 @@
   * [API Integration](SSH_Keys/API_Integration.md)
 * API Key
   * [Overview](API_Key/Overview.md)
+* Tier
+  * [Overview](Tier/Overview.md)
 * Referral
   * [Overview](Referral/Overview.md)
 * API Reference

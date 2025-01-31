@@ -13,9 +13,9 @@ See the [Manage Accounts](Manage_Accounts.md) section for more details.
 
 ## Add a Payment Card
 
-Once an account has been created, you need to add a payment card to upgrade to **Engineer Tier 2**
+Once an account has been created, you need to add a payment card to upgrade to **Engineer Tier 2**. 
 
-See the [Billing Information](Billing_Information.md) section for more details.
+See the [Tier](../Tier/Overview.md) section and [Billing Information](Billing_Information.md) section for more details.
 
 ## Use our Products
 
@@ -23,4 +23,4 @@ Once you sign up, you can start deploying CPU or RPC instances directly, as well
 A deposit of at least $20 is required to unlock GPU instances.
 
 
-See the [Deploy Products](Deploy_Products.md) section for more details
+See the [Tier](../Tier/Overview.md) section and [Deploy Products](Deploy_Products.md) section for more details
