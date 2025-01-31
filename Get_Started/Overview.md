@@ -13,15 +13,14 @@ See the [Manage Accounts](Manage_Accounts.md) section for more details.
 
 ## Add a Payment Card
 
-Once an account has been created, you need to add a payment card to get started with using
-our products and receive $10 in free credits!
+Once an account has been created, you need to add a payment card to upgrade to **Engineer Tier 2**
 
 See the [Billing Information](Billing_Information.md) section for more details.
 
-## Deploy Products
+## Use our Products
 
-Once a payment card is added, you can use our products. This includes [Serverless Endpoints](../Serverless_Endpoints/Overview.md),
-[Dedicated Endpoints](../Dedicated_Endpoints/Overview.md), and [GPU Instances](../Instances/Overview.md).
-You can also create SSH keys for your GPU instances.
+Once you sign up, you can start deploying CPU or RPC instances directly, as well as using serverless endpoints. 
+A deposit of at least $20 is required to unlock GPU instances.
+
 
 See the [Deploy Products](Deploy_Products.md) section for more details
