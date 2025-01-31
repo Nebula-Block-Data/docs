@@ -6,19 +6,20 @@ At Nebula Block, you pay first by purchasing credits, which are then deducted by
 your GPU instances). To upgrade to **Engineer Tier 2**, you need to [register your first payment card](#adding-a-payment-card)
 on the platform. [Invoices](#invoices) are generated automatically for each credit purchase.
 
-All information regarding billing is handled in the [Billing page](https://nebulablock.com/billing) of the customer portal.
+All information regarding billing is handled in the [Billing](https://nebulablock.com/billing) tab
 
 ## Adding a Payment Card
 
-To add a payment card, navigate to the "Add a New Card" button on the billing page and enter your card details.
-Nebula Block accepts all types of payment cards. If the card meets the following requirements, it will be added to your account successfully:
+To add a payment card, simply navigate to the "Add a New Card" button on the billing page and enter your card details.
+Nebula Block accepts all types of payment cards, but a small charge of **$0.98 USD** will be applied to your card to validate
+that it has funds. If the card meets the following requirements, it is added to your account successfully:
 - Has valid card credentials (CVV, address, card number, etc.,)
 - Doesn't exist on another account
-- Has enough funds (a $0.98 USD charge will be placed on your card and credited to your account)
+- Has enough funds (the $0.98 USD charge will be credited to your account)
 
 ## Managing Payment Methods
 
-Managing payment methods is simple via our customer portal. To change your default payment method, configure this 
+Managing payment methods is simple via our customer portal. To change your default payment method, simply configure this 
 in the **Payment Method** section of the billing page.
 
 ## Purchasing Credits
@@ -30,8 +31,9 @@ or with a new card.
 ## Invoices
 
 All transactions, including receiving credits, making purchases, and receiving bonus/promo credits will be documented and 
-listed in the **Transactions** section of the billing page. There are downloadable invoices for each transaction.
+listed in the **Transaction** section of the billing page. There are downloadable invoices for each transaction.
 
 ## Usage
 
 To see the usage rate of your products, see the **Usages** section of the billing page.
+

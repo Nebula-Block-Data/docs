@@ -1,15 +1,14 @@
 # Overview
 
 In this getting started guide, learn how to create an account, manage your billing details,
-and deploy Nebula Block products.
+and deploy the various Nebula Block products.
 
 ## Create an Account
 
-To access the [Nebula Block customer portal](https://nebulablock.com/home), which is the home to using our products, you first need to create an account.
+To access the Nebula Block customer portal, you first need to create an account to add your payment
+information and access our products.
 
-Sign up [here](https://nebulablock.com/login) to create an account. Once registered, you can log in and use our services.
-
-See the [Manage Accounts](Manage_Accounts.md) section for more details.
+Sign up [here](https://nebulablock.com/login) to create an account. One registered, you can log in and use our services.
 
 ## Add a Payment Card
 
