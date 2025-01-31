@@ -13,9 +13,19 @@
 * Dedicated Endpoints
   * [Overview](Dedicated_Endpoints/Overview.md)
   * [Quickstart](Dedicated_Endpoints/Quickstart.md)
-* GPU Instance
-  * [Overview](GPU_Instance/Overview.md)
-  * [Quickstart](GPU_Instance/Quickstart.md)
+* GPU Instances
+  * [Overview](GPU_Instances/Overview.md)
+  * [Quickstart](GPU_Instances/Quickstart.md)
+* SSH Keys
+  * [Overview](SSH_Keys/Overview.md)
+  * [Quickstart](SSH_Keys/Quickstart.md)
+  * [API Integration](SSH_Keys/API_Integration.md)
+* API Key
+  * [Overview](API_Key/Overview.md)
+* Tier
+  * [Overview](Tier/Overview.md)
+* Referral
+  * [Overview](Referral/Overview.md)
 * API Reference
   * [Overview](API_Reference/Overview.md)
   * [Authentication](API_Reference/Authentication.md)
@@ -30,7 +40,6 @@
     * [Start GPU Instance](API_Reference/Instances/Start_GPU_Instance.md)
     * [Stop GPU Instance](API_Reference/Instances/Stop_GPU_Instance.md)
     * [Reboot GPU Instance](API_Reference/Instances/Reboot_GPU_Instance.md)
-  * Serverless
   * SSH Keys
     * [Create SSH Key](API_Reference/SSH_Keys/Create_SSH_Key.md)
     * [List SSH Keys](API_Reference/SSH_Keys/List_SSH_Keys.md)

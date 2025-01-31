@@ -1,0 +1,24 @@
+# Overview
+
+When users sign up for Nebula Block, they are automatically issued a unique API key. This key allows users to 
+authenticate and interact with the platform's API endpoints, including those related to Serverless AI. 
+Each user is permitted to have only one API key at a time.
+
+## Key Features
+
+- **One API Key per User**: Each user can only have one API key, which is assigned upon registration.
+- **Regeneration**: If needed, users can regenerate their API key at any time.
+- **Authentication**: The API key is used to authenticate API requests. It is required for accessing all endpoints, including serverless models.
+
+## Managing Your API Key
+1. **Obtaining the API Key**: Upon sign-up, an API key will be provided to you.
+2. **Regenerating the API Key**:
+   - If you need to regenerate your API key, you can do so via your user account dashboard.
+   - Once regenerated, your old key will become invalid, and only the new key will work for API authentication.
+3. **Using the API Key:**
+   - Include your API key in the request header for authentication:
+   ```Authorization: Bearer YOUR_API_KEY```
+   - This is required for all API requests, including interacting with serverless endpoints and managing resources.
+4. **Security Considerations**:
+   - Keep your API key secure. Do not expose it in publicly accessible areas such as client-side code or version control.
+   - If you suspect your API key has been compromised, regenerate it immediately.
