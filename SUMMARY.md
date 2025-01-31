@@ -40,7 +40,6 @@
     * [Start GPU Instance](API_Reference/Instances/Start_GPU_Instance.md)
     * [Stop GPU Instance](API_Reference/Instances/Stop_GPU_Instance.md)
     * [Reboot GPU Instance](API_Reference/Instances/Reboot_GPU_Instance.md)
-  * Serverless
   * SSH Keys
     * [Create SSH Key](API_Reference/SSH_Keys/Create_SSH_Key.md)
     * [List SSH Keys](API_Reference/SSH_Keys/List_SSH_Keys.md)
