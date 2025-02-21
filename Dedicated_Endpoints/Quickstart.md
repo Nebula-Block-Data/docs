@@ -1,6 +1,10 @@
 
 # Quickstart
 
+To get started, please contact us [here](https://www.nebulablock.com/contact). Tell us as much as you can about your needs
+and we'll get you setup with the right infrastructure. 
+
+<!-- 
 ## Log In or Sign Up
 - If you have an account, log in with Google or email/password.
 - If you’re new to Nebula Block, create an account for free.
@@ -24,3 +28,4 @@
 - Start Deployment
   - Click Deploy, and your endpoint will be created. Deployment may take a few minutes 
 depending on the model size and hardware configuration.
+-->

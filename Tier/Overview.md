@@ -49,4 +49,4 @@ This page outlines the different tiers available in the system, their requiremen
 - The "Upgrade" or "Deposit" button in the interface allows users to progress to higher tiers.
 - Higher tiers provide increased computational power and request capabilities.
 
-For further assistance, see the [Contact Us](../Contact_Us/README.md) section .
+For further assistance, see the [Contact Us](../Contact_Us/README.md) section.
