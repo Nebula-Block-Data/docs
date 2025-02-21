@@ -10,7 +10,8 @@ Nebula Block's referral program rewards users for inviting others to join our pl
 
 ## Referral Commission Tiers
 
-Referrers earn commissions based on the total spending of their referees. The commission structure is as follows:
+Referrers (user making the referral) earn commissions based on the total spending of their referees (user being referred 
+by the referrer). The commission structure is as follows:
 
 | Tier | Referees' Total Spend | Serverless Endpoint Commission | Compute Commission |
 |------|-----------------------|--------------------------------|--------------------|
@@ -24,7 +25,6 @@ Referrers earn commissions based on the total spending of their referees. The co
 - Users can view their **total number of successful referrals** and **earnings** in the customer portal.
 - Payouts are made on the **first day of each month**.
 - Earnings are **credited directly** to the user's account as platform credits.
-
 
 ## How to Apply a Referral Code
 

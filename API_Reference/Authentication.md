@@ -30,10 +30,9 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJiZWJlZXJta
 
 ## API Keys
 
-Alternative to access tokens, API keys can be used to authenticate requests. The plus side to using API keys is there 
-being no expiration date, so users can use them for a much longer time. To learn how to create and manage API keys, see the
-[API Key Section Documentation](API_Keys/Create_API_Key.md). Once an API key is obtained, the following
-authorization header can be specified in each request:
+API keys can also be used to authenticate requests. The benefit of using an API key is that there is no expiration date, 
+so you can use them for a longer time without authenticating often. To learn how to create and manage API keys, see the
+[API Key Section Documentation](API_Keys/Create_API_Key.md). Once an API key is obtained, the following authorization header can be specified in each request:
 
 ```
 Authorization: Bearer <api_key>

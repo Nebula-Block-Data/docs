@@ -7,13 +7,13 @@ NVIDIA H100, A100, L40s, and RTX series GPUs.
 
 ## Key Features
 - **High-Performance GPUs**
-  - Access the latest NVIDIA GPUs, including H200, H100 L40S and B200(coming soon!).
+  - Access the latest NVIDIA GPUs, including H200, H100, L40S and B200 (coming soon!).
   - Ideal for AI model training, real-time inference, and complex simulations.
 - **Low Latency**
   - Deploy instances in geographically optimized locations for ultra-low latency.
   - Benefit from direct access to high-speed GPU resources with minimal delays.
 - **Secure Access**
-  - Use SSH public keys for secure and seamless server management.
+  - Use SSH Key or Password Authentication for secure and seamless server access.
   - Integrated firewalls and security groups to protect your data and workloads.
 - **High-Speed Networking**
   - Leverage dedicated bandwidth and optimized networking to transfer large datasets efficiently.

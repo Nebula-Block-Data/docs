@@ -6,7 +6,7 @@ specializes in advanced cloud computing and blockchain infrastructure solutions.
 stringent demands of modern academic and commercial institutions, Nebula Block provides secure, scalable
 and cost-effective computing environments.
 
-Learn how to create and manage powerful cloud computing resources via this documentation. Learn how to create
+Learn how to create and manage powerful cloud computing resources via this documentation. You'll create
 and manage an account, add credit card and billing details, and deploy products.
 
 ## What are Serverless Endpoints?
@@ -23,9 +23,7 @@ your own LLM models onto hardware of your choice.
 
 ## What are GPU Instances?
 
-[GPU instances] are our final and base Nebula Block product, which enables you to spin up and deploy GPU instances for your
-AI and compute-intensive projects in a flash! By a myriad of different configurations and hardware, you can integrate
-these virtual machines in your project at a good market price.
+[GPU instances](GPU_Instances/Overview.md) are cloud computing resources that you can rent out for your AI and compute-intensive projects! Select your desired hardware and its configurations, and gain access to cutting edge cloud computing resources in minutes!
 
 ## Contact Us
 

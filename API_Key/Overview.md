@@ -10,7 +10,7 @@ Each user is permitted to have only one API key at a time.
 - **Regeneration**: If needed, users can regenerate their API key at any time.
 - **Authentication**: The API key is used to authenticate API requests. It is required for accessing all endpoints, including serverless models.
 
-## Managing Your API Key
+## Using and Managing Your API Key
 1. **Obtaining the API Key**: Upon sign-up, an API key will be provided to you.
 2. **Regenerating the API Key**:
    - If you need to regenerate your API key, you can do so via your user account dashboard.
@@ -20,5 +20,5 @@ Each user is permitted to have only one API key at a time.
    ```Authorization: Bearer YOUR_API_KEY```
    - This is required for all API requests, including interacting with serverless endpoints and managing resources.
 4. **Security Considerations**:
-   - Keep your API key secure. Do not expose it in publicly accessible areas such as client-side code or version control.
+   - Keep your API key secure. Do not expose it publicly (eg. in client-side code or version control).
    - If you suspect your API key has been compromised, regenerate it immediately.

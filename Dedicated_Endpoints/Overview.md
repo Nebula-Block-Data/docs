@@ -1,8 +1,10 @@
 
 # Overview
-Welcome to Nebula Block's Dedicated Endpoints for LLMs, the ultimate solution for users requiring custom 
+Welcome to Nebula Block's Dedicated Endpoints for AI Inference, the ultimate solution for users requiring custom 
 infrastructure and model configurations. With dedicated endpoints, you can deploy pre-existing models like 
 Meta LLaMA and Qwen or upload your own custom models on hardware you choose.
+
+To use this product, please get in touch with us [here](https://www.nebulablock.com/contact). 
 
 ## Key Features
 - **Customizable Hardware:** Select the GPU and memory configuration to meet your needs.

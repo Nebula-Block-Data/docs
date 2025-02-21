@@ -9,7 +9,9 @@
 * Serverless Endpoints
   * [Overview](Serverless_Endpoints/Overview.md)
   * [Quickstart](Serverless_Endpoints/Quickstart.md)
-  * [API Integration](Serverless_Endpoints/API_Integration.md)
+  * [Text Generation](Serverless_Endpoints/Text_Generation.md)
+  * [Image Generation](Serverless_Endpoints/Image_Generation.md)
+  * [Embedding Generation](Serverless_Endpoints/Embedding_Generation.md)
 * Dedicated Endpoints
   * [Overview](Dedicated_Endpoints/Overview.md)
   * [Quickstart](Dedicated_Endpoints/Quickstart.md)
@@ -40,6 +42,11 @@
     * [Start GPU Instance](API_Reference/Instances/Start_GPU_Instance.md)
     * [Stop GPU Instance](API_Reference/Instances/Stop_GPU_Instance.md)
     * [Reboot GPU Instance](API_Reference/Instances/Reboot_GPU_Instance.md)
+  * Serverless Endpoints
+    * [List Serverless Models](API_Reference/Serverless_Endpoints/List_Serverless_Models.md)
+    * [Generate Text](API_Reference/Serverless_Endpoints/Generate_Text)
+    * [Generate Images](API_Reference/Serverless_Endpoints/Generate_Images.md)
+    * [Generate Embeddings](API_Reference/Serverless_Endpoints/Generate_Embeddings.md)
   * SSH Keys
     * [Create SSH Key](API_Reference/SSH_Keys/Create_SSH_Key.md)
     * [List SSH Keys](API_Reference/SSH_Keys/List_SSH_Keys.md)

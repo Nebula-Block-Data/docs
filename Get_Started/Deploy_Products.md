@@ -9,27 +9,28 @@ There are 3 main products at Nebula Block:
 
 ## Serverless Endpoints
 
-These are endpoints that contain general LLM models which are exposed to you and able to use.
+These are endpoints that host various LLM models which are exposed to you to use. These LLMs are open to use for all our customers. 
 
-To see a tutorial, see the [Quickstart guide](../Serverless_Endpoints/Quickstart.md)
+To see a tutorial, see the [Quickstart guide](../Serverless_Endpoints/Quickstart.md).
 
 ## Dedicated Endpoints
 
-Similar to serverless endpoints, dedicated endpoints are endpoints containing LLM models that are exposed to you for use in your projects.
-However, these LLM models are customizable and the hardware used is up to you as well.
+Dedicated endpoints are like serverless endpoints, but far more customizable. That is, you can select the hardware and  
+the desired model (one of ours or even your own!) and we'll deploy it on its own server. Unlike the serverless endpoints above, 
+the server on your dedicated endpoint will serve your workloads exclusively. 
 
-To see a tutorial, see the [Quickstart guide](../Dedicated_Endpoints/Quickstart.md)
+To see a tutorial, see the [Quickstart guide](../Dedicated_Endpoints/Quickstart.md).
 
 ## GPU Instances
 
-GPU instances are the core product of Nebula Block, and involve GPU virtual machines in a variety of different
+GPU instances are the core product of Nebula Block. They consist of on-demand GPU virtual machines, customizable with a variety of
 configurations for you to run in your projects.
 
-To see a tutorial, see the [Quickstart guide](../Instances/Quickstart.md)
+To see a tutorial, see the [Quickstart guide](../Instances/Quickstart.md).
 
 
 ## SSH Keys
 
-Although not a product at Nebula Block, SSH keys are used for GPU instances.
+SSH keys are used for the security and access of GPU instances (note this is not a NebulaBlock product).
 
-To see a tutorial, see the [Quickstart guide](../SSH_Keys/Quickstart.md)
+To see a tutorial, see the [Quickstart guide](../SSH_Keys/Quickstart.md).
