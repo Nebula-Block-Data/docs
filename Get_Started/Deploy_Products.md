@@ -4,32 +4,25 @@
 
 There are 3 main products at Nebula Block:
 - [Serverless Endpoints](../Serverless_Endpoints/Overview.md)
-- [Dedicated Endpoints](../Dedicated_Endpoints)
-- [GPU Instances](../Instances/Overview.md)
+- [Dedicated Endpoints](../Dedicated_Endpoints/Overview.md).
+- [GPU Instances](../GPU_Instances/Overview.md)
 
 ## Serverless Endpoints
 
-These are endpoints that contain general LLM models which are exposed to you and able to use.
+These are endpoints that host various generative AI models immediately available to use. 
 
-To see a tutorial, see the [Quickstart guide](../Serverless_Endpoints/Quickstart.md)
+For more details, see [here](../Serverless_Endpoints/Overview.md).
 
 ## Dedicated Endpoints
 
-Similar to serverless endpoints, dedicated endpoints are endpoints containing LLM models that are exposed to you for use in your projects.
-However, these LLM models are customizable and the hardware used is up to you as well.
+Dedicated endpoints are like serverless endpoints, but far more customizable. That is, you can select the hardware and the desired model (one of ours or even your own!) and we'll deploy it on its own server. Unlike the serverless endpoints above, 
+the server on your dedicated endpoint will serve your workloads exclusively. 
 
-To see a tutorial, see the [Quickstart guide](../Dedicated_Endpoints/Quickstart.md)
+For more details, see [here](../Dedicated_Endpoints/Overview.md).
 
 ## GPU Instances
 
-GPU instances are the core product of Nebula Block, and involve GPU virtual machines in a variety of different
-configurations for you to run in your projects.
+GPU instances consist of on-demand GPU virtual machines, customizable with a variety of configurations to suit you and your needs for any project.
 
-To see a tutorial, see the [Quickstart guide](../Instances/Quickstart.md)
+For more details, see [here](../GPU_Instances/Overview.md).
 
-
-## SSH Keys
-
-Although not a product at Nebula Block, SSH keys are used for GPU instances.
-
-To see a tutorial, see the [Quickstart guide](../SSH_Keys/Quickstart.md)

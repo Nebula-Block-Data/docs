@@ -6,19 +6,21 @@ Each user is permitted to have only one API key at a time.
 
 ## Key Features
 
-- **One API Key per User**: Each user can only have one API key, which is assigned upon registration.
-- **Regeneration**: If needed, users can regenerate their API key at any time.
+- **One API Key Per User**: Each user can only have one API key, which is assigned upon registration.
+- **API Key Renewal**: Users can renew their API key whenever necessary.
 - **Authentication**: The API key is used to authenticate API requests. It is required for accessing all endpoints, including serverless models.
 
-## Managing Your API Key
+## Using and Managing Your API Key
 1. **Obtaining the API Key**: Upon sign-up, an API key will be provided to you.
-2. **Regenerating the API Key**:
-   - If you need to regenerate your API key, you can do so via your user account dashboard.
-   - Once regenerated, your old key will become invalid, and only the new key will work for API authentication.
+2. **Renewing the API Key**:
+   - If you need to renew your API key, you can do so via your user account dashboard.
+   - Once renewed, your old key will become invalid, and the valid key for API authentication will be the new one. 
 3. **Using the API Key:**
    - Include your API key in the request header for authentication:
-   ```Authorization: Bearer YOUR_API_KEY```
-   - This is required for all API requests, including interacting with serverless endpoints and managing resources.
+
+```Authorization: Bearer YOUR_API_KEY```
+
+  - This is required for all API requests, including interacting with serverless endpoints and managing resources.
 4. **Security Considerations**:
-   - Keep your API key secure. Do not expose it in publicly accessible areas such as client-side code or version control.
-   - If you suspect your API key has been compromised, regenerate it immediately.
+   - Keep your API key secure. Do not expose it publicly (eg. in client-side code or version control).
+   - If you suspect your API key has been compromised, renew it immediately to avoid unexpected charges. 

@@ -1,10 +1,8 @@
 # Overview
-Welcome to the Nebula Block API! This guide will help you get set up and launch your first instance in a few simple steps. 
-For the easiest experience, you can use the [Nebula Block platform](https://nebulablock.com/), which streamlines instance deployment.
-
+This guide will help you get set up with the Nebula Block API. 
 
 ## Prerequisites
-- **Nebula Block Account**: Sign up on [Nebula Block](https://nebula-block.com) and log in to your account.
+- **Nebula Block Account**: Sign up on [Nebula Block](https://www.nebulablock.com) and log in to your account.
 
 ## API Overview
 
