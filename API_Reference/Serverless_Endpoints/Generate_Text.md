@@ -3,7 +3,7 @@
 description: Generate Serverless Text.
 ---
 
-# Generte Serverless Text
+# Generate Serverless Text
 
 Return the generated text based on the given inputs. 
 
