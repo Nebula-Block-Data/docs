@@ -12,14 +12,13 @@
   - Choose from the available GPU options:
     - NVIDIA H100: Best for large-scale AI model training.
     - NVIDIA A100: Ideal for AI/ML workloads and data analytics.
-    - NVIDIA L40s: Balanced performance for AI inference and graphics workloads.
+    - NVIDIA L40s: A more budget-friendly option for complex tasks like AI inference and graphics workloads.
     - RTX A6000: Great for 3D rendering, simulations, and visualization.
-    - RTX 4090: 
+    - RTX 4090: A great cost-effective option for demanding GPU tasks. 
 - Choose an Operating System/Image
 - Select an SSH Public Key (if applicable)
   - Create or select an existing SSH public key for secure access to the instance.
-  - Note that some instances may not support SSH Public Keys yet, in which case a secure username and password will be 
-  - provided to you.
+  - Note that some instances may not support SSH Public Keys yet, in which case a secure username and password will be provided to you.
 - Set a Server Name
   - Assign a meaningful name to your instance for easy identification.
 - Deploy

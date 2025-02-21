@@ -19,14 +19,14 @@ These instance configurations are referred to as products.
 An array containing information about products organized by GPU model and region:
 
 - **id** `string`: The unique identifier for the product.
-- **dc_id** `number`: The unique identifier of data center.
+- **dc_id** `number`: The unique identifier for the vendor providing the image.
 - **product_type** : The region where the GPU product is available.
-- **region** `string`: Name of the region associated with the product location.
+- **region** `string`: Name of the product location (country).
 - **price_per_hour** `decimal`: Price value for the GPU per hour.
 - **cpu** `number`: The number of CPU cores in the product.
 - **ram** `number`: The amount of RAM in gigabytes for the product.
 - **gpu** `string`: The GPU model name for the GPU product.
-- **gpu_type** `string`: The GPU serial name for the GPU product.
+- **gpu_type** `string`: The GPU type. 
 - **gpu_count** `number`: The number of GPUs included in the GPU product.
 - **disk_size** `number`: The root disk size of the GPU flavor in gigabytes.
 - **ephemeral** `number`: The ephemeral disk storage capacity for the product in gigabytes. Ephemeral storage is a temporary drive that is attached to a virtual machine (VM) during its runtime for storage of the active workload.

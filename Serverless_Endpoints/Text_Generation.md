@@ -1,13 +1,13 @@
 
 # Image Generation
 
-Use these models to generate text. Each model will support these parameters: 
+Use these models to generate text. Each model uses these parameters: 
 
-- messages: The current dialogue between the user and the model. 
-- system prompt: Set of instructions, guidelines, and contextual information, which tell the AI how to respond to the queries.
-- output length: The maximum number of tokens that will be generated for each response. 
-- temperature: Temperature controls randomness, higher values increase diversity.
-- top_p: A higher value will result in more diverse outputs, while a lower value will result in more repetitive outputs.
+- Messages: The current dialogue between the user and the model. 
+- System Prompt: Set of instructions, guidelines, and contextual information, which tell the AI how to respond to the queries.
+- Output Length: The maximum number of tokens that will be generated for each response. 
+- Temperature: Temperature controls randomness. Higher values increase diversity.
+- Top P: A higher value will result in more diverse outputs, while a lower value will result in more repetitive outputs.
 
 `messages` is the only mandatory parameter. The rest are given default values.
 
@@ -21,48 +21,18 @@ Listed below are the available models (each supporting the parameters above):
 - Llama3.1-8B
 - Qwen2.5-Coder-32B
 
-### Using the Models
+## Using the Models
 
-##### Through our website UI 
+##### Through Our Website UI 
 
-1. Go to the [Nebula Block](https://nebula-block.com) website.
+1. Go to the [Nebula Block](https://www.nebulablock.com) website.
 2. Log in, and ensure you have enough credits. 
 3. Click on the "Serverless Endpoints" tab and select your model.
 4. Select your parameters, enter your text and just press Enter! 
 
 ##### Through API Endpoint
 
-This option is great if you want to use our API endpoint directly in your projects. To specify the desired model, use this mapping for the `model_name`: 
-
-- DeepSeek-R1-Distill-Llama-70B: `deepseek-ai/DeepSeek-R1-Distill-Llama-70B`
-- DeepSeek-R1-Distill-Qwen-32B: `deepseek-ai/DeepSeek-R1-Distill-Qwen-32B`
-- Llama3.3-70B: `meta-llama/Llama-3.3-70B-Instruct`
-- Llama3.1-8B: `meta-llama/Llama-3.1-8B-Instruct`
-- Qwen2.5-Coder-32B: `Qwen/Qwen2.5-Coder-32B-Instruct`
-
-A successful generation consists of a stream of responses: 
-
-```json
-{
-    "id": "chatcmpl-86800105604e81c7918d10b45fd46fa3",
-    "created": 1740006821,
-    "model": "meta-llama/Llama-3.1-8B-Instruct",
-    "object": "chat.completion.chunk",
-    "choices": [
-        {
-            "index": 0,
-            "delta": {
-                "content": "Yes",
-                "role": "assistant"
-            }
-        }
-    ]
-}
-```
-
-where the content of each response will contain the generated token. These tokens put together form the complete response.
-
-Below are some code snippets to get you started!
+This option is to use our API endpoint directly in your projects. Below are some code snippets to get you started!
 
 ## Using cURL
 ```bash
@@ -135,4 +105,36 @@ async function main() {
 main(); 
 ```
 
-For more information on API access, refer to the [API Reference](API_Reference/).
+> **NOTE:**  Don't forget to use **your** API key. See [here](../API_Reference/Authentication.md) and [here](../API_Key/Overview.md) for more details on authentication. 
+
+To specify the desired model, use this mapping for the `model_name`: 
+
+- DeepSeek-R1-Distill-Llama-70B: `deepseek-ai/DeepSeek-R1-Distill-Llama-70B`
+- DeepSeek-R1-Distill-Qwen-32B: `deepseek-ai/DeepSeek-R1-Distill-Qwen-32B`
+- Llama3.3-70B: `meta-llama/Llama-3.3-70B-Instruct`
+- Llama3.1-8B: `meta-llama/Llama-3.1-8B-Instruct`
+- Qwen2.5-Coder-32B: `Qwen/Qwen2.5-Coder-32B-Instruct`
+
+A successful generation response consists of a stream of responses: 
+
+```json
+{
+    "id": "chatcmpl-86800105604e81c7918d10b45fd46fa3",
+    "created": 1740006821,
+    "model": "meta-llama/Llama-3.1-8B-Instruct",
+    "object": "chat.completion.chunk",
+    "choices": [
+        {
+            "index": 0,
+            "delta": {
+                "content": "Yes",
+                "role": "assistant"
+            }
+        }
+    ]
+}
+```
+
+where the content of each response will contain the generated token. These tokens put together form the complete response.
+
+Feel free to explore refer to the [API Reference](../API_Reference/Serverless_Endpoints/Generate_Text.md) for more details.

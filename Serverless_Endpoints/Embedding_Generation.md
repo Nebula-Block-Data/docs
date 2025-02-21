@@ -10,12 +10,54 @@ pieces of data, enabling efficient comparison and retrieval.
 - UAE-Large-V1: `WhereIsAI/UAE-Large-V1`
 - BGE Large EN v1.5: `BAAI/bge-large-en-v1.5`
 
-### Using the Models
+## Using the Models
 
 ##### Through API Endpoint
 
-This option is great if you want to use our API endpoint directly in your projects. To specify the desired model, use 
-this mapping for the `model`: 
+This option is to use our API endpoint directly in your projects. Below are some code snippets to get you started!
+
+## Using cURL
+```bash
+curl -X POST "https://dev-llm-proxy.nebulablock.com/v1/embeddings" \
+    -H "Content-Type: application/json" \
+    -H "Authorization: Bearer $NEBULA_API_KEY" \
+    --data-raw '{
+      "model":"WhereIsAI/UAE-Large-V1",
+      "input":[ 
+            "Bananas are berries, but strawberries are not, according to botanical classifications.",  
+            "The Eiffel Tower in Paris was originally intended to be a temporary structure." 
+        ] 
+    }'
+```
+
+## Using Python
+
+```python
+import requests 
+import os
+
+url = "https://dev-llm-proxy.nebulablock.com/v1/embeddings" 
+
+headers = {  
+    "Content-Type": "application/json",  
+    "Authorization": f"Bearer {os.environ.get('NEBULA_API_KEY')}" 
+} 
+
+data = {
+    "model":"WhereIsAI/UAE-Large-V1",
+    "input":[ 
+        "Bananas are berries, but strawberries are not, according to botanical classifications.", 
+        "The Eiffel Tower in Paris was originally intended to be a temporary structure." 
+    ] 
+}
+
+response = requests.post(url, headers=headers, json=data) 
+print(response.json())
+```
+
+> **NOTE:**  Don't forget to use **your** API key. See [here](../API_Reference/Authentication.md) and [here](../API_Key/Overview.md) for more details on authentication. 
+
+To specify the desired model, use this mapping for the `model`: 
 
 - UAE-Large-V1: `WhereIsAI/UAE-Large-V1`
 - BGE Large EN v1.5: `BAAI/bge-large-en-v1.5`
@@ -61,45 +103,5 @@ A successful response body will return the embeddings in this format:
 }
 ```
 
-Below are some examples to get you started!
 
-## Using cURL
-```bash
-curl -X POST "https://dev-llm-proxy.nebulablock.com/v1/embeddings" \
-    -H "Content-Type: application/json" \
-    -H "Authorization: Bearer $NEBULA_API_KEY" \
-    --data-raw '{
-      "model":"WhereIsAI/UAE-Large-V1",
-      "input":[ 
-            "Bananas are berries, but strawberries are not, according to botanical classifications.",  
-            "The Eiffel Tower in Paris was originally intended to be a temporary structure." 
-        ] 
-    }'
-```
-
-## Using Python
-
-```python
-import requests 
-import os
-
-url = "https://dev-llm-proxy.nebulablock.com/v1/embeddings" 
-
-headers = {  
-    "Content-Type": "application/json",  
-    "Authorization": f"Bearer {os.environ.get('NEBULA_API_KEY')}" 
-} 
-
-data = {
-    "model":"WhereIsAI/UAE-Large-V1",
-    "input":[ 
-        "Bananas are berries, but strawberries are not, according to botanical classifications.", 
-        "The Eiffel Tower in Paris was originally intended to be a temporary structure." 
-    ] 
-}
-
-response = requests.post(url, headers=headers, json=data) 
-print(response.json())
-```
-
-See our [API Reference]() for more details on API use.
+Feel free to explore refer to the [API Reference](../API_Reference/Serverless_Endpoints/Generate_Embeddings.md) for more details.

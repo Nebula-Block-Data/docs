@@ -7,7 +7,7 @@ NVIDIA H100, A100, L40s, and RTX series GPUs.
 
 ## Key Features
 - **High-Performance GPUs**
-  - Access the latest NVIDIA GPUs, including H200, H100, L40S and B200 (coming soon!).
+  - Access the latest NVIDIA GPUs, including H200, H100 and L40S.
   - Ideal for AI model training, real-time inference, and complex simulations.
 - **Low Latency**
   - Deploy instances in geographically optimized locations for ultra-low latency.
@@ -20,4 +20,4 @@ NVIDIA H100, A100, L40s, and RTX series GPUs.
 
 ## Pricing and Billing
 - **Pay-As-You-Go:** Billing is based on the selected hardware and duration of use.
-- Check the [pricing page](https://nebula-block.com/pricing) for details.
+- Check the [pricing page](https://www.nebulablock.com/pricing) for details. 

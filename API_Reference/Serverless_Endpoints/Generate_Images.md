@@ -11,6 +11,8 @@ Return the generated image based on the given inputs.
 
 `POST` `{API_URL}/images/generation`
 
+where `API_URL = https://api.nebulablock.com/api/v1`.
+
 ## Response Attributes
 
 #### data `dict`

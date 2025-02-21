@@ -8,7 +8,6 @@
   * [Deploy Products](Get_Started/Deploy_Products.md)
 * Serverless Endpoints
   * [Overview](Serverless_Endpoints/Overview.md)
-  * [Quickstart](Serverless_Endpoints/Quickstart.md)
   * [Text Generation](Serverless_Endpoints/Text_Generation.md)
   * [Image Generation](Serverless_Endpoints/Image_Generation.md)
   * [Embedding Generation](Serverless_Endpoints/Embedding_Generation.md)
@@ -21,7 +20,6 @@
 * SSH Keys
   * [Overview](SSH_Keys/Overview.md)
   * [Quickstart](SSH_Keys/Quickstart.md)
-  * [API Integration](SSH_Keys/API_Integration.md)
 * API Key
   * [Overview](API_Key/Overview.md)
 * Tier

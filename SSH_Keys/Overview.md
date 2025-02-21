@@ -8,7 +8,7 @@ alternative to traditional passwords. Managing them is super easy at Nebula Bloc
 - **Code Samples:** See our code samples for using SSH keys.
 
 ## Prerequisites
-- **Nebula Block Account:** Ensure you have an account on the [Nebula Block](https://nebula-block.com).
+- **Nebula Block Account:** Ensure you have an account on the [Nebula Block](https://www.nebulablock.com).
 
 ## Pricing and Billing
 - SSH keys management is free of charge, so add as many as you want! 

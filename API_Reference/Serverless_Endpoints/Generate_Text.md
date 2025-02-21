@@ -11,6 +11,8 @@ Return the generated text based on the given inputs.
 
 `POST` `{API_URL}/chat/completions`
 
+where the `API_URL = https://inference.nebulablock.com/v1`.
+
 ## Response Attributes
 
 #### data `dict`

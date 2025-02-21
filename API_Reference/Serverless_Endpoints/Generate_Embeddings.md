@@ -11,6 +11,8 @@ Return the generated embeddings based on the given inputs.
 
 `POST` `{API_URL}/embeddings`
 
+where `API_URL = https://inference.nebulablock.com/v1`.
+
 ## Response Attributes
 
 #### model `model`

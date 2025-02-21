@@ -8,7 +8,8 @@ in the top right corner of your screen and sign up with either email + password 
 ## Activate Account
 
 Once you create an account, you need to activate it before you're able to sign in. An activation email will be sent to your account
-so make sure to activate it. If the email didn't send, you can resend the activation email.
+so make sure to activate it. If needed, you can resend the activation email by logging in, which will refer you to a 
+page to resend the activation email.
 
 ## Updating Account Information
 

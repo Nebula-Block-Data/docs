@@ -3,7 +3,7 @@
 description: List Available Serverless Models.
 ---
 
-# List Models
+# List Serverless Models
 
 Return a list of all available serverless models and their details. 
 
@@ -19,7 +19,7 @@ A dict containing a key-value pair of `models: [list of models]`. Each model in 
 containing the following model information: 
 
 - **model_name** `string`: The unique name for the model. Use this value when specifying the desired models in API calls.
-- **model_alis** `string`: An eaasy to understand name of the model. 
+- **model_alias** `string`: An eaasy to understand name of the model. 
 - **model_type** `string`: The type of data output by the model. 
 - **context_length** `string`: The length of the context required by the model.
 - **max_completion_tokens** `string`: The maximum number of tokens that will be generated for each response, if applicable.
