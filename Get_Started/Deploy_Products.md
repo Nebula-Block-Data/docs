@@ -4,8 +4,8 @@
 
 There are 3 main products at Nebula Block:
 - [Serverless Endpoints](../Serverless_Endpoints/Overview.md)
-- [Dedicated Endpoints](../Dedicated_Endpoints)
-- [GPU Instances](../Instances/Overview.md)
+- [Dedicated Endpoints](../Dedicated_Endpoints/Overview.md)
+- [GPU Instances](../GPU_Instances/Overview.md)
 
 ## Serverless Endpoints
 
