@@ -8,6 +8,7 @@ Use these models to generate text. Each model uses these parameters:
 - Output Length: The maximum number of tokens that will be generated for each response. 
 - Temperature: Temperature controls randomness. Higher values increase diversity.
 - Top P: A higher value will result in more diverse outputs, while a lower value will result in more repetitive outputs.
+- Stream: If set to `true`, the response will be streamed in chunks. If False, the entire generation will be returned in one response.
 
 `messages` is the only mandatory parameter. The rest are given default values.
 
@@ -41,8 +42,8 @@ curl -X POST "https://inference.nebulablock.com/v1/chat/completions" \
     -H "Authorization: Bearer $NEBULA_API_KEY" \
     --data-raw '{
         "messages": [
-			{"role":"user","content":"Is Montreal a thriving hub for the AI industry?"}
-		],
+	  {"role":"user","content":"Is Montreal a thriving hub for the AI industry?"}
+	],
         "model": "meta-llama/Llama-3.1-8B-Instruct",
         "max_tokens": null, 
         "temperature": 1,
@@ -52,7 +53,6 @@ curl -X POST "https://inference.nebulablock.com/v1/chat/completions" \
 ```
 
 ## Using Python
-
 ```python
 import requests 
 import os
@@ -81,28 +81,34 @@ print(response.json())
 
 ## Using JavaScript
 ```javascript
-import OpenAI from 'openai'; 
+const url = "https://inference.nebulablock.com/v1/chat/completions";
 
-const openai = new OpenAI({ 
-  apiKey: process.env.NEBULA_API_TOKEN, 
-  baseURL: 'https://inference.nebulablock.com/v1/chat/completions'
-}); 
+const headers = {
+    "Content-Type": "application/json",
+    "Authorization": `Bearer ${process.env.NEBULA_API_KEY}`
+};
 
-async function main() { 
-  const completion = await openai.chat.completions.create({ 
-    messages=[
-			{"role":"user","content":"Is Montreal a thriving hub for the AI industry?"}
-		], 
-    model: 'meta-llama/Llama-3.1-8B-Instruct',  
-    max_tokens: null, 
+const data = {
+    messages: [
+        { role: "user", content: "Is Montreal a thriving hub for the AI industry?" }
+    ],
+    model: "meta-llama/Llama-3.1-8B-Instruct",
+    max_tokens: null,
     temperature: 1,
     top_p: 0.9,
     stream: false
-  }); 
-  console.log(completion.choices); 
-} 
+};
 
-main(); 
+fetch(url, {
+    method: 'POST',
+    headers: headers,
+    body: JSON.stringify(data)
+})
+    .then(response => response.json())
+    .then(data => {
+        console.log(JSON.stringify(data, null, 2));
+    })
+    .catch(error => console.error('Error:', error));
 ```
 
 > **NOTE:**  Don't forget to use **your** API key. See [here](../API_Reference/Authentication.md) and [here](../API_Key/Overview.md) for more details on authentication. 
@@ -115,20 +121,52 @@ To specify the desired model, use this mapping for the `model_name`:
 - Llama3.1-8B: `meta-llama/Llama-3.1-8B-Instruct`
 - Qwen2.5-Coder-32B: `Qwen/Qwen2.5-Coder-32B-Instruct`
 
-A successful generation response consists of a stream of responses: 
+A successful generation response (non-streaming)  will contain a `chat.completion` object, and should look like this: 
 
 ```json
 {
-    "id": "chatcmpl-86800105604e81c7918d10b45fd46fa3",
-    "created": 1740006821,
+    "id": "chatcmpl-ec0014bc38e2cad1e45d47f7f01f6569",
+    "created": 1740432179,
+    "model": "meta-llama/Llama-3.1-8B-Instruct",
+    "object": "chat.completion",
+    "system_fingerprint": null,
+    "choices": [
+        {
+            "finish_reason": "stop",
+            "index": 0,
+            "message": {
+                "content": "Yes! Montreal has ... research.",
+                "role": "assistant",
+                "tool_calls": null,
+                "function_call": null
+            }
+        }
+    ],
+    "usage": {
+        "completion_tokens": 695,
+        "prompt_tokens": 42,
+        "total_tokens": 737,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+    },
+    "service_tier": null,
+    "prompt_logprobs": null
+}
+```
+
+whereas the streaming option will return several responses, each containing a `chat.completion.chunk` object, and will look like this: 
+
+```json
+{
+    "id": "chatcmpl-289eb1f670a58c5cde47ddb634aad595",
+    "created": 1740432271,
     "model": "meta-llama/Llama-3.1-8B-Instruct",
     "object": "chat.completion.chunk",
     "choices": [
         {
             "index": 0,
             "delta": {
-                "content": "Yes",
-                "role": "assistant"
+                "content": " everyone"
             }
         }
     ]

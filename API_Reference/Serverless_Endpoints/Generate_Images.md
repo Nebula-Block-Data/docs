@@ -11,7 +11,14 @@ Return the generated image based on the given inputs.
 
 `POST` `{API_URL}/images/generation`
 
-where `API_URL = https://api.nebulablock.com/api/v1`.
+where `API_URL = https://api.nebulablock.com/api/v1`. 
+
+> **Note**: As a reminder, the only mandatory parameter in the request body is "prompt", so your request could look as 
+> simple as this: 
+> ```json 
+> {"prompt": "a flying cat"}
+> ```
+> To specify more parameters, see the ones available at the [Serverless Endpoints](../../Serverless_Endpoints/Image_Generation.md) section.
 
 ## Response Attributes
 
@@ -54,36 +61,17 @@ Here's an example of a successful response. It consists of a stream of `data` di
 a generated token. The entire collection of dictionaries represents the complete generated response. 
 
 ```json
-data: {
-    "id": "chatcmpl-3061dfd6d9170825ba0fb54086c4dad3",
-    "created": 1740081592,
-    "model": "meta-llama/Llama-3.1-8B-Instruct",
-    "object": "chat.completion.chunk",
-    "choices": [
+{
+    "model": "black-forest-labs/FLUX.1-schnell",
+    "object": "list",
+    "data": [
         {
+            "timings": {
+                "inference": 4.76837158203125e-07
+            },
             "index": 0,
-            "delta": {
-                "content": "It",
-                "role": "assistant"
-            }
+            "b64_json": "3hfjsd..."
         }
     ]
 }
-
-data: {
-    "id": "chatcmpl-3061dfd6d9170825ba0fb54086c4dad3",
-    "created": 1740081592,
-    "model": "meta-llama/Llama-3.1-8B-Instruct",
-    "object": "chat.completion.chunk",
-    "choices": [
-        {
-            "index": 0,
-            "delta": {
-                "content": " looks"
-            }
-        }
-    ]
-}
-...
-data: [DONE]
 ```
