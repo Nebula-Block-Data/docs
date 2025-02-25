@@ -7,18 +7,20 @@ pieces of data, enabling efficient comparison and retrieval.
 
 ## Models available
 
-- UAE-Large-V1: `WhereIsAI/UAE-Large-V1`
-- BGE Large EN v1.5: `BAAI/bge-large-en-v1.5`
+- UAE-Large-V1: Good for general-purpose text embeddings with high accuracy.
+- BGE Large EN v1.5: Optimized for English text embeddings with enhanced performance.
 
 ## Using the Models
 
-##### Through API Endpoint
+### Through API Endpoint
 
 This option is to use our API endpoint directly in your projects. Below are some code snippets to get you started!
 
-## Using cURL
+> **NOTE:**  Don't forget to use **your** API key. See the [API Reference](../API_Reference/Authentication.md) and the [Overview](../API_Key/Overview.md) for more details on authentication.
+
+#### Using cURL
 ```bash
-curl -X POST "https://dev-llm-proxy.nebulablock.com/v1/embeddings" \
+curl -X POST "https://inference.nebulablock.com/v1/embeddings" \
     -H "Content-Type: application/json" \
     -H "Authorization: Bearer $NEBULA_API_KEY" \
     --data-raw '{
@@ -30,13 +32,12 @@ curl -X POST "https://dev-llm-proxy.nebulablock.com/v1/embeddings" \
     }'
 ```
 
-## Using Python
-
+#### Using Python
 ```python
 import requests 
 import os
 
-url = "https://dev-llm-proxy.nebulablock.com/v1/embeddings" 
+url = "https://inference.nebulablock.com/v1/embeddings" 
 
 headers = {  
     "Content-Type": "application/json",  
@@ -55,12 +56,42 @@ response = requests.post(url, headers=headers, json=data)
 print(response.json())
 ```
 
-> **NOTE:**  Don't forget to use **your** API key. See [here](../API_Reference/Authentication.md) and [here](../API_Key/Overview.md) for more details on authentication. 
+#### Using JavaScript
+```javascript
+const url = 'https://inference.nebulablock.com/v1/embeddings';
 
+const headers = {
+    "Content-Type": "application/json",
+    "Authorization": `Bearer ${process.env.NEBULA_API_KEY}`
+};
+
+const data = {
+    "model": "WhereIsAI/UAE-Large-V1",
+    "input": [
+        "Bananas are berries, but strawberries are not, according to botanical classifications.",
+        "The Eiffel Tower in Paris was originally intended to be a temporary structure."
+    ]
+};
+
+fetch(url, {
+    method: 'POST',
+    headers: headers,
+    body: JSON.stringify(data)
+})
+    .then(response => response.json())
+    .then(data => {
+        console.log(JSON.stringify(data, null, 2));
+    })
+    .catch(error => console.error('Error:', error));
+```
+
+#### Selecting a Model
 To specify the desired model, use this mapping for the `model`: 
 
 - UAE-Large-V1: `WhereIsAI/UAE-Large-V1`
 - BGE Large EN v1.5: `BAAI/bge-large-en-v1.5`
+
+#### Response Example
 
 A successful response body will return the embeddings in this format: 
 
@@ -72,8 +103,6 @@ A successful response body will return the embeddings in this format:
       {
             "embedding": [
                 -0.373046875,
-                -0.5546875,
-                -0.033203125,
                 ..., 
                 0.248046875
             ],
@@ -83,8 +112,6 @@ A successful response body will return the embeddings in this format:
         {
             "embedding": [
                 -0.50390625,
-                -0.462890625,
-                0.294921875,
                 ...,
                 0.01409912109375
             ],
@@ -103,5 +130,7 @@ A successful response body will return the embeddings in this format:
 }
 ```
 
+> **NOTE:** Notice that there are 2 embeddings, each with its own index number. These embeddings correspond to the given input sentences, 
+> of which there are 2. You can choose how many sentences to create embeddings for, this is just an example. 
 
 Feel free to explore refer to the [API Reference](../API_Reference/Serverless_Endpoints/Generate_Embeddings.md) for more details.

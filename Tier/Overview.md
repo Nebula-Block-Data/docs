@@ -40,7 +40,7 @@ This page outlines the different tiers available in the system, their requiremen
 
 5. **Expert Tier 2**
    - Requires a **$50 spend**.
-   - Grants GPU access.
+   - Grants GPU access.o
    - Highest request rate of **3,000 RPM**.
    - Token Rate: **800,000 TPM**.
 
