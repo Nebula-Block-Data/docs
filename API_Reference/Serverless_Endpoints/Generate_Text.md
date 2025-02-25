@@ -158,3 +158,5 @@ Alternatively, if you set `stream` to False you can get the entire generated com
     "prompt_logprobs": null
 }
 ```
+
+For more examples, see the [Serverless Endpoints](../../Serverless_Endpoints/Text_Generation.md) section.

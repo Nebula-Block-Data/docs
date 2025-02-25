@@ -58,7 +58,31 @@ print(response.json())
 
 #### Using JavaScript
 ```javascript
+const url = 'https://inference.nebulablock.com/v1/embeddings';
 
+const headers = {
+    "Content-Type": "application/json",
+    "Authorization": `Bearer ${process.env.NEBULA_API_KEY}`
+};
+
+const data = {
+    "model": "WhereIsAI/UAE-Large-V1",
+    "input": [
+        "Bananas are berries, but strawberries are not, according to botanical classifications.",
+        "The Eiffel Tower in Paris was originally intended to be a temporary structure."
+    ]
+};
+
+fetch(url, {
+    method: 'POST',
+    headers: headers,
+    body: JSON.stringify(data)
+})
+    .then(response => response.json())
+    .then(data => {
+        console.log(JSON.stringify(data, null, 2));
+    })
+    .catch(error => console.error('Error:', error));
 ```
 
 #### Selecting a Model
