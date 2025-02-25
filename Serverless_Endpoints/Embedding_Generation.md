@@ -18,7 +18,7 @@ This option is to use our API endpoint directly in your projects. Below are some
 
 ## Using cURL
 ```bash
-curl -X POST "https://dev-llm-proxy.nebulablock.com/v1/embeddings" \
+curl -X POST "https://inference.nebulablock.com/v1/embeddings" \
     -H "Content-Type: application/json" \
     -H "Authorization: Bearer $NEBULA_API_KEY" \
     --data-raw '{
@@ -36,7 +36,7 @@ curl -X POST "https://dev-llm-proxy.nebulablock.com/v1/embeddings" \
 import requests 
 import os
 
-url = "https://dev-llm-proxy.nebulablock.com/v1/embeddings" 
+url = "https://inference.nebulablock.com/v1/embeddings" 
 
 headers = {  
     "Content-Type": "application/json",  
@@ -53,6 +53,12 @@ data = {
 
 response = requests.post(url, headers=headers, json=data) 
 print(response.json())
+```
+
+## Using JavaScript
+
+```javascript
+
 ```
 
 > **NOTE:**  Don't forget to use **your** API key. See [here](../API_Reference/Authentication.md) and [here](../API_Key/Overview.md) for more details on authentication. 
@@ -103,5 +109,7 @@ A successful response body will return the embeddings in this format:
 }
 ```
 
+>> **NOTE:** Notice that there are 2 embeddings, each with its own index number. These embeddings correspond to the given input sentences, 
+> of which there are 2. You can choose how many sentences to create embeddings for, this is just an example. 
 
 Feel free to explore refer to the [API Reference](../API_Reference/Serverless_Endpoints/Generate_Embeddings.md) for more details.

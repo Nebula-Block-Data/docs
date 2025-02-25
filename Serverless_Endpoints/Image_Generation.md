@@ -50,7 +50,7 @@ curl -X POST "https://api.nebulablock.com/api/v1/images/generation" \
     -H "Authorization: Bearer $NEBULA_API_KEY" \
     --data-raw '{
       "model_name":"stabilityai/stable-diffusion-xl-base-1.0",
-      "prompt":"",
+      "prompt":"a flying cat",
       "num_steps":25,
       "guidance_scale":9,
       "negative_prompt":null,
@@ -74,10 +74,10 @@ headers = {
 
 data = {
     "model_name":"stabilityai/stable-diffusion-xl-base-1.0",
-    "prompt":"",
+    "prompt":"a flying cat",
     "num_steps":25,
     "guidance_scale":9,
-    "negative_prompt": null,
+    "negative_prompt": None,
     "width":1024,
     "height":1024
 }
@@ -89,30 +89,33 @@ print(response.json())
 ## Using JavaScript
 
 ```javascript
-const fetchImage = async () => { 
+const url = 'https://api.nebulablock.com/api/v1/images/generation';
 
-const url = 'https://api.nebulablock.com/api/v1/images/generation'; 
+const headers = {
+    "Content-Type": "application/json",
+    "Authorization": `Bearer ${process.env.NEBULA_API_KEY}`
+};
 
-const response = await fetch(url, {
-  method: 'POST',  
+const data = {
+    "model_name": "stabilityai/stable-diffusion-xl-base-1.0",
+    "prompt": "",
+    "num_steps": 25,
+    "guidance_scale": 9,
+    "negative_prompt": null,
+    "width": 1024,
+    "height": 1024
+};
 
-  headers: {  
-    'Content-Type': 'application/json',  
-    'Authorization': 'Bearer ${process.env.NEBULA_API_KEY}',  
-  },  
-
-  body: JSON.stringify({  
-      "model_name":"stabilityai/stable-diffusion-xl-base-1.0",
-      "prompt":"",
-      "num_steps":25,
-      "guidance_scale":9,
-      "negative_prompt":null,
-      "width":1024,
-      "height":1024
-  })
-}); 
-
-const json = await response.json();
+fetch(url, {
+    method: 'POST',
+    headers: headers,
+    body: JSON.stringify(data)
+})
+    .then(response => response.json())
+    .then(data => {
+        console.log(JSON.stringify(data, null, 2));
+    })
+    .catch(error => console.error('Error:', error));
 ```
 
 > **NOTE:**  Don't forget to use **your** API key. See [here](../API_Reference/Authentication.md) and [here](../API_Key/Overview.md) for more details on authentication. 
@@ -121,11 +124,23 @@ A successful response body will return the image in this format:
 
 ```json
 {
-  "image_b64": "iVBORw0KGgoAAAANSUhEUgAAB..."
+    "model": "black-forest-labs/FLUX.1-schnell",
+    "object": "list",
+    "data": [
+        {
+            "timings": {
+                "inference": 13.366829872131348
+            },
+            "index": 0,
+            "b64_json": "sjkkc9j34m..."
+        }
+    ],
+    "message": "Image generated successfully",
+    "status": "success"
 }
 ```
 
-> **NOTE:** You'll need to use an image b64 decoder to view the result. 
+> **NOTE:** You'll need to use an image b64 decoder to view the result. Just pass in the b64_json value to the decoder of your choice.
 
 To specify the desired model, use this mapping for the `model_name`: 
 - StableDiffusion XL 1.0: `stabilityai/stable-diffusion-xl-base-1.0` 

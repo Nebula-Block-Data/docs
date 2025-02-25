@@ -135,7 +135,7 @@ A successful generation response (non-streaming)  will contain a `chat.completio
             "finish_reason": "stop",
             "index": 0,
             "message": {
-                "content": "Yes! Montreal has ... research.",
+                "content": "Yes! Montreal is the home of cutting edge ... research.",
                 "role": "assistant",
                 "tool_calls": null,
                 "function_call": null
@@ -154,7 +154,7 @@ A successful generation response (non-streaming)  will contain a `chat.completio
 }
 ```
 
-whereas the streaming option will return several responses, each containing a `chat.completion.chunk` object, and will look like this: 
+Whereas the streaming option will return several responses, each containing a `chat.completion.chunk` object, and will look like this: 
 
 ```json
 {
