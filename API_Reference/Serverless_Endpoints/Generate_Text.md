@@ -88,8 +88,8 @@ curl -X GET '{API_URL}/api/v1/chat/completions' \
 
 #### Response
 
-Here's an example of a successful response. It consists of a stream of `data` dictionaries, each containing the data for 
-a generated token. The entire collection of dictionaries represents the complete generated response. 
+Here's an example of a successful response in the streaming option. It consists of a stream of `chat.completion.chunk` objects, 
+The entire collection of chunks represents the complete generated response. 
 
 ```json
 data: {
@@ -124,4 +124,37 @@ data: {
 }
 ...
 data: [DONE]
+```
+
+Alternatively, if you set `stream` to False you can get the entire generated completion in 1 `chat.completion` object: 
+
+```json
+{
+    "id": "chatcmpl-ec0014bc38e2cad1e45d47f7f01f6569",
+    "created": 1740432179,
+    "model": "meta-llama/Llama-3.1-8B-Instruct",
+    "object": "chat.completion",
+    "system_fingerprint": null,
+    "choices": [
+        {
+            "finish_reason": "stop",
+            "index": 0,
+            "message": {
+                "content": "Yes! Montreal is the home of cutting edge ... research.",
+                "role": "assistant",
+                "tool_calls": null,
+                "function_call": null
+            }
+        }
+    ],
+    "usage": {
+        "completion_tokens": 695,
+        "prompt_tokens": 42,
+        "total_tokens": 737,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+    },
+    "service_tier": null,
+    "prompt_logprobs": null
+}
 ```
