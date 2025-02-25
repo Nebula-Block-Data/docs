@@ -64,39 +64,38 @@ curl -X GET '{API_URL}/api/v1/images/generation' \
 Here's an example of a successful response. It consists of a stream of `data` dictionaries, each containing the data for 
 a generated token. The entire collection of dictionaries represents the complete generated response. 
 
-```json
-data: {
-    "id": "chatcmpl-3061dfd6d9170825ba0fb54086c4dad3",
-    "created": 1740081592,
-    "model": "meta-llama/Llama-3.1-8B-Instruct",
-    "object": "chat.completion.chunk",
-    "choices": [
+```json{
+    "model": "WhereIsAI/UAE-Large-V1",
+    "data": [
         {
+            "embedding": [
+                -0.373046875,
+                ...,
+                -0.10302734375
+            ],
             "index": 0,
-            "delta": {
-                "content": "It",
-                "role": "assistant"
-            }
-        }
-    ]
-}
-
-data: {
-    "id": "chatcmpl-3061dfd6d9170825ba0fb54086c4dad3",
-    "created": 1740081592,
-    "model": "meta-llama/Llama-3.1-8B-Instruct",
-    "object": "chat.completion.chunk",
-    "choices": [
+            "object": "embedding"
+        },
         {
-            "index": 0,
-            "delta": {
-                "content": " looks"
-            }
+            "embedding": [
+                -0.50390625,
+                ...,
+                -0.03564453125,
+                0.01409912109375
+            ],
+            "index": 1,
+            "object": "embedding"
         }
-    ]
+    ],
+    "object": "list",
+    "usage": {
+        "completion_tokens": 0,
+        "prompt_tokens": 33,
+        "total_tokens": 33,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+    }
 }
-...
-data: [DONE]
 ```
 
 For more examples, see the [Serverless Endpoints](../../Serverless_Endpoints/Embedding_Generation.md) section.

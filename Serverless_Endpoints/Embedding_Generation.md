@@ -7,16 +7,18 @@ pieces of data, enabling efficient comparison and retrieval.
 
 ## Models available
 
-- UAE-Large-V1: `WhereIsAI/UAE-Large-V1`
-- BGE Large EN v1.5: `BAAI/bge-large-en-v1.5`
+- UAE-Large-V1: Good for general-purpose text embeddings with high accuracy.
+- BGE Large EN v1.5: Optimized for English text embeddings with enhanced performance.
 
 ## Using the Models
 
-##### Through API Endpoint
+### Through API Endpoint
 
 This option is to use our API endpoint directly in your projects. Below are some code snippets to get you started!
 
-## Using cURL
+> **NOTE:**  Don't forget to use **your** API key. See the [API Reference](../API_Reference/Authentication.md) and the [Overview](../API_Key/Overview.md) for more details on authentication.
+
+#### Using cURL
 ```bash
 curl -X POST "https://inference.nebulablock.com/v1/embeddings" \
     -H "Content-Type: application/json" \
@@ -30,8 +32,7 @@ curl -X POST "https://inference.nebulablock.com/v1/embeddings" \
     }'
 ```
 
-## Using Python
-
+#### Using Python
 ```python
 import requests 
 import os
@@ -55,18 +56,18 @@ response = requests.post(url, headers=headers, json=data)
 print(response.json())
 ```
 
-## Using JavaScript
-
+#### Using JavaScript
 ```javascript
 
 ```
 
-> **NOTE:**  Don't forget to use **your** API key. See [here](../API_Reference/Authentication.md) and [here](../API_Key/Overview.md) for more details on authentication. 
-
+#### Selecting a Model
 To specify the desired model, use this mapping for the `model`: 
 
 - UAE-Large-V1: `WhereIsAI/UAE-Large-V1`
 - BGE Large EN v1.5: `BAAI/bge-large-en-v1.5`
+
+#### Response Example
 
 A successful response body will return the embeddings in this format: 
 
@@ -78,8 +79,6 @@ A successful response body will return the embeddings in this format:
       {
             "embedding": [
                 -0.373046875,
-                -0.5546875,
-                -0.033203125,
                 ..., 
                 0.248046875
             ],
@@ -89,8 +88,6 @@ A successful response body will return the embeddings in this format:
         {
             "embedding": [
                 -0.50390625,
-                -0.462890625,
-                0.294921875,
                 ...,
                 0.01409912109375
             ],
@@ -109,7 +106,7 @@ A successful response body will return the embeddings in this format:
 }
 ```
 
->> **NOTE:** Notice that there are 2 embeddings, each with its own index number. These embeddings correspond to the given input sentences, 
+> **NOTE:** Notice that there are 2 embeddings, each with its own index number. These embeddings correspond to the given input sentences, 
 > of which there are 2. You can choose how many sentences to create embeddings for, this is just an example. 
 
 Feel free to explore refer to the [API Reference](../API_Reference/Serverless_Endpoints/Generate_Embeddings.md) for more details.
