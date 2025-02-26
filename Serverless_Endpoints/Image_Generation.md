@@ -50,7 +50,7 @@ curl -X POST "https://api.nebulablock.com/api/v1/images/generation" \
     -H "Content-Type: application/json" \
     -H "Authorization: Bearer $NEBULA_API_KEY" \
     --data-raw '{
-      "model_name":"stabilityai/stable-diffusion-xl-base-1.0",
+      "model":"stabilityai/stable-diffusion-xl-base-1.0",
       "prompt":"a flying cat",
       "num_steps":25,
       "guidance_scale":9,
@@ -74,7 +74,7 @@ headers = {
 } 
 
 data = {
-    "model_name":"stabilityai/stable-diffusion-xl-base-1.0",
+    "model":"stabilityai/stable-diffusion-xl-base-1.0",
     "prompt":"a flying cat",
     "num_steps":25,
     "guidance_scale":9,
@@ -98,7 +98,7 @@ const headers = {
 };
 
 const data = {
-    "model_name": "stabilityai/stable-diffusion-xl-base-1.0",
+    "model": "stabilityai/stable-diffusion-xl-base-1.0",
     "prompt": "",
     "num_steps": 25,
     "guidance_scale": 9,
