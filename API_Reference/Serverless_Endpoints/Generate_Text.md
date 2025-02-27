@@ -139,7 +139,6 @@ Alternatively, if you set `stream` to True you'll get a stream of `chat.completi
         }
     ]
 }
-
 {
     "id": "chatcmpl-3061dfd6d9170825ba0fb54086c4dad3",
     "created": 1740081592,

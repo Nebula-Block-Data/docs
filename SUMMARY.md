@@ -9,7 +9,7 @@
 * Serverless Endpoints
   * [Overview](Serverless_Endpoints/Overview.md)
   * [Text Generation](Serverless_Endpoints/Text_Generation.md)
-  * [Vision](Serverless_Endpoints/Vision.md)
+  * [Text Generation (Vision)](Serverless_Endpoints/Vision.md)
   * [Image Generation](Serverless_Endpoints/Image_Generation.md)
   * [Embedding Generation](Serverless_Endpoints/Embedding_Generation.md)
 * Dedicated Endpoints

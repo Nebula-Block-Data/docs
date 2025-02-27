@@ -1,9 +1,9 @@
 ---
-# title: Generate Serverless Text (Vision Model)
-description: Generate Serverless Text (Vision Model).
+# title: Generate Serverless Text (Vision)
+description: Generate Serverless Text (Vision).
 ---
 
-# Generate Serverless Text (Vision Model)
+# Generate Serverless Text (Vision)
 
 Return the generated text based on the given textual and image inputs. 
 
