@@ -1,10 +1,9 @@
 # Text Generation
 
-Use these models to generate text, whether it's to review code, write a story, etc. The possibilities are endless! 
-
+Use these models to generate text, whether it's to review code, write a story, etc. 
 ## Models available
 
-Listed below are the available models: 
+Available text models:
 
 - DeepSeek-R1-Distill-Llama-70B: High-quality text generation for complex queries.
 - DeepSeek-R1-Distill-Qwen-32B: Efficient text generation with lower resource usage.
@@ -14,14 +13,12 @@ Listed below are the available models:
 
 ## Using the Models
 
-### Through Our Website UI 
-
 1. Go to the [Nebula Block](https://www.nebulablock.com) website.
 2. Log in, and ensure you have enough credits. 
 3. Click on the "Serverless Endpoints" tab and select your model.
-4. Select your parameters, enter your text and just press Enter! 
+4. Select your parameters, enter your text (and image, if applicable) and just press Enter! 
 
-Each model supports these parameters: 
+The parameters you can tweak are outlined below: 
 
 - Messages: The current dialogue between the user and the model. 
 - System Prompt: Set of instructions, guidelines, and contextual information, which tell the AI how to respond to the queries.
@@ -124,7 +121,7 @@ To specify the desired model, use this mapping for the `model_name`:
 
 #### Response Example 
 
-A successful generation response (non-streaming)  will contain a `chat.completion` object, and should look like this: 
+A successful generation response (non-streaming) will contain a `chat.completion` object, and should look like this: 
 
 ```json
 {
@@ -157,7 +154,7 @@ A successful generation response (non-streaming)  will contain a `chat.completio
 }
 ```
 
-Whereas the streaming option will return several responses, each containing a `chat.completion.chunk` object, and will look like this: 
+This represents the entire generated response from the inference. Alternatively, the streaming option (`stream: true` in the request body) will return several responses, each containing a `chat.completion.chunk` object, and will look like this: 
 
 ```json
 {
