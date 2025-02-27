@@ -151,6 +151,29 @@ A successful generation response (non-streaming) will contain a `chat.completion
 }
 ```
 
-The streaming logic from the [Text Generation](Text_Generation.md) section applies here as well. 
+As is the case with text generation, this represents the entire generated response, and setting the `stream` parameter to `True` will return the response in chunks: 
 
-Feel free to explore refer to the [API Reference](../API_Reference/Serverless_Endpoints/Vision.md) and the [Text Generation](Text_Generation.md) for more details.
+```json
+{
+    "id": "chatcmpl-3812731562554b23a32dd80fbb7d0d09",
+    "created": 1740692435,
+    "model": "Qwen/Qwen2.5-VL-7B-Instruct",
+    "object": "chat.completion.chunk",
+    "choices": [
+        {
+            "index": 0,
+            "delta": {
+                "content": " setting"
+            }
+        }
+    ]
+}
+{ 
+  ...
+}
+...
+```
+
+with the collection of chunks forming the entire response.
+
+Feel free to explore refer to the [API Reference](../API_Reference/Serverless_Endpoints/Vision.md) for more details.

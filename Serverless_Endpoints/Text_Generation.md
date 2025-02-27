@@ -171,6 +171,10 @@ This represents the entire generated response from the inference. Alternatively,
         }
     ]
 }
+{ 
+  ...
+}
+...
 ```
 
 where the content of each response will contain the generated token. These tokens put together form the complete response.

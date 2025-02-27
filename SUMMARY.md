@@ -44,6 +44,7 @@
   * Serverless Endpoints
     * [List Serverless Models](API_Reference/Serverless_Endpoints/List_Serverless_Models.md)
     * [Generate Text](API_Reference/Serverless_Endpoints/Generate_Text.md)
+    * [Generate Text (Vision)](API_Reference/Serverless_Endpoints/Vision.md)
     * [Generate Images](API_Reference/Serverless_Endpoints/Generate_Images.md)
     * [Generate Embeddings](API_Reference/Serverless_Endpoints/Generate_Embeddings.md)
   * SSH Keys

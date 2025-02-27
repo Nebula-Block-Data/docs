@@ -143,6 +143,10 @@ As is the case with text generation, if you set `stream` to True you can get the
         }
     ]
 }
+{ 
+  ...
+}
+...
 ```
 
 For more examples, see the [Serverless Endpoints](../../Serverless_Endpoints/Text_Generation.md) section.
