@@ -44,7 +44,7 @@ curl -X GET '{API_URL}/api/v1/images/generation' \
 -H 'Authorization: Bearer {TOKEN/KEY}' \
 -H 'Content-Type: application/json' \
 -d '{
-    "model_name": "stabilityai/stable-diffusion-xl-base-1.0",
+    "model": "stabilityai/stable-diffusion-xl-base-1.0",
     "prompt": "insert your prompt here",
     "num_steps": 25,
     "guidance_scale": 9,
