@@ -1,6 +1,8 @@
 # Overview
 
-This page outlines the different tiers available in the system, their requirements, and the corresponding benefits.
+This page outlines the different tiers available in the system, their requirements, and the corresponding benefits. All
+users have access to our serverless endpoints. The tiers dictate your request and token rates, as well as
+whether you have access to GPU instances.
 
 ### **Tier Levels and Benefits**
 | Tier Level          | Requirement     | GPU Access | Request Rate | Token Rate  |
