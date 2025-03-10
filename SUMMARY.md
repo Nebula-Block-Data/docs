@@ -2,7 +2,7 @@
 
 * [Overview](Overview.md)
 * Get Started
-  * [Overview](Get_Started/Overview.md)
+* [Quickstart](Get_Started/Quickstart)
   * [Manage Accounts](Get_Started/Manage_Accounts.md)
   * [Billing Information](Get_Started/Billing_Information.md)
   * [Deploy Products](Get_Started/Deploy_Products.md)
