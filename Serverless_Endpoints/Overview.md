@@ -22,7 +22,7 @@ samples in curl, Python, or JavaScript.
 - **Pay-As-You-Go:** Charges are based on token usage.
 - Check the [pricing page](https://www.nebulablock.com/pricing) for details.
 
-## Types of Generation 
+## Types of Inference 
 
 To get started with Text Generation, see [Text Generation](Text_Generation.md).
 

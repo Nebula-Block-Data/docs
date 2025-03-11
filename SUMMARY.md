@@ -2,13 +2,14 @@
 
 * [Overview](Overview.md)
 * Get Started
-  * [Overview](Get_Started/Overview.md)
+  * [Quickstart](Get_Started/Quickstart.md)
   * [Manage Accounts](Get_Started/Manage_Accounts.md)
   * [Billing Information](Get_Started/Billing_Information.md)
   * [Deploy Products](Get_Started/Deploy_Products.md)
 * Serverless Endpoints
   * [Overview](Serverless_Endpoints/Overview.md)
   * [Text Generation](Serverless_Endpoints/Text_Generation.md)
+  * [Text Generation (Vision)](Serverless_Endpoints/Vision.md)
   * [Image Generation](Serverless_Endpoints/Image_Generation.md)
   * [Embedding Generation](Serverless_Endpoints/Embedding_Generation.md)
 * Dedicated Endpoints
@@ -43,6 +44,7 @@
   * Serverless Endpoints
     * [List Serverless Models](API_Reference/Serverless_Endpoints/List_Serverless_Models.md)
     * [Generate Text](API_Reference/Serverless_Endpoints/Generate_Text.md)
+    * [Generate Text (Vision)](API_Reference/Serverless_Endpoints/Vision.md)
     * [Generate Images](API_Reference/Serverless_Endpoints/Generate_Images.md)
     * [Generate Embeddings](API_Reference/Serverless_Endpoints/Generate_Embeddings.md)
   * SSH Keys

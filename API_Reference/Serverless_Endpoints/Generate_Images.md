@@ -3,7 +3,7 @@
 description: Generate Serverless Images.
 ---
 
-# Generte Serverless Images
+# Generate Serverless Images
 
 Return the generated image based on the given inputs. 
 
@@ -11,23 +11,29 @@ Return the generated image based on the given inputs.
 
 `POST` `{API_URL}/images/generation`
 
-where `API_URL = https://api.nebulablock.com/api/v1`.
+where `API_URL = https://api.nebulablock.com/api/v1`. For more details on the parameters, see the [Serverless Endpoints](../../Serverless_Endpoints/Image_Generation.md) section.
 
 ## Response Attributes
 
-#### data `dict`
+#### model `string`
+The specific AI model used to generate the response.
 
-A dict containing the data of the generated text output. It contains the following fields:  
+#### object `string`
+The type of the data. 
 
-- **id** `string`: A unique identifier for the completion request.
-- **created** `integer`: A Unix timestamp representing when the response was generated.
-- **model** `string`: The specific AI model used to generate the response.
-- **object** `string`: The type of response object (e.g., `"chat.completion.chunk"` for a streamed chunk).
-- **choices** `array`: An array containing response segments. Each entry represents a part of the response.
-  - **index** `integer`:  The position of this choice in the response (useful for multi-choice responses).
-  - **delta** `dict`: Contains data on the generated output. 
-    - **content** `string`: The generated text for this chunk.
-    - **role** `string`: Specifies the role of the AI (e.g., "assistant").
+#### data `list`
+
+A list of dictionaries containing the generated image data. Each dictionary contains the following fields:
+- **timings** `dict`: Contains the time taken for inference.
+  - **inference** `float`: The time taken for inference in seconds.
+- **index** `integer`: The index of the generated image (if more than 1 image is generated).
+- **b64_json** `string`: The base64-encoded JSON data of the generated image.
+
+#### message `string`
+A message indicating the status of the request.
+
+#### status `string`
+The status of the request.
 
 ## Example
 
@@ -38,7 +44,7 @@ curl -X GET '{API_URL}/api/v1/images/generation' \
 -H 'Authorization: Bearer {TOKEN/KEY}' \
 -H 'Content-Type: application/json' \
 -d '{
-    "model_name": "stabilityai/stable-diffusion-xl-base-1.0",
+    "model": "stabilityai/stable-diffusion-xl-base-1.0",
     "prompt": "insert your prompt here",
     "num_steps": 25,
     "guidance_scale": 9,
@@ -50,40 +56,25 @@ curl -X GET '{API_URL}/api/v1/images/generation' \
 
 #### Response
 
-Here's an example of a successful response. It consists of a stream of `data` dictionaries, each containing the data for 
-a generated token. The entire collection of dictionaries represents the complete generated response. 
+Here's an example of a successful response. Note that you need to decode the b64 json data with a decoder of your choice to 
+see the image. 
 
 ```json
-data: {
-    "id": "chatcmpl-3061dfd6d9170825ba0fb54086c4dad3",
-    "created": 1740081592,
-    "model": "meta-llama/Llama-3.1-8B-Instruct",
-    "object": "chat.completion.chunk",
-    "choices": [
+{
+    "model": "black-forest-labs/FLUX.1-schnell",
+    "object": "list",
+    "data": [
         {
+            "timings": {
+                "inference": 13.366829872131348
+            },
             "index": 0,
-            "delta": {
-                "content": "It",
-                "role": "assistant"
-            }
+            "b64_json": "sdj23kjjk2..."
         }
-    ]
+    ],
+    "message": "Image generated successfully",
+    "status": "success"
 }
-
-data: {
-    "id": "chatcmpl-3061dfd6d9170825ba0fb54086c4dad3",
-    "created": 1740081592,
-    "model": "meta-llama/Llama-3.1-8B-Instruct",
-    "object": "chat.completion.chunk",
-    "choices": [
-        {
-            "index": 0,
-            "delta": {
-                "content": " looks"
-            }
-        }
-    ]
-}
-...
-data: [DONE]
 ```
+
+For more examples, see the [Serverless Endpoints](../../Serverless_Endpoints/Image_Generation.md) section.
