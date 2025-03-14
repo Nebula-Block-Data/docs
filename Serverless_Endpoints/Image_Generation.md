@@ -38,7 +38,7 @@ Image-to-Image models generate images based on the input image and mask image in
 3. Click on the "Serverless Endpoints" tab and select your model.
 4. Choose your parameters, enter your prompt and just press Enter! 
 
-Bolded parameters are supported across all models, while unbolded paramters are specific to certain models: 
+Bolded parameters are supported across all models, while non-bolded parameters are specific to certain models: 
 
 - **Prompt**: The prompt to guide the model's generation.
 - Negative Prompt: A prompt to guide the model away from generating certain content.
@@ -48,7 +48,9 @@ leads to better quality but costs more.
 - **Guidance Scale**: A high value encourages the model adhere closely to the prompt, but may result in a lower image quality.
 - Seed: A number to seed the generation. Using the same value ensures reproducibility.
 - Input Image: The image to use as a base for the generation. When using our API, this should be a base64 encoded image.
-- Mask Image: The mask to use for the generation. In other words, specify which areas of the image should be modified with the mask. When using our API, this should be a base64 encoded image.
+- Mask Image: The mask to use for the generation. In other words, a mask to specify which areas of the image should be modified. White pixels in the mask are repainted (preserved from the input image) while black pixels are preserved. When using our API, this should be a base64 encoded image.
+
+> **NOTE:** The input image and mask image are not required to be the same dimensions. If they aren't the same, the model will roughly approximate the masked areas on the input image. 
 
 ### Through API Endpoint
 
