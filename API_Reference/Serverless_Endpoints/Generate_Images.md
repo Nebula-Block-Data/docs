@@ -69,8 +69,8 @@ curl -X POST "https://api.nebulablock.com/api/v1/images/generation" \
     "guidance_scale": 4.5,
     "width": 1024,
     "height": 1024,
-    "input_image": "/9j/4…/Z", 
-    "mask_image": "/9j/4…ACgD/9k="
+    "image": "/9j/4…/Z", 
+    "mask": "/9j/4…ACgD/9k="
 }'
 ```
 

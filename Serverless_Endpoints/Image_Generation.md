@@ -42,6 +42,7 @@ Text-to-Image models generate an image based on the prompt input. We currently s
 
 ##### Image-to-Image models
 Image-to-Image models generate images based on the input image and mask image in addition to the prompt. We currently support:
+
 - **Flux.1 Fill Dev**: Fills in missing parts of an image using a provided mask.
 
 ## Using the Models
@@ -54,6 +55,8 @@ Our website UI is the easiest and fastest way to use our endpoints.
 2. Log in, and ensure you have enough credits. 
 3. Click on the "Serverless Endpoints" tab and select your model.
 4. Choose your parameters, enter your prompt (and image + mask if applicable) and just press Enter!
+
+> **NOTE:** We support JPG, JPEG, PNG, and WebP image formats. 
 
 ### Through API Endpoint
 
@@ -93,8 +96,8 @@ curl -X POST "https://api.nebulablock.com/api/v1/images/generation" \
     "guidance_scale": 4.5,
     "width": 1024,
     "height": 1024,
-    "input_image": "/9j/4…/Z", 
-    "mask_image": "/9j/4…ACgD/9k="
+    "image": "/9j/4…/Z", 
+    "mask": "/9j/4…ACgD/9k="
 }'
 ```
 
@@ -150,8 +153,8 @@ data = {
     "negative_prompt": None,
     "width":1024,
     "height":1024, 
-    "input_image":"/9j/4…/Z", 
-    "mask_image":"/9j/4…ACgD/9k="
+    "image":"/9j/4…/Z", 
+    "mask":"/9j/4…ACgD/9k="
 }
 
 response = requests.post(url, headers=headers, json=data) 
@@ -210,8 +213,8 @@ const data =  {
     "negative_prompt": null,
     "width": 1024,
     "height": 1024, 
-    "input_image": "/9j/4…/Z", 
-    "mask_image": "/9j/4…ACgD/9k="
+    "image": "/9j/4…/Z", 
+    "mask": "/9j/4…ACgD/9k="
 };
 
 fetch(url, {
