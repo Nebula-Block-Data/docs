@@ -32,6 +32,7 @@ leads to better quality but costs more.
 - Mask Image: The mask to use for the generation. In other words, a mask to specify which areas of the image should be modified. White pixels in the mask are repainted (preserved from the input image) while black pixels are preserved. When using our API, this should be a base64 encoded image.
 
 > **NOTE:** For best results, ensure that the mask dimensions are the same as the image. 
+> **NOTE:** The Flux.1 Fill Dev model requires that the height and width are divisible by 16. If not, it will automatically resize the dimensions accordingly. 
 
 ##### Text-to-Image models
 
