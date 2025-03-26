@@ -18,6 +18,21 @@ Here's a table for the models available, and the parameters they support.
 | `seed`            |                    | ✓              |                 | 
 | `input_image`     |                    |                | ✓               | 
 | `mask_image`      |                    |                | ✓               |
+
+##### Parameters 
+
+- Prompt: The prompt to guide the model's generation.
+- Negative Prompt: A prompt to guide the model away from generating certain content.
+- Width, Height: The resolution of the output image. 
+- Steps: Number of inference steps that the model will take. A higher number of steps typically 
+leads to better quality but costs more. 
+- Guidance Scale: A high value encourages the model adhere closely to the prompt, but may result in a lower image quality.
+- Seed: A number to seed the generation. Using the same value ensures reproducibility.
+- Input Image: The image to use as a base for the generation. When using our API, this should be a base64 encoded image.
+- Mask Image: The mask to use for the generation. In other words, a mask to specify which areas of the image should be modified. White pixels in the mask are repainted (preserved from the input image) while black pixels are preserved. When using our API, this should be a base64 encoded image.
+
+> **NOTE:** For best results, ensure that the mask dimensions are the same as the image. 
+
 ##### Text-to-Image models
 
 Text-to-Image models generate an image based on the prompt input. We currently support: 
@@ -33,24 +48,12 @@ Image-to-Image models generate images based on the input image and mask image in
 
 ### Through Our Website UI 
 
+Our website UI is the easiest and fastest way to use our endpoints. 
+
 1. Go to the [Nebula Block](https://www.nebulablock.com) website.
 2. Log in, and ensure you have enough credits. 
 3. Click on the "Serverless Endpoints" tab and select your model.
-4. Choose your parameters, enter your prompt and just press Enter! 
-
-Bolded parameters are supported across all models, while non-bolded parameters are specific to certain models: 
-
-- **Prompt**: The prompt to guide the model's generation.
-- Negative Prompt: A prompt to guide the model away from generating certain content.
-- **Width, Height**: The resolution of the output image. 
-- **Steps**: Number of inference steps that the model will take. A higher number of steps typically 
-leads to better quality but costs more. 
-- **Guidance Scale**: A high value encourages the model adhere closely to the prompt, but may result in a lower image quality.
-- Seed: A number to seed the generation. Using the same value ensures reproducibility.
-- Input Image: The image to use as a base for the generation. When using our API, this should be a base64 encoded image.
-- Mask Image: The mask to use for the generation. In other words, a mask to specify which areas of the image should be modified. White pixels in the mask are repainted (preserved from the input image) while black pixels are preserved. When using our API, this should be a base64 encoded image.
-
-> **NOTE:** The input image and mask image are not required to be the same dimensions. If they aren't the same, the model will roughly approximate the masked areas on the input image. 
+4. Choose your parameters, enter your prompt (and image + mask if applicable) and just press Enter!
 
 ### Through API Endpoint
 
