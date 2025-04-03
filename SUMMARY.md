@@ -27,6 +27,8 @@
   * [Overview](Tier/Overview.md)
 * Referral
   * [Overview](Referral/Overview.md)
+* Object Storage
+  * [Overview](Object_Storage/Environment_Check_And_s3cmd_Setup.md)
 * API Reference
   * [Overview](API_Reference/Overview.md)
   * [Authentication](API_Reference/Authentication.md)
