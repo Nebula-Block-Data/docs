@@ -12,6 +12,7 @@
   * [Text Generation (Vision)](Serverless_Endpoints/Vision.md)
   * [Image Generation](Serverless_Endpoints/Image_Generation.md)
   * [Embedding Generation](Serverless_Endpoints/Embedding_Generation.md)
+  * [Model List](Serverless_Endpoints/Model_List.md)
 * Dedicated Endpoints
   * [Overview](Dedicated_Endpoints/Overview.md)
   * [Quickstart](Dedicated_Endpoints/Quickstart.md)
