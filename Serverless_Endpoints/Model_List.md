@@ -27,4 +27,4 @@ For models that have a corresponding blog post, we've linked it in the model's t
 
 ##### Image-to-Image
 
-- [Flux.1 Fill Dev](https://www.nebulablock.com/blog/67e1b32e7bef4a2d8c1234fe: Specialized in image inpainting, replacing selected areas based on text prompts and masks.
+- [Flux.1 Fill Dev](https://www.nebulablock.com/blog/67e1b32e7bef4a2d8c1234fe): Specialized in image inpainting, replacing selected areas based on text prompts and masks.
