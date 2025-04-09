@@ -1,6 +1,7 @@
 # Text Generation
 
-Use these models to generate text, whether it's to review code, write a story, etc. 
+Use these models to generate text, whether it's to review code, write a story, etc.
+
 ## Models available
 
 Available text models:
