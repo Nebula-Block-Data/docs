@@ -4,15 +4,15 @@
 
     i. Navigate to the **Object Storage** tab, and click **Deploy**.
 
-![1.1](../assets/images/1.png)
+![1.1](../../assets/images/1.png)
 
     ii. Select your configuration, a **unique name** and click **Create**. 
 
-![1.2](../assets/images/2.png)
+![1.2](../../assets/images/2.png)
 
     iii. Your new storage deployment should now appear in the list.
 
-![1.3](../assets/images/3.png)
+![1.3](../../assets/images/3.png)
 
 > **Note:** The storage name must be globally unique - not just unique to your account. 
 
@@ -118,7 +118,7 @@ s3cmd mb s3://<bucket_name>
 
 > **Note:** You can verify the bucket creation in the UI or by running `s3cmd ls` again.
 
-![4.1](../assets/images/4.png)
+![4.1](../../assets/images/4.png)
 
     iii. Upload an object 
 
@@ -219,8 +219,8 @@ Your deployment shows:
 The values are updated hourly. To view pricing: 
 - Go to your storage deployment's **Details** page. 
 
-![6.1](../assets/images/5.png)
+![6.1](../../assets/images/5.png)
 
 - Or check the pricing when selecting your configuration
 
-![6.2](../assets/images/6.png)
+![6.2](../../assets/images/6.png)

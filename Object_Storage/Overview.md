@@ -14,13 +14,8 @@ Our platform allows you to start storing your data effortlessly with just a few 
 - **Credit Balance:** Ensure you have at least $0.01 credit balance in your account.
 
 ## Pricing and Billing
-- **Pay-As-You-Go:** Charges are based on storage usage and data transfer.
-- Check the [pricing page](https://www.nebulablock.com/pricing) for details.
+- **Pay-As-You-Go:** Charges are based on storage usage and data transfer, done hourly. 
 
 ## Getting Started
 
-To create and manage buckets, see [Bucket Management](Bucket_Management.md).
-
-To upload and retrieve objects, see [Object Operations](Object_Operations.md).
-
-To configure access policies, see [Access Management](Access_Management.md).
+To get started using Linux/Mac, see [Linux/Mac](Tutorials/LinuxMac.md).
