@@ -21,6 +21,7 @@
 * Object Storage
   * [Overview](Object_Storage/Overview.md)
   * [Tutorials](Object_Storage/Tutorials)
+    * [Linux/Mac Tutorial](Object_Storage/Tutorials/LinuxMac.md)
 * SSH Keys
   * [Overview](SSH_Keys/Overview.md)
   * [Quickstart](SSH_Keys/Quickstart.md)
