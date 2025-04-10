@@ -18,6 +18,9 @@
 * GPU Instances
   * [Overview](GPU_Instances/Overview.md)
   * [Quickstart](GPU_Instances/Quickstart.md)
+* Object Storage
+  * [Overview](Object_Storage/Overview.md)
+  * [Tutorials](Object_Storage/Tutorials)
 * SSH Keys
   * [Overview](SSH_Keys/Overview.md)
   * [Quickstart](SSH_Keys/Quickstart.md)
