@@ -34,9 +34,9 @@ Here's what each setting means:
 - `S3 Endpoint [s3.amazonaws.com]`: Use the **Hostname** from the Details page. 
 - `DNS-style bucket+hostname...`: Same as the **Hostname** above. 
 - `Encryption password`: Optional. If set, your files will be encrypted before upload and decrypted on download using this password. 
-- `Path to GPG program`: For encrypting files locally before upload. Leave blank unless you’ve installed and use GPG for file encryption.
+- `Path to GPG program`: Optional. For encrypting files locally before upload. Leave blank unless you’ve installed and use GPG for file encryption.
 - `Use HTTPS protocol [Yes]`: Leave as `Yes` for secure transfers. 
-- `HTTP Proxy server name`: Only needed if you're on a restricted network (like a company or school) that requires a proxy to access the internet. Leave blank otherwise
+- `HTTP Proxy server name`: Optional. Only needed if you're on a restricted network (like a company or school) that requires a proxy to access the internet. Leave blank otherwise.
 - `Test access with supplied credentials? [Y/n]`: Test the configuration with `Y`. 
 - `Save settings? [y/N]`: Save the configuration with `y`.
 
@@ -194,10 +194,10 @@ Bucket 's3://test-bucket-2000/' removed
 
 ### Delete Your Deployment
 
-To remove your storage: 
-    1. Go to the **Object Storage** tab. 
-    2. Click **Delete** on the deployment you want to remove. 
-    3. Confirm the deletion. 
+To remove your storage:
+1. Go to the **Object Storage** tab.
+2. Click **Delete** on the deployment you want to remove. 
+3. Confirm the deletion. 
 
 ### Billing 
 
