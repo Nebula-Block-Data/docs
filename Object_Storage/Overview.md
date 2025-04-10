@@ -5,9 +5,10 @@ Our platform allows you to start storing your data effortlessly with just a few 
 ## Key Features
 - **S3-Compatible API:** Seamlessly integrate with existing tools and workflows that support the S3 protocol.
 - **Live Use:** Manage your storage interactively on our platform's UI. 
-- **Code Samples:** Quick-start guides for curl, Python, and JavaScript.
+- **Complete Tutorials:** Quick-start guides for Windows, Linux and Mac.
 - **Scalable Storage:** Store and retrieve unlimited amounts of data with high availability and durability.
 - **Customizable Configurations:** Tailor storage buckets to meet your workload requirements.
+- **Secure:** Options to encrypt your data in transit and at rest, ensuring maximum security.
 
 ## Prerequisites
 - **Nebula Block Account:** Ensure you have an account on our [platform](https://www.nebulablock.com).
