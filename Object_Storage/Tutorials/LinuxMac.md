@@ -1,35 +1,30 @@
 # Tutorial: Linux/Mac
 
-1. Start Your Deployment 
+### Starting Your Deployment 
 
-    i. Navigate to the **Object Storage** tab, and click **Deploy**.
-
+1. Navigate to the **Object Storage** tab, and click **Deploy**.
 ![1.1](../../assets/images/storage_linux_tutorial/1.png)
 
-    ii. Select your configuration, a **unique name** and click **Create**. 
-
+2. Select your configuration, a **unique name** and click **Create**.
 ![1.2](../../assets/images/storage_linux_tutorial/2.png)
-
-    iii. Your new storage deployment should now appear in the list.
+3. Your new storage deployment should now appear in the list.
 
 ![1.3](../../assets/images/storage_linux_tutorial/3.png)
 
 > **Note:** The storage name must be globally unique - not just unique to your account. 
 
-2. Install `S3cmd` Tool 
+### S3 API Setup 
 
 Our storage uses the **S3 API** (like Amazon S3). You create "buckets" to store your files, which can be accessed via URL. 
 
-To interact with your storage from the command line, install [s3cmd](https://s3tools.org/s3cmd) based on your operating system.
+1. Install [s3cmd](https://s3tools.org/s3cmd) based on your operating system.
 
-3. Configure `S3cmd`
+2. Configure `S3cmd`
 
-    i. Open a terminal and run: 
-
-```bash
-s3cmd --configure
-```
-
+    i. Open a terminal and run:
+    ```bash
+    s3cmd --configure
+    ```
     ii. Enter the required settings when prompted. If you're not sure, **press Enter to accept the default** (shown in brackets `[]`). 
 
 Here's what each setting means: 
@@ -102,25 +97,24 @@ Configuration saved to '/Users/user/.s3cfg'
 user@server ~ % 
 ```
 
-4. Using `S3cmd`
+### Using Your Storage (via `S3cmd`)
 
-    i. List all buckets 
+1. List all buckets 
 
 ```bash
 s3cmd ls
 ```
 
-    ii. Create a new bucket 
+2. Create a new bucket 
 
 ```bash
 s3cmd mb s3://<bucket_name>
 ```
 
-> **Note:** You can verify the bucket creation in the UI or by running `s3cmd ls` again.
+> **Note:** You can verify the bucket creation by running `s3cmd ls` again, or in the UI:
+>![4.1](../../assets/images/storage_linux_tutorial/4.png)
 
-![4.1](../../assets/images/storage_linux_tutorial/4.png)
-
-    iii. Upload an object 
+3. Upload an object 
 
 ```bash
 s3cmd put <local_file_path> s3://<bucket_name>/<object_name>
@@ -142,11 +136,9 @@ Example:
 s3cmd put --recursive <local_folder_path> s3://<bucket_name>/<object_name>`).
 ```
 
-This will upload all the **contents** of the folder, not the folder itself. 
+This will upload all the **contents** of the folder, not the folder itself. Also note there may be a delay before the UI shows uploaded files. 
 
-> **Note:** There may be a delay before the UI shows uploaded files.
-
-    iv. List all objects in a bucket 
+4. List all objects in a bucket 
 
 ```bash
 s3cmd ls s3://<bucket_name>
@@ -162,13 +154,13 @@ user@server ~ %
 
 You can also see your bucket in the UI by clicking View on your deployment, then the Buckets tab, the clicking the bucket row (see the above screenshot example)  
 
-    v. Download an object 
+5. Download an object 
 
 ```bash
 s3cmd get s3://<bucket_name>/<object_name> <local_file_path>
 ```
 
-It should look like this: 
+Example: 
 
 ```bash
 user@server ~ % s3cmd get s3://test-bucket-2000/uploaded_test_file.txt download.txt     
@@ -176,8 +168,7 @@ download: 's3://test-bucket-2000/uploaded_test_file.txt' -> 'download.txt'  [1 o
  8 of 8   100% in    0s   113.58 B/s  done
 user@server ~ % 
 ```
-
-    vi. Delete an object 
+6. Delete an object 
 
 ```bash
 s3cmd del s3://<bucket_name>/<object_name>
@@ -189,7 +180,7 @@ user@server ~ % s3cmd del s3://test-bucket-2000/uploaded_test_file.txt
 delete: 's3://test-bucket-2000/uploaded_test_file.txt'
 ```
 
-    vii. Delete a bucket 
+7. Delete a bucket 
 
 ```bash
 s3cmd rb s3://<bucket_name>
@@ -201,14 +192,14 @@ user@server ~ % s3cmd rb s3://test-bucket-2000
 Bucket 's3://test-bucket-2000/' removed
 ```
 
-5. Delete Your Deployment
+### Delete Your Deployment
 
 To remove your storage: 
-    i. Go to the **Object Storage** tab. 
-    ii. Click **Delete** on the deployment you want to remove. 
-    iii. Confirm the deletion. 
+    1. Go to the **Object Storage** tab. 
+    2. Click **Delete** on the deployment you want to remove. 
+    3. Confirm the deletion. 
 
-6. Billing 
+### Billing 
 
 Your deployment shows: 
 
