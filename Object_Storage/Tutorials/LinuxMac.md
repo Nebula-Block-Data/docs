@@ -1,18 +1,5 @@
 # Tutorial: Linux/Mac
 
-### Starting Your Deployment 
-
-1. Navigate to the **Object Storage** tab, and click **Deploy**.
-![1.1](../../assets/images/storage_linux_tutorial/1.png)
-
-2. Select your configuration, a **unique name** and click **Create**.
-![1.2](../../assets/images/storage_linux_tutorial/2.png)
-3. Your new storage deployment should now appear in the list.
-
-![1.3](../../assets/images/storage_linux_tutorial/3.png)
-
-> **Note:** The storage name must be globally unique - not just unique to your account. 
-
 ### S3 API Setup 
 
 Our storage uses the **S3 API** (like Amazon S3). You create "buckets" to store your files, which can be accessed via URL. 
