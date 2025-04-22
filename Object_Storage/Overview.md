@@ -19,10 +19,15 @@ Our platform allows you to start storing your data effortlessly with just a few 
 
 ## Getting Started
 To get started with Nebula Block account, see [Get Started](Getting_Started.md).
+
 ## Getting Started with 's3cmd'
 To get started using Linux/Mac, see [Linux/Mac](Tutorials/LinuxMac.md).
+
 To get started using Windows, see [Windows](Tutorials/Windows.md).
+
 ## Getting Started with SDKs
 To get started using Golang SDK, see [Golang](SDK/Golang_sdk.md).
-To get started using Python SDK, see [Python](SDK/Java_sdk.md).
-To get started using Java SDK, see [Java](SDK/Python_sdk.md).
+
+To get started using Python SDK, see [Python](SDK/Python_sdk.md).
+
+To get started using Java SDK, see [Java](SDK/Java_sdk.md).

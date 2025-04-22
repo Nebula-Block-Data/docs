@@ -34,6 +34,13 @@
 * Object Storage
   * [Overview](Object_Storage/Overview.md)
   * [Get Started](Object_Storage/Getting_Started.md)
+  * Tutorials
+    * [Linux/Mac](Object_Storage/Tutorials/LinuxMac.md)
+    * [Windows](Object_Storage/Tutorials/Windows.md)
+  * SDK
+    * [Golang](Object_Storage/SDK/Golang_sdk.md)
+    * [Python](Object_Storage/SDK/Java_sdk.md)
+    * [Java](Object_Storage/SDK/Python_sdk.md)
 * API Reference
   * [Overview](API_Reference/Overview.md)
   * [Authentication](API_Reference/Authentication.md)
