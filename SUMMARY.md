@@ -31,6 +31,9 @@
   * [Overview](Tier/Overview.md)
 * Referral
   * [Overview](Referral/Overview.md)
+* Object Storage
+  * [Overview](Object_Storage/Overview.md)
+  * [Get Started](Object_Storage/Getting_Started.md)
 * API Reference
   * [Overview](API_Reference/Overview.md)
   * [Authentication](API_Reference/Authentication.md)
