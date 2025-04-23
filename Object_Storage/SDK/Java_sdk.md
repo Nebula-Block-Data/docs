@@ -39,8 +39,8 @@ public class Main {
         // S3 credentials and endpoint
         String accessKey = "YOUR_ACCESS_KEY"; // Replace with your access key
         String secretKey = "YOUR_SECRET_KEY"; // Replace with your secret key
-        String endpoint = "https://s3-us-east.nebulablock.com";
-        String region = "us";
+        String endpoint = "HOST_NAME" //Use the Hostname from the Details page.
+        String region = "US";
 
         // Create S3 client
         AmazonS3 s3 = AmazonS3ClientBuilder.standard()

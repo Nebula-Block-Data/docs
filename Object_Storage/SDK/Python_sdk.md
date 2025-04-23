@@ -24,10 +24,10 @@ import logging
 logging.basicConfig(level=logging.INFO)  # Change to DEBUG for more request details
 
 # Set your NebulaBlock object storage information
-ENDPOINT_URL = 'https://s3-us-east.nebulablock.com'
+ENDPOINT_URL = "HOST_NAME"  #Use the Hostname from the Details page.
 ACCESS_KEY = 'YOUR_ACCESS_KEY'
 SECRET_KEY = 'YOUR_SECRET_KEY'
-REGION_NAME = 'us-east-1'
+REGION_NAME = 'US'
 
 def list_buckets():
     try:

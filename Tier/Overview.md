@@ -21,7 +21,7 @@ whether you have access to GPU instances.
    - Available to all users upon sign-up.
    - Provides a request rate limit of **60 requests per minute (RPM)** for using serverless endpoints.
    - Token Rate: **60,000 tokens per minute (TPM)** for using serverless endpoints.
-   - No GPU access.
+   - No CPU and GPU access.
 
 2. **Engineer Tier 2**
    - Requires adding a credit card.
