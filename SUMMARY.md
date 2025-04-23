@@ -18,15 +18,6 @@
 * GPU Instances
   * [Overview](GPU_Instances/Overview.md)
   * [Quickstart](GPU_Instances/Quickstart.md)
-* SSH Keys
-  * [Overview](SSH_Keys/Overview.md)
-  * [Quickstart](SSH_Keys/Quickstart.md)
-* API Key
-  * [Overview](API_Key/Overview.md)
-* Tier
-  * [Overview](Tier/Overview.md)
-* Referral
-  * [Overview](Referral/Overview.md)
 * Object Storage
   * [Overview](Object_Storage/Overview.md)
   * [Get Started](Object_Storage/Getting_Started.md)
@@ -37,6 +28,15 @@
     * [Golang](Object_Storage/SDK/Golang_sdk.md)
     * [Python](Object_Storage/SDK/Java_sdk.md)
     * [Java](Object_Storage/SDK/Python_sdk.md)
+* SSH Keys
+  * [Overview](SSH_Keys/Overview.md)
+  * [Quickstart](SSH_Keys/Quickstart.md)
+* API Key
+  * [Overview](API_Key/Overview.md)
+* Tier
+  * [Overview](Tier/Overview.md)
+* Referral
+  * [Overview](Referral/Overview.md)
 * API Reference
   * [Overview](API_Reference/Overview.md)
   * [Authentication](API_Reference/Authentication.md)
