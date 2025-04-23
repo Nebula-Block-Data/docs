@@ -178,27 +178,3 @@ Example:
 user@server ~ % s3cmd rb s3://test-bucket-2000                       
 Bucket 's3://test-bucket-2000/' removed
 ```
-
-### Delete Your Deployment
-
-To remove your storage:
-1. Go to the **Object Storage** tab.
-2. Click **Delete** on the deployment you want to remove. 
-3. Confirm the deletion. 
-
-### Billing 
-
-Your deployment shows: 
-
-- Storage Usage: How much data you're storing.
-- Bandwidth Usage: How much data has been transferred out. 
-- Current Charges: The total charges incurred so far, calculated by a rate on your storage usage and a rate on your bandwidth usage. 
-
-The values are updated hourly. To view pricing: 
-- Go to your storage deployment's **Details** page. 
-
-![6.1](../../assets/images/storage_linux_tutorial/5.png)
-
-- Or check the pricing when selecting your configuration
-
-![6.2](../../assets/images/storage_linux_tutorial/6.png)
