@@ -35,8 +35,8 @@ func main() {
 	// Set the S3 compatible service information
 	accessKey := "YOUR_ACCESS_KEY"
 	secretKey := "YOUR_SECRET_KEY"
-	endpoint := "https://s3-us-east.nebulablock.com"
-	region := "us"
+	endpoint := "HOST_NAME" //Use the Hostname from the Details page.
+	region := "US"
 
 	// Create a session
 	s3Config := &aws.Config{

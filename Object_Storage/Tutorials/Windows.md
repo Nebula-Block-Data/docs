@@ -79,11 +79,11 @@ s3cmd --configure
 You will be prompted to enter the following details:
 
 ```
-Access Key: your_ak
-Secret Key: your_sk
-Default Region: cn-east-1
-S3 Endpoint: http://s3-qos.xy-jnd-3.qiniu-solutions.com/
-DNS-style bucket+hostname: http://s3-qos.xy-jnd-3.qiniu-solutions.com/
+Access Key: YOUR_ACCESS_KEY
+Secret Key: YOUR_SECRET_KEY
+Default Region: US
+S3 Endpoint: HOST_NAME //Use the Hostname from the Details page.
+DNS-style bucket+hostname: HOST_NAME //Use the Hostname from the Details page.
 Encryption password: (press Enter to pass)
 Path to GPG program: (press Enter to pass)
 Use HTTPS protocol: No
