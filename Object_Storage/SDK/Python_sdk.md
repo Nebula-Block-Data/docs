@@ -1,17 +1,19 @@
 # Nebula Block Storage Python SDK Example
 
-This example demonstrates how to connect to Nebula Block (an S3-compatible service) and perform basic operations like listing buckets, uploading, downloading, and generating a presigned URL using the AWS SDK for Python (`boto3`).
+This example demonstrates how to connect to Nebula Block (an S3-compatible service) and perform basic operations like listing buckets, uploading, downloading, and generating a presigned URL using the AWS SDK for Python [`boto3`](https://boto3.amazonaws.com/v1/documentation/api/latest/index.html).
 
 ## Prerequisites
 
 Before running the code, ensure you have the following:
 
-1. **Python** installed.
-2. **boto3** and **python-dotenv** libraries installed. You can install them using pip:
+1. Create an object storage bucket on the [Nebula Block](https://www.nebulablock.com/object-storage) platform, then navigate to the corresponding page to obtain the storage access credentials.
+![1.1](../../assets/images/storage_linux_tutorial/7.png)
+2. **Python** installed.
+3. **boto3** and **python-dotenv** libraries installed. You can install them using pip:
    ```bash
    pip install boto3 python-dotenv
    ```
-3. Create a `.env` file with your Nebula Block credentials:
+4. Create a `.env` file with your Nebula Block credentials:
    ```ini
    NEBULA_ACCESS_KEY=YOUR_ACCESS_KEY  #Use the Access Key from the Details page.
    NEBULA_SECRET_KEY=YOUR_SECRET_KEY  #Use the Secret Key from the Details page.
