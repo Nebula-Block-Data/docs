@@ -5,13 +5,14 @@ users have access to our serverless endpoints. The tiers dictate your request an
 whether you have access to GPU instances.
 
 ### **Tier Levels and Benefits**
-| Tier Level          | Requirement     | GPU Access | Request Rate | Token Rate  |
-|---------------------|-----------------|------------|--------------|-------------|
-| **Engineer Tier 1** | Sign Up         | No         | 60 RPM       | 60,000 TPM  |
-| **Engineer Tier 2** | Add Credit Card | No         | 300 RPM      | 150,000 TPM |
-| **Engineer Tier 3** | Deposit $10     | Yes        | 600 RPM      | 200,000 TPM |
-| **Expert Tier 1**   | Spend $30       | Yes        | 1,500 RPM    | 500,000 TPM |
-| **Expert Tier 2**   | Spend $50       | Yes        | 3,000 RPM    | 800,000 TPM |
+| Tier Level          | Requirement     | GPU Access | CPU Access | Request Rate | Token Rate  |
+|---------------------|-----------------|------------|------------|--------------|-------------|
+| **Engineer Tier 1** | Sign Up         | No         | No         | 60 RPM       | 60,000 TPM  |
+| **Engineer Tier 2** | Add Credit Card | No         | Yes        | 300 RPM      | 150,000 TPM |
+| **Engineer Tier 3** | Deposit $10     | Yes        | Yes        | 600 RPM      | 200,000 TPM |
+| **Expert Tier 1**   | Spend $30       | Yes        | Yes        | 1,500 RPM    | 500,000 TPM |
+| **Expert Tier 2**   | Spend $50       | Yes        | Yes        | 3,000 RPM    | 800,000 TPM |
+
 
 
 ### **Tier Descriptions**
@@ -20,7 +21,7 @@ whether you have access to GPU instances.
    - Available to all users upon sign-up.
    - Provides a request rate limit of **60 requests per minute (RPM)** for using serverless endpoints.
    - Token Rate: **60,000 tokens per minute (TPM)** for using serverless endpoints.
-   - No GPU access.
+   - No CPU and GPU access.
 
 2. **Engineer Tier 2**
    - Requires adding a credit card.

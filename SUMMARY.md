@@ -20,8 +20,14 @@
   * [Quickstart](GPU_Instances/Quickstart.md)
 * Object Storage
   * [Overview](Object_Storage/Overview.md)
+  * [Get Started](Object_Storage/Getting_Started.md)
   * Tutorials
-    * [Linux/Mac Tutorial](Object_Storage/Tutorials/LinuxMac.md)
+    * [Linux/Mac](Object_Storage/Tutorials/LinuxMac.md)
+    * [Windows](Object_Storage/Tutorials/Windows.md)
+  * SDK
+    * [Golang](Object_Storage/SDK/Golang_sdk.md)
+    * [Python](Object_Storage/SDK/Python_sdk.md)
+    * [Java](Object_Storage/SDK/Java_sdk.md)
 * SSH Keys
   * [Overview](SSH_Keys/Overview.md)
   * [Quickstart](SSH_Keys/Quickstart.md)
