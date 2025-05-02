@@ -6,11 +6,13 @@ Use these models to generate text, whether it's to review code, write a story, e
 
 Available text models:
 
+- DeepSeek-V3-0324: The leading non-reasoning model.
 - DeepSeek-R1-Distill-Llama-70B: High-quality text generation for complex queries.
 - DeepSeek-R1-Distill-Qwen-32B: Efficient text generation with lower resource usage.
 - Llama3.3-70B: Advanced conversational AI with extensive knowledge.
-- Llama3.1-8B: General-purpose text generation at low cost.
+- Qwen-QwQ-32B: The AI model from the Qwen series, designed for reasoning and problem-solving.
 - Qwen2.5-Coder-32B: Specialized in code generation and completion.
+
 
 ## Using the Models
 
