@@ -39,6 +39,8 @@ The status of the request.
 
 #### Request
 
+##### Text-to-Image Generation
+
 ```bash
 curl -X GET '{API_URL}/api/v1/images/generation' \
 -H 'Authorization: Bearer {TOKEN/KEY}' \
@@ -51,6 +53,24 @@ curl -X GET '{API_URL}/api/v1/images/generation' \
     "width": 1024,
     "height": 1024,
     "negative_prompt": null
+}'
+```
+
+##### Image-to-Image Generation
+
+```bash
+curl -X POST "https://api.nebulablock.com/api/v1/images/generation" \
+    -H "Content-Type: application/json" \
+    -H "Authorization: Bearer $NEBULA_API_KEY" \
+    --data-raw '{
+    "model":"black-forest-labs/FLUX.1-Fill-dev",
+    "prompt": "a red baseball cap",
+    "num_steps": 40,
+    "guidance_scale": 4.5,
+    "width": 1024,
+    "height": 1024,
+    "image": "/9j/4…/Z", 
+    "mask": "/9j/4…ACgD/9k="
 }'
 ```
 
