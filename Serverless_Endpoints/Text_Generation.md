@@ -45,7 +45,7 @@ curl -X POST "https://inference.nebulablock.com/v1/chat/completions" \
         "messages": [
 	  {"role":"user","content":"Is Montreal a thriving hub for the AI industry?"}
 	],
-        "model": "meta-llama/Llama-3.1-8B-Instruct",
+        "model": "meta-llama/Llama-3.3-70B-Instruct",
         "max_tokens": null, 
         "temperature": 1,
         "top_p": 0.9,
@@ -69,7 +69,7 @@ data = {
     "messages":[
 		{"role":"user","content":"Is Montreal a thriving hub for the AI industry?"}
 	],
-    "model":"meta-llama/Llama-3.1-8B-Instruct",
+    "model":"meta-llama/Llama-3.3-70B-Instruct",
     "max_tokens":None,
     "temperature":1,
     "top_p":0.9,
@@ -93,7 +93,7 @@ const data = {
     messages: [
         { role: "user", content: "Is Montreal a thriving hub for the AI industry?" }
     ],
-    model: "meta-llama/Llama-3.1-8B-Instruct",
+    model: "meta-llama/Llama-3.3-70B-Instruct",
     max_tokens: null,
     temperature: 1,
     top_p: 0.9,
@@ -116,10 +116,11 @@ fetch(url, {
 
 To specify the desired model, use this mapping for the `model_name`: 
 
+- DeepSeek-V3-0324: `deepseek-ai/DeepSeek-V3-0324`
 - DeepSeek-R1-Distill-Llama-70B: `deepseek-ai/DeepSeek-R1-Distill-Llama-70B`
 - DeepSeek-R1-Distill-Qwen-32B: `deepseek-ai/DeepSeek-R1-Distill-Qwen-32B`
 - Llama3.3-70B: `meta-llama/Llama-3.3-70B-Instruct`
-- Llama3.1-8B: `meta-llama/Llama-3.1-8B-Instruct`
+- Qwen-QwQ-32B: `Qwen/QwQ-32B`
 - Qwen2.5-Coder-32B: `Qwen/Qwen2.5-Coder-32B-Instruct`
 
 #### Response Example 
@@ -130,7 +131,7 @@ A successful generation response (non-streaming) will contain a `chat.completion
 {
     "id": "chatcmpl-ec0014bc38e2cad1e45d47f7f01f6569",
     "created": 1740432179,
-    "model": "meta-llama/Llama-3.1-8B-Instruct",
+    "model": "meta-llama/Llama-3.3-70B-Instruct",
     "object": "chat.completion",
     "system_fingerprint": null,
     "choices": [
@@ -163,7 +164,7 @@ This represents the entire generated response from the inference. Alternatively,
 {
     "id": "chatcmpl-289eb1f670a58c5cde47ddb634aad595",
     "created": 1740432271,
-    "model": "meta-llama/Llama-3.1-8B-Instruct",
+    "model": "meta-llama/Llama-3.3-70B-Instruct",
     "object": "chat.completion.chunk",
     "choices": [
         {
