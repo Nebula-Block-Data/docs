@@ -6,6 +6,6 @@ This guide will help you get set up with the Nebula Block API.
 
 ## API Overview
 
-- **BASE URL**: `https://api.nebula-block.com`
+- **BASE URL**: `https://api.nebulablock.com`
 - **BASE PATH**: `/api/v1`
-- **API_URL**: `https://api.nebula-block.com/api/v1`
+- **API_URL**: `https://api.nebulablock.com/api/v1`
