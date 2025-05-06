@@ -1,30 +1,53 @@
+# Welcome to Nebula Block
 
-# Overview
+Nebula Block is a cutting-edge AI cloud platform that provides enterprise-grade infrastructure for AI development, training, and deployment. Our platform combines powerful GPU/CPU cloud compute, scalable object storage, and state-of-the-art inference models to accelerate your AI journey.
 
-Welcome to [Nebula Block ](https://nebulablock.com/), an innovative Montreal-based startup revolutionizing cloud computing and AI solutions. Tailored
-to meet the high demands of academic and commercial institutions, Nebula Block delivers secure, scalable, and cost-efficient 
-computing environments alongside cutting-edge AI tools.
+## Our Core Services
 
-Learn how to create and manage powerful cloud computing resources and use state-of-the-art AI tools via this documentation. 
-You'll create and manage an account, add credit card and billing details, and deploy exciting products.
+### 🚀 Serverless Endpoints
+Use AI models with zero infrastructure management:
+- Pre-configured popular models ready for instant use
+- Pay-per-call pricing with no upfront costs
+- Auto-scaling to handle varying workloads
+- Support for text, vision, and embedding generation
 
-## What are Serverless Endpoints?
+### 🎯 Dedicated Endpoints
+Custom infrastructure for production workloads:
+- Deploy your own models with full control
+- Optimized for high-throughput applications
+- Custom hardware configurations
+- Enterprise-grade SLAs
 
-[Serverless endpoints](Serverless_Endpoints/Overview.md) are endpoints that host advance generative AI models (e.g. large language models
- such as Meta's LLama). With the ease of a few clicks and signing up into our customer portal,
-you can access pre-configured models and use them directly in your projects, almost no setup required! 
+### 💪 GPU Cloud Compute
+Access powerful computing resources on demand:
+- Latest NVIDIA GPUs (H200, H100, 5090, etc.)
+- Flexible instance types optimized for AI/ML
+- Per-second billing
+- Automated scaling options
 
-## What are Dedicated Endpoints?
+### 🗄️ Object Storage
+Enterprise-grade storage solution for your AI data:
+- Highly available and durable
+- Multiple storage tiers
+- S3-compatible with SDK support
 
-[Dedicated endpoints](Dedicated_Endpoints/Overview.md) are similar to serverless endpoints, but are the ultimate solution
-for users requiring custom infrastructure and model configurations. With dedicated endpoints, you can deploy
-your own AI models onto hardware of your choice.
+## Why Choose Nebula Block?
 
-## What are GPU Instances?
+- **Cost-Efficient**: Up to 70% lower costs compared to major cloud providers
+- **High Performance**: Enterprise-grade infrastructure optimized for AI workloads
+- **Easy to Use**: Simple API and intuitive interface
+- **Secure**: SOC 2 compliant with enterprise-grade security
+- **Scalable**: Automatically scale resources based on your needs
+- **Support**: 24/7 technical support and dedicated account management
 
-[GPU instances](GPU_Instances/Overview.md) are cloud computing resources that you can rent out for your AI and compute-intensive projects. 
-Select your desired hardware and its configurations, and gain access to cutting edge cloud computing resources in minutes.
+## Getting Started
 
-## Contact Us
+1. [Create an account](Get_Started/Quickstart.md)
+2. [Set up billing](Get_Started/Billing_Information.md)
+3. [Deploy your first endpoint](Get_Started/Deploy_Products.md)
 
-To contact Nebula Block, see the [Contact Us](Contact_Us/README.md) section.
+## Need Help?
+
+- [API Documentation](API_Reference/Overview.md)
+- [Contact Support](Contact_Us/README.md)
+- [Join our Discord Community](Contact_Us/README.md)
