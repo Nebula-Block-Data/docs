@@ -1,14 +1,88 @@
-# Quickstart
+# SSH Keys Quickstart Guide
 
-## Log In or Sign Up
-- If you have an account, log in with Google or email/password.
-- If you’re new to Nebula Block, create an account for free.
+This guide will walk you through creating and using SSH keys with your Nebula Block GPU instances.
 
-## Creating an SSH Key
-1. Head over to the [SSH Public Key](https://nebulablock.com/sshKey) tab
-2. Click "Create".
-3. Enter the SSH key name and key data.
-4. Click "Save" and you're done! 
+## 1. Generate an SSH Key Pair
 
-## Using SSH Keys
-Use the [SSH Public Key](https://nebulablock.com/sshKey) tab to manage your SSH keys. You can view, create and delete keys as needed.
+### On Linux/macOS
+```bash
+# Generate a key pair (replace your@email.com with your email)
+ssh-keygen -t ed25519 -C "your@email.com"
+
+# Start the ssh-agent
+eval "$(ssh-agent -s)"
+
+# Add your private key to ssh-agent
+ssh-add ~/.ssh/id_ed25519
+```
+
+### On Windows (PowerShell)
+```powershell
+# Generate a key pair
+ssh-keygen -t ed25519 -C "your@email.com"
+
+# Start the ssh-agent
+Start-Service ssh-agent
+
+# Add your private key to ssh-agent
+ssh-add $env:USERPROFILE\.ssh\id_ed25519
+```
+
+## 2. Add Your Public Key to Nebula Block
+
+1. Go to the [Nebula Block Dashboard](https://dashboard.nebulablock.com)
+2. Navigate to SSH Public Key
+3. Click "Create"
+4. Copy your public key content:
+   ```bash
+   # On Linux/macOS
+   cat ~/.ssh/id_ed25519.pub
+   
+   # On Windows
+   type $env:USERPROFILE\.ssh\id_ed25519.pub
+   ```
+5. Paste the key content and give it a descriptive name
+6. Click "Confirm"
+
+## 3. Use SSH Keys with GPU Instances
+
+### When Creating a New Instance
+1. Start creating a new GPU instance
+2. In the instance creation form, select your SSH key
+3. Complete the instance creation
+
+### Connect to Your Instance
+```bash
+# Replace with your instance's IP address
+ssh -i ~/.ssh/id_ed25519 user@instance_ip
+```
+
+## 4. Best Practices
+
+- Keep your private key secure and never share it
+- Use a strong passphrase when generating keys
+- Use different keys for different purposes
+- Regularly rotate your keys
+- Remove unused keys from your account
+
+## 5. Troubleshooting
+
+### Common Issues
+
+1. **Permission Issues**
+```bash
+# Fix private key permissions
+chmod 600 ~/.ssh/id_ed25519
+```
+
+2. **Connection Refused**
+- Verify the instance is running
+- Check if the IP address is correct
+- Ensure the security group allows SSH (port 22)
+
+3. **Key Not Working**
+- Verify you're using the correct key
+- Check if the key is added to the ssh-agent
+- Ensure the public key is properly added to the instance
+
+For more detailed information about SSH keys, see our [Overview](Overview.md).

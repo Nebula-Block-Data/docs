@@ -3,99 +3,220 @@
 description: Generate Embeddings From Text.
 ---
 
-# Generate Serverless Embeddings
+# Embeddings API
 
-Return the generated embeddings based on the given inputs. 
+Generate vector embeddings from text using our embedding models. These embeddings can be used for semantic search, clustering, and other machine learning tasks.
 
-## HTTP Request
+## Endpoint
 
-`POST` `{API_URL}/embeddings`
-
-where `API_URL = https://inference.nebulablock.com/v1`. The body requires: 
-
-- `model`: The model to use for generating embeddings.
-- `input`: A list of strings to generate embeddings from.
-
-For authentication, see the [Authentication](../Authentication.md) section. For an example, see the [Serverless Endpoints](../../Serverless_Endpoints/Embedding_Generation.md) section.
-
-## Response Attributes
-
-#### model `model`
-A string representing the AI model used to generate the response.
-
-#### data `array`
-An array containing the embeddings, represented by dictionaries with the following key-value pairs: 
-
-- **embedding** `list of floats`: The generated embedding for input at index `index`. 
-- **index** `integer`: An index to identify the position of the embedding in the response, relative to the ordering of the input.
-- **object** `string`: An object label to describe the data. 
-
-#### object `string`
-Describes the type of data returned.
-
-#### usage `dict`
-A dictionary containing information about the inference request, in key-value pairs: 
-
-- **completion_tokens** `integer`: The number of tokens generated in the completion for a completion action (not applicable for embeddings).
-- **prompt_tokens** `integer`: The number of tokens in the prompt.
-- **total_tokens** `integer`: The total number of tokens (prompt and completion combined).
-- **completion_tokens_details** `null`: Additional details about the completion tokens, if available. 
-- **prompt_tokens_details** `null`: Additional details about the prompt tokens, if available. 
-
-## Example
-
-#### Request
-
-```bash
-curl -X GET '{API_URL}/api/v1/images/generation' \
--H 'Authorization: Bearer {TOKEN/KEY}' \
--H 'Content-Type: application/json' \
--d '{
-    "model": "WhereIsAI/UAE-Large-V1",
-    "input": [
-        "Bananas are berries, but strawberries are not, according to botanical classifications.",
-        "The Eiffel Tower in Paris was originally intended to be a temporary structure."
-    ]
-}'
+```
+POST https://inference.nebulablock.com/v1/embeddings
 ```
 
-#### Response
+## Request Headers
 
-Here's an example of a successful response. It consists of a stream of `data` dictionaries, each containing the data for 
-a generated token. The entire collection of dictionaries represents the complete generated response. 
+| Header | Value |
+|--------|-------|
+| Authorization | Bearer YOUR_API_KEY |
+| Content-Type | application/json |
 
-```json{
-    "model": "WhereIsAI/UAE-Large-V1",
-    "data": [
-        {
-            "embedding": [
-                -0.373046875,
-                ...,
-                -0.10302734375
-            ],
-            "index": 0,
-            "object": "embedding"
-        },
-        {
-            "embedding": [
-                -0.50390625,
-                ...,
-                -0.03564453125,
-                0.01409912109375
-            ],
-            "index": 1,
-            "object": "embedding"
-        }
+## Request Body
+
+| Parameter | Type | Required | Description |
+|-----------|------|----------|-------------|
+| model | string | Yes | Model ID (e.g., "WhereIsAI/UAE-Large-V1") |
+| input | string or array | Yes | Text to embed (string or array of strings) |
+| encoding_format | string | No | Output format: "float" or "base64" (default: "float") |
+| normalize | boolean | No | Whether to L2-normalize the embeddings (default: true) |
+
+### Example Request
+
+```bash
+curl https://api.inference.nebulablock.com/v1/embeddings/generate \
+  -H "Authorization: Bearer YOUR_API_KEY" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "model": "ada-002",
+    "input": ["Hello world", "How are you?"],
+    "encoding_format": "float"
+  }'
+```
+
+## Response
+
+### Success Response
+
+```json
+{
+  "status": "success",
+  "data": {
+    "embeddings": [
+      {
+        "embedding": [0.0023, -0.0141, 0.0262, ...],
+        "index": 0
+      },
+      {
+        "embedding": [-0.0076, 0.0179, 0.0121, ...],
+        "index": 1
+      }
     ],
-    "object": "list",
     "usage": {
-        "completion_tokens": 0,
-        "prompt_tokens": 33,
-        "total_tokens": 33,
-        "completion_tokens_details": null,
-        "prompt_tokens_details": null
-    }
+      "prompt_tokens": 6,
+      "total_tokens": 6
+    },
+    "model": "ada-002",
+    "dimensions": 1536
+  }
 }
 ```
 
-For more examples, see the [Serverless Endpoints](../../Serverless_Endpoints/Embedding_Generation.md) section.
+### Error Response
+
+```json
+{
+  "status": "error",
+  "error": {
+    "code": "invalid_input",
+    "message": "Input text is too long",
+    "details": {
+      "max_tokens": 8191,
+      "input_tokens": 10000
+    }
+  }
+}
+```
+
+## Rate Limits
+
+Rate limits apply based on your tier level. See [Rate Limits](../Overview.md#rate-limits) for details.
+
+## Models
+
+Available models for generating embeddings:
+
+| Model | Best For |
+|-------|----------|
+| UAE-Large-V1 | General-purpose text embeddings with high accuracy |
+| BGE Large EN v1.5 | Optimized English text embeddings |
+
+For detailed information about each model and their latest updates, see [Model List](Model_List.md).
+
+## Embedding Formats
+
+Embeddings can be returned in two formats:
+
+1. **Float Array**: Default format, returns embeddings as arrays of floating-point numbers
+2. **Base64**: Compressed format, useful for efficient storage and transmission
+
+### Base64 Format Example
+
+```json
+{
+  "status": "success",
+  "data": {
+    "embeddings": [
+      {
+        "embedding": "base64_encoded_string",
+        "index": 0
+      }
+    ]
+  }
+}
+```
+
+## Error Codes
+
+| Code | Description |
+|------|-------------|
+| invalid_input | Input text is invalid or too long |
+| invalid_model | Specified model doesn't exist |
+| batch_size_exceeded | Too many inputs in single request |
+| rate_limit_exceeded | Too many requests |
+| insufficient_quota | Not enough credits or quota |
+
+## Code Examples
+
+### Python
+
+```python
+from nebula_block import NebulaClient
+import numpy as np
+
+client = NebulaClient(api_key="YOUR_API_KEY")
+
+# Generate embeddings for multiple texts
+response = client.generate_embeddings(
+    model="ada-002",
+    input=["Hello world", "How are you?"]
+)
+
+# Convert to numpy arrays
+embeddings = np.array([e["embedding"] for e in response.data["embeddings"]])
+
+# Calculate similarity
+similarity = np.dot(embeddings[0], embeddings[1])
+print(f"Similarity: {similarity}")
+```
+
+### JavaScript
+
+```javascript
+const { NebulaClient } = require('nebula-block');
+
+const client = new NebulaClient({ apiKey: 'YOUR_API_KEY' });
+
+async function generateEmbeddings() {
+  const response = await client.generateEmbeddings({
+    model: 'ada-002',
+    input: ['Hello world', 'How are you?']
+  });
+  
+  // Get embeddings
+  const embeddings = response.data.embeddings.map(e => e.embedding);
+  
+  // Calculate similarity (using dot product)
+  const similarity = dotProduct(embeddings[0], embeddings[1]);
+  console.log(`Similarity: ${similarity}`);
+}
+
+function dotProduct(a, b) {
+  return a.reduce((sum, val, i) => sum + val * b[i], 0);
+}
+
+generateEmbeddings();
+```
+
+## Common Use Cases
+
+1. **Semantic Search**
+```python
+# Create an index of documents
+docs = ["First document", "Second document", "Third document"]
+doc_embeddings = client.generate_embeddings(model="ada-002", input=docs)
+
+# Search query
+query = "Find similar documents"
+query_embedding = client.generate_embeddings(model="ada-002", input=[query])
+
+# Find similar documents using cosine similarity
+similarities = np.dot(doc_embeddings, query_embedding.T)
+```
+
+2. **Clustering**
+```python
+from sklearn.cluster import KMeans
+
+# Generate embeddings for your texts
+embeddings = client.generate_embeddings(model="ada-002", input=texts)
+
+# Perform clustering
+kmeans = KMeans(n_clusters=3)
+clusters = kmeans.fit_predict(embeddings)
+```
+
+## See Also
+
+- [Model List](Model_List.md)
+- [Rate Limits](../Overview.md#rate-limits)
+- [Authentication](../Authentication.md)
+- [Best Practices](../Best_Practices.md)

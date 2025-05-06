@@ -13,8 +13,6 @@ whether you have access to GPU instances.
 | **Expert Tier 1**   | Spend $30       | Yes        | Yes        | 1,500 RPM    | 500,000 TPM |
 | **Expert Tier 2**   | Spend $50       | Yes        | Yes        | 3,000 RPM    | 800,000 TPM |
 
-
-
 ### **Tier Descriptions**
 
 1. **Engineer Tier 1**
@@ -43,7 +41,7 @@ whether you have access to GPU instances.
 
 5. **Expert Tier 2**
    - Requires a **$50 spend**.
-   - Grants GPU access.o
+   - Grants GPU access.
    - Highest request rate of **3,000 RPM**.
    - Token Rate: **800,000 TPM**.
 
@@ -53,3 +51,73 @@ whether you have access to GPU instances.
 - Higher tiers provide increased computational power and request capabilities.
 
 For further assistance, see the [Contact Us](../Contact_Us/README.md) section.
+
+# Pricing
+
+Nebula Block offers transparent, competitive pricing across all our services. Pay only for what you use with no hidden fees.
+
+## GPU Instances
+
+### On-Demand Pricing Starting From
+| GPU Type | Price per Hour|
+|----------|---------------|
+| H200 | $1.95 |
+| H100 | $1.25 |
+| A100 | $0.89 |
+| L40S | $0.75 |
+| 5090 | $0.65 |
+
+Custom configurations available for enterprise customers.
+
+## Serverless AI Endpoints
+
+### Language Models (per 1M tokens)
+| Model | Price |
+|-------|-------|
+| Llama 3.3 70B | $0.35 |
+| Qwen QwQ 32B | $1.08 |
+| Qwen 2.5 Coder 32B | $0.15 |
+| DeepSeek Models | Free tier available |
+
+DeepSeek Models include:
+- DeepSeek-V3-0324
+- DeepSeek-R1-Distill-Llama-70B
+- DeepSeek-R1-Distill-Qwen-32B
+
+### Image Generation
+| Model | Price |
+|-------|-------|
+| Stable Diffusion XL 1.0 | $0.009 per image |
+| FLUX.1 [schnell] | $0.0019 per image |
+| FLUX.1 Fill | Free tier available |
+
+### Vision Models
+| Model | Price |
+|-------|-------|
+| Qwen 2.5 VL 7B | $0.10 per 1M tokens |
+
+### Embedding Models
+| Model | Price |
+|-------|-------|
+| UAE-Large-V1 | $0.012 per 1M tokens |
+| BGE-large-en-v1.5 | $0.006 per 1M tokens |
+| M2-BERT-Retrieval-32k | Free tier available |
+
+## Object Storage
+| Service | Price |
+|---------|-------|
+| Standard Storage | $0.02 per GB/month |
+| Data Transfer OUT | $0.08 per GB |
+| Data Transfer IN | Free |
+
+## Enterprise Features
+
+Enterprise customers receive:
+- Custom pricing for high-volume usage
+- Dedicated support team
+- SLA guarantees (up to 99.99% uptime)
+- Private deployments
+- Custom security configurations
+- Flexible billing options
+
+For enterprise pricing and custom solutions, [contact our sales team](../Contact_Us/README.md).
