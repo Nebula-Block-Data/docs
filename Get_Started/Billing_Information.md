@@ -7,9 +7,11 @@ Our cloud compute platform offers flexible billing options for GPU rental, objec
 ## Pricing Structure
 
 ### GPU Rental
-- **A100 GPU**: Starting at $1.30/hour
-- **H100 GPU**: Starting at $1.75/hour
-- **H200 GPU**: Starting at $2.09/hour
+- **H200 GPU**: Starting at $1.95/hour
+- **H100 GPU**: Starting at $1.25/hour
+- **A100 GPU**: Starting at $0.89/hour
+- **L40S GPU**: Starting at $0.75/hour
+- **5090 GPU**: Starting at $0.65/hour
 - Custom configurations available for enterprise customers
 
 ### Object Storage
@@ -29,11 +31,13 @@ Pricing varies by model size and type:
   - DeepSeek-R1-Distill-Llama-70B
   - DeepSeek-R1-Distill-Qwen-32B
 
-#### Vision Models
-- **Qwen 2.5 VL 7B**: $0.10 per 1M tokens
+#### Image Models
 - **Stable Diffusion XL 1.0**: $0.009 per image
 - **FLUX.1 [schnell]**: $0.0019 per image
 - **FLUX.1 Fill**: Free tier available
+
+#### Vision Models
+- **Qwen 2.5 VL 7B**: $0.10 per 1M tokens
 
 #### Embedding Models
 - **UAE-Large-V1**: $0.012 per 1M tokens
@@ -83,13 +87,11 @@ Enterprise customers receive additional benefits:
 Access detailed billing information through:
 - **Transaction History**: View all credit purchases and usage
 - **Usage Analytics**: Monitor resource consumption
-- **Cost Forecasting**: Estimate future costs
-- **Billing Reports**: Download detailed monthly statements
 
 ## Support
 
 For billing inquiries:
-- Email: billing@nebulablock.com
+- Email: contact@nebulablock.com
 - Support portal: https://nebulablock.com/support
 - Enterprise customers: Contact your dedicated account manager
 
