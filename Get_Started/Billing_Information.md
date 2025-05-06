@@ -1,39 +1,101 @@
 # Billing Information
 
-## How it Works
+## Overview
 
-Payments are simple- you can purchase credits, which are then deducted by your product usage billing (e.g hourly usage from
-your GPU instances). [Invoices](#invoices) are generated automatically for each credit purchase, and all other billing 
-information is handled in the [Billing](https://nebulablock.com/billing) tab.
+Our cloud compute platform offers flexible billing options for GPU rental, object storage, and inference endpoints. You only pay for what you use, with transparent pricing and no hidden fees.
 
-## Adding a Payment Card
+## Pricing Structure
 
-To add a payment card, simply navigate to the "Add a New Card" button on the billing page and enter your card details. 
-If the card meets the following requirements, it is added to your account successfully:
-- Has valid card credentials (CVV, address, card number, etc.)
-- Doesn't exist on another account
-- Has enough funds (the $0.98 USD charge will be credited to your account)
+### GPU Rental
+- **A100 GPU**: Starting at $1.30/hour
+- **H100 GPU**: Starting at $1.75/hour
+- **H200 GPU**: Starting at $2.09/hour
+- Custom configurations available for enterprise customers
 
-Nebula Block accepts all types of payment cards. Note that a small charge of **$0.98 USD** will be applied to your card to validate
-that it has funds. This amount will be credited as credits to your account on our platform. 
+### Object Storage
+- Standard storage: $0.02 per GB/month
+- Data transfer OUT: $0.08 per GB
+- Data transfer IN: Free
 
-## Managing Payment Methods
+### Inference Endpoints
+Pricing varies by model size and type:
 
-Managing payment methods is simple via our customer portal. To change your default payment method, simply configure this 
-in the **Payment Method** section of the billing page.
+#### Language Models (per 1M tokens)
+- **Llama 3.3 70B**: $0.35
+- **Qwen QwQ 32B**: $1.08
+- **Qwen 2.5 Coder 32B**: $0.15
+- **DeepSeek Models**: Free tier available
+  - DeepSeek-V3-0324
+  - DeepSeek-R1-Distill-Llama-70B
+  - DeepSeek-R1-Distill-Qwen-32B
 
-## Purchasing Credits
+#### Vision Models
+- **Qwen 2.5 VL 7B**: $0.10 per 1M tokens
+- **Stable Diffusion XL 1.0**: $0.009 per image
+- **FLUX.1 [schnell]**: $0.0019 per image
+- **FLUX.1 Fill**: Free tier available
 
-To purchase credits, which are the sole currency that you use to make payments for our products, simply select the 
-amount you wish to purchase on the billing page, then make the purchase, which will be done with your default payment card
-or with a new card.
+#### Embedding Models
+- **UAE-Large-V1**: $0.012 per 1M tokens
+- **BGE-large-en-v1.5**: $0.006 per 1M tokens
+- **M2-BERT-Retrieval-32k**: Free tier available
 
-## Invoices
+## Payment Methods
 
-Transactions made on your account (e.g. when you are billed for usage) will be documented as downloadable invoices and 
-listed in the **Transaction** section of the billing page. 
+To add a payment card:
+1. Navigate to the "Add a New Card" button on the billing page
+2. Enter your card details
+3. Your card will be verified and added to your account
 
-## Usage
+Requirements for payment cards:
+- Valid card credentials (CVV, address, card number)
+- Not associated with another account
 
-To see the usage rate of your products, see the **Usages** section of the billing page.
+We accept all major credit and debit cards.
+
+## Credits and Billing
+
+### Purchasing Credits
+1. Select desired credit amount on the billing page
+2. Complete purchase using default payment method or new card
+3. Credits are immediately available for use
+4. Credits never expire
+
+### Usage Billing
+- GPU instances are billed by the hour
+- Storage is billed by GB/month
+- Inference endpoints are billed by usage (tokens/requests)
+- Billing cycles run monthly
+- Automatic credit replenishment when balance is low
+
+## Enterprise Features
+
+Enterprise customers receive additional benefits:
+- Custom pricing for high-volume usage
+- Dedicated support team
+- SLA guarantees
+- Private deployments
+- Custom security configurations
+- Flexible billing options
+
+## Monitoring and Reports
+
+Access detailed billing information through:
+- **Transaction History**: View all credit purchases and usage
+- **Usage Analytics**: Monitor resource consumption
+- **Cost Forecasting**: Estimate future costs
+- **Billing Reports**: Download detailed monthly statements
+
+## Support
+
+For billing inquiries:
+- Email: billing@nebulablock.com
+- Support portal: https://nebulablock.com/support
+- Enterprise customers: Contact your dedicated account manager
+
+## SLA and Uptime
+
+- Standard tier: 99.9% uptime guarantee
+- Enterprise tier: Up to 99.99% uptime guarantee with geo-redundancy
+- Service credits provided for any downtime below guaranteed levels
 
