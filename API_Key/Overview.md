@@ -24,3 +24,7 @@ Each user is permitted to have only one API key at a time.
 4. **Security Considerations**:
    - Keep your API key secure. Do not expose it publicly (eg. in client-side code or version control).
    - If you suspect your API key has been compromised, renew it immediately to avoid unexpected charges. 
+
+## See Also
+- [Glossary](../glossary.md)
+- [API Reference - API Keys](../API_Reference/API_Keys/Create_API_Key.md)
