@@ -5,126 +5,104 @@ Please use aws-sdk-go V1 version as follows.
 
 ## Prerequisites
 
-1. Go installed on your system
-2. AWS SDK for Go installed. You can get it using:
-```bash
-go get github.com/aws/aws-sdk-go
-```
+To run this program, you'll need:
 
-## Example Code
+- Go installed on your machine (https://golang.org/doc/install).
+- AWS SDK for Go installed. You can get it using:
+
+  ```bash
+  go get github.com/aws/aws-sdk-go
+  ```
+
+- Access credentials (Access Key ID and Secret Access Key) for the S3-compatible service you are connecting to.
+
+## Code
 
 ```go
 package main
 
 import (
-    "fmt"
-    "log"
+	"fmt"
+	"log"
 
-    "github.com/aws/aws-sdk-go/aws"
-    "github.com/aws/aws-sdk-go/aws/credentials"
-    "github.com/aws/aws-sdk-go/aws/session"
-    "github.com/aws/aws-sdk-go/service/s3"
+	"github.com/aws/aws-sdk-go/aws"
+	"github"github.com/aws/aws-sdk-go/aws/credentials"
+	"github.com/aws/aws-sdk-go/aws/session"
+	"github.com/aws/aws-sdk-go/service/s3"
 )
 
 func main() {
-    // Replace with your credentials and endpoint
-    accessKey := "your_access_key"
-    secretKey := "your_secret_key"
-    endpoint := "your_endpoint"
-    region := "us-east-1" // Use appropriate region
+	// Set the S3 compatible service information
+	accessKey := "YOUR_ACCESS_KEY"
+	secretKey := "YOUR_SECRET_KEY"
+	endpoint := "HOST_NAME" //Use the Hostname from the Details page.
+	region := "US"
 
-    // Create custom credentials
-    creds := credentials.NewStaticCredentials(accessKey, secretKey, "")
+	// Create a session
+	s3Config := &aws.Config{
+		Credentials:      credentials.NewStaticCredentials(accessKey, secretKey, ""),
+		Endpoint:         aws.String(endpoint),
+		Region:           aws.String(region),
+		S3ForcePathStyle: aws.Bool(true), // Use path-style instead of virtual host style
+	}
 
-    // Create custom AWS config
-    config := &aws.Config{
-        Credentials:      creds,
-        Endpoint:        aws.String(endpoint),
-        Region:          aws.String(region),
-        S3ForcePathStyle: aws.Bool(true), // Required for S3-compatible services
-    }
+	sess, err := session.NewSession(s3Config)
+	if err != nil {
+		log.Fatalf("Failed to create session: %v", err)
+	}
 
-    // Create session
-    sess, err := session.NewSession(config)
-    if err != nil {
-        log.Fatalf("Failed to create session: %v", err)
-    }
+	// Create S3 service client
+	svc := s3.New(sess)
 
-    // Create S3 service client
-    svc := s3.New(sess)
+	// List all buckets
+	fmt.Println("Attempting to list buckets...")
+	result, err := svc.ListBuckets(nil)
+	if err != nil {
+		log.Fatalf("Failed to list buckets: %v", err)
+	}
 
-    // List buckets
-    result, err := svc.ListBuckets(nil)
-    if err != nil {
-        log.Fatalf("Failed to list buckets: %v", err)
-    }
-
-    fmt.Println("Buckets:")
-    for _, bucket := range result.Buckets {
-        fmt.Printf("- %s created on %s\n",
-            aws.StringValue(bucket.Name), aws.TimeValue(bucket.CreationDate))
-    }
+	fmt.Println("Successfully connected! Current buckets:")
+	for _, bucket := range result.Buckets {
+		fmt.Printf("  - %s
+", *bucket.Name)
+	}
 }
 ```
 
-## Additional Operations
+## Explanation
 
-Here are some common operations you can perform with the SDK:
+1. **Setting up the S3 Configuration:**
+   - The program starts by setting the AWS access key, secret key, and endpoint of the S3-compatible service. The region is also set to `us`.
+   - `S3ForcePathStyle` is set to `true` to use path-style addressing rather than virtual host style.
 
-### Upload an Object
+2. **Creating a Session:**
+   - A new session is created using the configuration parameters. If the session creation fails, the program logs an error and exits.
 
-```go
-func uploadObject(svc *s3.S3, bucket, key string, body io.Reader) error {
-    input := &s3.PutObjectInput{
-        Bucket: aws.String(bucket),
-        Key:    aws.String(key),
-        Body:   body,
-    }
+3. **Listing Buckets:**
+   - The program uses the `ListBuckets` API to retrieve all available buckets. If the request is successful, it prints out the names of the buckets.
 
-    _, err := svc.PutObject(input)
-    return err
-}
+## Running the Program
+
+1. Save the above code to a file, for example, `main.go`.
+2. Run the program using the following command:
+
+   ```bash
+   go run main.go
+   ```
+
+3. The output will display the names of the S3 buckets.
+
+### Example Output
+
+```
+Attempting to list buckets...
+Successfully connected! Current buckets:
+  - my-bucket-name-1
+  - my-bucket-name-2
+  - my-bucket-name-3
 ```
 
-### Download an Object
+## Notes
 
-```go
-func downloadObject(svc *s3.S3, bucket, key string) ([]byte, error) {
-    input := &s3.GetObjectInput{
-        Bucket: aws.String(bucket),
-        Key:    aws.String(key),
-    }
-
-    result, err := svc.GetObject(input)
-    if err != nil {
-        return nil, err
-    }
-    defer result.Body.Close()
-
-    return ioutil.ReadAll(result.Body)
-}
-```
-
-### Generate Presigned URL
-
-```go
-func generatePresignedURL(svc *s3.S3, bucket, key string, duration time.Duration) (string, error) {
-    req, _ := svc.GetObjectRequest(&s3.GetObjectInput{
-        Bucket: aws.String(bucket),
-        Key:    aws.String(key),
-    })
-
-    return req.Presign(duration)
-}
-```
-
-## Usage
-
-1. Save the code in a file (e.g., `main.go`)
-2. Replace the placeholder credentials with your actual credentials
-3. Run the program:
-```bash
-go run main.go
-```
-
-For more information, refer to the [AWS SDK for Go Documentation](https://docs.aws.amazon.com/sdk-for-go/api/service/s3/) 
+- Make sure your AWS credentials (Access Key and Secret Key) are correctly set.
+- The program will list the buckets available at the specified S3-compatible service endpoint.

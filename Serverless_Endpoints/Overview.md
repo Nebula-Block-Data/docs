@@ -10,7 +10,7 @@ samples in curl, Python, or JavaScript.
 - **Serverless Endpoints:** No setup required—get started instantly after signing in.
 - **Live Use:** Test models interactively on our platform's UI. 
 - **Code Samples:** Quick-start guides for curl, Python, and JavaScript.
-- **Support for Popular Models:** Choose from a range of new models like Deepseek V3 and more.
+- **Support for Popular Models:** Choose from a range of new models like Meta's LLaMA3.1, StableDiffusion XL, and more.
 - **Scalable Performance:** Built on Nebula Block's GPU-accelerated infrastructure.
 - **Customizable Configurations:** Tailor endpoints to meet your workload requirements.
 

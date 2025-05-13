@@ -2,22 +2,6 @@
 Welcome to Nebula Block's S3-Compatible Object Storage, the easiest way to store and manage your data in the cloud.
 Our platform allows you to start storing your data effortlessly with just a few clicks!
 
-## Features
-
-- S3-compatible API
-- High durability and availability
-- Secure data transfer and storage
-- Flexible access control
-- Pay-as-you-go pricing
-
-## Getting Started
-
-To get started with Object Storage, see our [Getting Started Guide](Getting_Started.md).
-
-For detailed tutorials on using Object Storage:
-- [Linux/Mac Tutorial](Tutorials/LinuxMac.md)
-- [Windows Tutorial](Tutorials/Windows.md)
-
 ## Key Features
 - **S3-Compatible API:** Seamlessly integrate with existing tools and workflows that support the S3 protocol.
 - **Live Use:** Manage your storage interactively on our platform's UI. 
@@ -33,10 +17,17 @@ For detailed tutorials on using Object Storage:
 ## Pricing and Billing
 - **Pay-As-You-Go:** Charges are based on storage usage and data transfer, done hourly. 
 
-## SDK Support
-Our Object Storage service is fully S3-compatible and supports standard AWS SDKs. For SDK documentation and examples, see:
-- [Python SDK Guide](SDK/Python_sdk.md)
-- [Go SDK Guide](SDK/Golang_sdk.md)
-- [Java SDK Guide](SDK/Java_sdk.md)
+## Getting Started
+To get started with Nebula Block account, see [Get Started](Getting_Started.md).
 
-For more details, visit our [SDK Reference](SDK/README.md) section.
+## Getting Started with 's3cmd'
+To get started using Linux/Mac, see [Linux/Mac](Tutorials/LinuxMac.md).
+
+To get started using Windows, see [Windows](Tutorials/Windows.md).
+
+## Getting Started with SDKs
+To get started using Golang SDK, see [Golang](SDK/Golang_sdk.md).
+
+To get started using Python SDK, see [Python](SDK/Python_sdk.md).
+
+To get started using Java SDK, see [Java](SDK/Java_sdk.md).

@@ -3,187 +3,159 @@
 description: Generate Serverless Text.
 ---
 
-# Text Generation API
+# Generate Serverless Text
 
-Generate text using our serverless AI models.
+Return the generated text based on the given inputs. 
 
-## Endpoint
+## HTTP Request
 
-```
-POST https://api.inference.nebulablock.com/v1/text/generate
-```
+`POST` `{API_URL}/chat/completions`
 
-## Request Headers
+where the `API_URL = https://inference.nebulablock.com/v1`. The body has the following parameters:
 
-| Header | Value |
-|--------|-------|
-| Authorization | Bearer YOUR_API_KEY |
-| Content-Type | application/json |
+- **messages** `array`: An array of message objects. Each object should have:
+  - **role** `string`: The role of the message sender (e.g., "user").
+  - **content** `string`: The content of the message.
+- **model** `string`: The model to use for generating the response.
+- **max_tokens** `integer or null`: The maximum number of tokens to generate. If null, the model's default will be used.
+- **temperature** `float`: Sampling temperature. Higher values make the output more random, while lower values make it more focused and deterministic.
+- **top_p** `float`: Nucleus sampling probability. The model will consider the results of the tokens with top_p probability mass. In other words, a higher value will result in more diverse outputs, while a lower value will result in more repetitive outputs.
+- **stream** `boolean`: Whether to stream the response in chunks or not. 
 
-## Request Body
+## Response Attributes
 
-| Parameter | Type | Required | Description |
-|-----------|------|----------|-------------|
-| model | string | Yes | Model ID (e.g., "gpt-4", "claude-2", "llama-2-70b") |
-| prompt | string | Yes | The input prompt for text generation |
-| max_tokens | integer | No | Maximum number of tokens to generate (default: 256) |
-| temperature | float | No | Sampling temperature between 0 and 2 (default: 0.7) |
-| top_p | float | No | Nucleus sampling parameter between 0 and 1 (default: 1) |
-| stop | array | No | Array of strings that will stop generation when encountered |
-| stream | boolean | No | Whether to stream the response (default: false) |
+#### id `string`
+A unique identifier for the completion request.
 
-### Example Request
+#### created `integer`
+A Unix timestamp representing when the response was generated.
 
-```bash
-curl https://api.inference.nebulablock.com/v1/text/generate \
-  -H "Authorization: Bearer YOUR_API_KEY" \
-  -H "Content-Type: application/json" \
-  -d '{
-    "model": "gpt-4",
-    "prompt": "Write a hello world program in Python",
-    "max_tokens": 100,
-    "temperature": 0.7
-  }'
-```
+#### model `string`
+The specific AI model used to generate the response.
 
-## Response
+#### object `string`
+The type of response object (e.g., `"chat.completion.chunk"` for a streamed chunk or `chat.completion` for a non-chunked completion).
 
-### Success Response
+#### system_fingerprint `string`
+A unique identifier for the system that generated the response, if available.
 
-```json
-{
-  "status": "success",
-  "data": {
-    "text": "Here's a simple Hello World program in Python:\n\nprint(\"Hello, World!\")",
-    "usage": {
-      "prompt_tokens": 8,
-      "completion_tokens": 12,
-      "total_tokens": 20
-    }
-  }
-}
-```
+#### choices `array`
+An array containing completion objects. Each object has the following fields:
+- **finish_reason** `string`: The reason the completion finished.
+- **index** `integer`:  An index demarking this completion object. 
+- **message** `dict`: Contains data on the generated output. 
+  - **content** `string`: The generated text for this completion object.
+  - **role** `string`: Specifies the role of the AI (e.g., "assistant").
+  - **tool_calls** `array`: Contains information about the tools used in generating the completion, if available. 
+  - **function_calls** `array`: Contains information about the functions used in generating the completion, if available.
 
-### Error Response
+#### usage `dict`
+A dictionary containing information about the inference request, in key-value pairs:
+- **completion_tokens** `integer`: The number of tokens generated in the completion for a completion action.
+- **prompt_tokens** `integer`: The number of tokens in the prompt.
+- **total_tokens** `integer`: The total number of tokens (prompt and completion combined).
+- **completion_tokens_details** `null`: Additional details about the completion tokens, if available.
+- **prompt_tokens_details** `null`: Additional details about the prompt tokens, if available.
 
-```json
-{
-  "status": "error",
-  "error": {
-    "code": "invalid_request",
-    "message": "Invalid model specified",
-    "details": {
-      "model": "Model 'invalid-model' not found"
-    }
-  }
-}
-```
+#### service_tier `string`
+The service tier used for the completion request.
 
-## Streaming Response
+#### prompt_logprobs `array`
+An array containing the log probabilities of the tokens in the prompt, if available.
 
-When `stream: true` is set, the response will be streamed as server-sent events:
+## Example
+
+#### Request
 
 ```bash
-curl https://api.inference.nebulablock.com/v1/text/generate \
-  -H "Authorization: Bearer YOUR_API_KEY" \
-  -H "Content-Type: application/json" \
-  -d '{
-    "model": "gpt-4",
-    "prompt": "Write a hello world program",
+curl -X GET '{API_URL}/api/v1/chat/completions' \
+-H 'Authorization: Bearer {TOKEN/KEY}' \
+-H 'Content-Type: application/json' \
+-d '{
+    "messages": [
+        {
+            "role": "user",
+            "content": "insert your prompt here"
+        }
+    ],
+    "model": "meta-llama/Llama-3.1-8B-Instruct",
+    "max_tokens": null,
+    "temperature": 1,
+    "top_p": 0.9,
     "stream": true
-  }'
+}'
 ```
 
-Each event will contain a chunk of the generated text:
+#### Response
 
-```
-data: {"text": "Here's", "finish_reason": null}
+Here's an example of a successful response in the non-streaming option. This response contains a `chat.completion` object and represents the entire generated text: 
 
-data: {"text": " a", "finish_reason": null}
-
-data: {"text": " simple", "finish_reason": null}
-
-data: {"text": " Hello", "finish_reason": null}
-
-data: {"text": " World", "finish_reason": null}
-
-data: {"text": " program", "finish_reason": null}
-
-data: {"text": ":", "finish_reason": null}
-
-data: {"text": "\n\nprint(\"Hello, World!\")", "finish_reason": "stop"}
-```
-
-## Rate Limits
-
-Rate limits apply based on your tier level. See [Rate Limits](../Overview.md#rate-limits) for details.
-
-## Models
-
-Available models for text generation:
-
-| Model | Best For |
-|-------|----------|
-| DeepSeek-V3-0324 | General text generation with high accuracy |
-| DeepSeek-R1-Distill-Llama-70B | Complex queries requiring detailed responses |
-| DeepSeek-R1-Distill-Qwen-32B | Efficient text generation with lower latency |
-| Llama3.3-70B | Advanced conversational AI and knowledge tasks |
-| Qwen-QwQ-32B | Reasoning and problem-solving tasks |
-| Qwen2.5-Coder-32B | Code generation and technical documentation |
-
-For detailed information about each model and their latest updates, see [Model List](Model_List.md).
-
-## Error Codes
-
-| Code | Description |
-|------|-------------|
-| invalid_request | Invalid parameters in the request |
-| model_not_found | Specified model doesn't exist |
-| context_length_exceeded | Input prompt is too long |
-| rate_limit_exceeded | Too many requests |
-| insufficient_quota | Not enough credits or quota |
-
-## Code Examples
-
-### Python
-
-```python
-from nebula_block import NebulaClient
-
-client = NebulaClient(api_key="YOUR_API_KEY")
-
-response = client.generate_text(
-    model="gpt-4",
-    prompt="Write a hello world program in Python",
-    max_tokens=100
-)
-
-print(response.text)
-```
-
-### JavaScript
-
-```javascript
-const { NebulaClient } = require('nebula-block');
-
-const client = new NebulaClient({ apiKey: 'YOUR_API_KEY' });
-
-async function generateText() {
-  const response = await client.generateText({
-    model: 'gpt-4',
-    prompt: 'Write a hello world program in Python',
-    maxTokens: 100
-  });
-  
-  console.log(response.text);
+```json
+{
+    "id": "chatcmpl-ec0014bc38e2cad1e45d47f7f01f6569",
+    "created": 1740432179,
+    "model": "meta-llama/Llama-3.1-8B-Instruct",
+    "object": "chat.completion",
+    "system_fingerprint": null,
+    "choices": [
+        {
+            "finish_reason": "stop",
+            "index": 0,
+            "message": {
+                "content": "Yes! Montreal is the home of cutting edge ... research.",
+                "role": "assistant",
+                "tool_calls": null,
+                "function_call": null
+            }
+        }
+    ],
+    "usage": {
+        "completion_tokens": 695,
+        "prompt_tokens": 42,
+        "total_tokens": 737,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+    },
+    "service_tier": null,
+    "prompt_logprobs": null
 }
-
-generateText();
 ```
 
-## See Also
+Alternatively, if you set `stream` to True you'll get a stream of `chat.completion.chunk` objects. The entire collection of chunks represents the complete generated response.
 
-- [Model List](Model_List.md)
-- [Vision API](Vision.md)
-- [Rate Limits](../Overview.md#rate-limits)
-- [Authentication](../Authentication.md)
+```json
+{
+    "id": "chatcmpl-3061dfd6d9170825ba0fb54086c4dad3",
+    "created": 1740081592,
+    "model": "meta-llama/Llama-3.1-8B-Instruct",
+    "object": "chat.completion.chunk",
+    "choices": [
+        {
+            "index": 0,
+            "delta": {
+                "content": "It",
+                "role": "assistant"
+            }
+        }
+    ]
+}
+{
+    "id": "chatcmpl-3061dfd6d9170825ba0fb54086c4dad3",
+    "created": 1740081592,
+    "model": "meta-llama/Llama-3.1-8B-Instruct",
+    "object": "chat.completion.chunk",
+    "choices": [
+        {
+            "index": 0,
+            "delta": {
+                "content": " looks"
+            }
+        }
+    ]
+}
+...
+[DONE]
+```
+
+
+For more examples, see the [Serverless Endpoints](../../Serverless_Endpoints/Text_Generation.md) section.
