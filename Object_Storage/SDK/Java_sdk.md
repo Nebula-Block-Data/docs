@@ -4,143 +4,84 @@ This example demonstrates how to connect to an S3 compatible service and list al
 
 ## Prerequisites
 
-1. Java Development Kit (JDK) 8 or later
-2. **AWS SDK for Java** added as a dependency.
+Before running the code, ensure you have the following:
 
-For Maven, add this to your `pom.xml`:
+1. **Java Development Kit (JDK)** installed.
+2. **AWS SDK for Java** added as a dependency.
+3. Replace `YOUR_ACCESS_KEY` and `YOUR_SECRET_KEY` with your actual AWS credentials.
+
+## Maven Dependency
+
+If you're using Maven, you need to add the following dependency in your `pom.xml`:
+
 ```xml
-<dependencies>
-    <dependency>
-        <groupId>com.amazonaws</groupId>
-        <artifactId>aws-java-sdk-s3</artifactId>
-        <version>1.12.261</version>
-    </dependency>
-</dependencies>
+<dependency>
+    <groupId>com.amazonaws</groupId>
+    <artifactId>aws-java-sdk-s3</artifactId>
+    <version>1.12.664</version>
+</dependency>
 ```
 
-## Example Code
+## Java Code
 
 ```java
 import com.amazonaws.auth.AWSStaticCredentialsProvider;
 import com.amazonaws.auth.BasicAWSCredentials;
-import com.amazonaws.client.builder.AwsClientBuilder.EndpointConfiguration;
+import com.amazonaws.client.builder.AwsClientBuilder;
 import com.amazonaws.services.s3.AmazonS3;
 import com.amazonaws.services.s3.AmazonS3ClientBuilder;
-import com.amazonaws.services.s3.model.*;
+import com.amazonaws.services.s3.model.Bucket;
 
-import java.io.File;
-import java.net.URL;
 import java.util.List;
 
-public class S3Example {
-    private final AmazonS3 s3Client;
-
-    public S3Example(String accessKey, String secretKey, String endpoint, String region) {
-        // Create credentials
-        BasicAWSCredentials credentials = new BasicAWSCredentials(accessKey, secretKey);
-
-        // Create endpoint configuration
-        EndpointConfiguration endpointConfig = new EndpointConfiguration(endpoint, region);
+public class Main {
+    public static void main(String[] args) {
+        // S3 credentials and endpoint
+        String accessKey = "YOUR_ACCESS_KEY"; // Replace with your access key
+        String secretKey = "YOUR_SECRET_KEY"; // Replace with your secret key
+        String endpoint = "HOST_NAME" //Use the Hostname from the Details page.
+        String region = "US";
 
         // Create S3 client
-        this.s3Client = AmazonS3ClientBuilder.standard()
-                .withEndpointConfiguration(endpointConfig)
-                .withCredentials(new AWSStaticCredentialsProvider(credentials))
-                .withPathStyleAccessEnabled(true)  // Required for S3-compatible services
-                .build();
-    }
+        AmazonS3 s3 = AmazonS3ClientBuilder.standard()
+            .withEndpointConfiguration(new AwsClientBuilder.EndpointConfiguration(endpoint, region))
+            .withCredentials(new AWSStaticCredentialsProvider(new BasicAWSCredentials(accessKey, secretKey)))
+            .withPathStyleAccessEnabled(true)
+            .build();
 
-    public void listBuckets() {
         try {
-            List<Bucket> buckets = s3Client.listBuckets();
-            System.out.println("Your buckets:");
+            List<Bucket> buckets = s3.listBuckets();
+            System.out.println("Buckets:");
             for (Bucket bucket : buckets) {
-                System.out.println("* " + bucket.getName());
+                System.out.println("  - " + bucket.getName());
             }
         } catch (Exception e) {
-            System.err.println("Error listing buckets: " + e.getMessage());
+            System.err.println("Error: " + e.getMessage());
         }
-    }
-
-    public void uploadFile(String bucketName, String keyName, String filePath) {
-        try {
-            s3Client.putObject(bucketName, keyName, new File(filePath));
-            System.out.println("Successfully uploaded " + keyName + " to " + bucketName);
-        } catch (Exception e) {
-            System.err.println("Error uploading file: " + e.getMessage());
-        }
-    }
-
-    public void downloadFile(String bucketName, String keyName, String destinationPath) {
-        try {
-            S3Object object = s3Client.getObject(bucketName, keyName);
-            object.getObjectContent().transferTo(new File(destinationPath).toPath());
-            System.out.println("Successfully downloaded " + keyName + " to " + destinationPath);
-        } catch (Exception e) {
-            System.err.println("Error downloading file: " + e.getMessage());
-        }
-    }
-
-    public URL generatePresignedUrl(String bucketName, String keyName, int expirationInMinutes) {
-        try {
-            java.util.Date expiration = new java.util.Date();
-            long expTimeMillis = expiration.getTime();
-            expTimeMillis += 1000 * 60 * expirationInMinutes;
-            expiration.setTime(expTimeMillis);
-
-            GeneratePresignedUrlRequest request = new GeneratePresignedUrlRequest(bucketName, keyName)
-                    .withMethod(HttpMethod.GET)
-                    .withExpiration(expiration);
-
-            URL url = s3Client.generatePresignedUrl(request);
-            System.out.println("Pre-signed URL: " + url.toString());
-            return url;
-        } catch (Exception e) {
-            System.err.println("Error generating pre-signed URL: " + e.getMessage());
-            return null;
-        }
-    }
-
-    public static void main(String[] args) {
-        // Replace these with your actual credentials and endpoint
-        String accessKey = "your_access_key";
-        String secretKey = "your_secret_key";
-        String endpoint = "your_endpoint";
-        String region = "us-east-1";
-
-        S3Example example = new S3Example(accessKey, secretKey, endpoint, region);
-
-        // List buckets
-        example.listBuckets();
-
-        // Upload a file
-        example.uploadFile("my-bucket", "test.txt", "local_file.txt");
-
-        // Download a file
-        example.downloadFile("my-bucket", "test.txt", "downloaded_file.txt");
-
-        // Generate pre-signed URL (expires in 60 minutes)
-        example.generatePresignedUrl("my-bucket", "test.txt", 60);
     }
 }
 ```
 
-## Usage
+## Explanation
 
-1. Create a new Java project
-2. Add the AWS SDK dependency to your project
-3. Copy the example code into a new file
-4. Replace the placeholder credentials with your actual credentials
-5. Compile and run the program
+### Steps in the Code
 
-## Additional Features
+1. **Credentials**: 
+   The program uses `BasicAWSCredentials` to provide the access key and secret key. Make sure to replace `YOUR_ACCESS_KEY` and `YOUR_SECRET_KEY` with your actual credentials.
 
-The AWS SDK for Java provides many more features for working with S3:
-- Multipart uploads
-- Server-side encryption
-- Access control lists (ACLs)
-- Bucket policies
-- Object tagging
-- Versioning
+2. **Client Configuration**: 
+   The `AmazonS3ClientBuilder` is configured with the endpoint and region of the S3-compatible service. The `.withPathStyleAccessEnabled(true)` ensures path-style access to the buckets.
 
-For more information, refer to the [AWS SDK for Java Documentation](https://docs.aws.amazon.com/sdk-for-java/latest/developer-guide/examples-s3.html) 
+3. **List Buckets**: 
+   The `listBuckets` method is called on the `AmazonS3` client to retrieve all the available buckets. These buckets are then printed to the console.
+
+4. **Error Handling**: 
+   If an error occurs during the process, it is caught in the `catch` block, and the error message is printed.
+
+## Run the Code
+
+To run the program, you can compile and execute it as a standard Java application. Make sure to have the AWS SDK for Java dependency correctly added to your project.
+
+---
+
+**Note**: Ensure that you replace the placeholders for access key and secret key with your own credentials. These credentials should be securely stored and not hardcoded in production applications.
