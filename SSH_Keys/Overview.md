@@ -11,4 +11,8 @@ alternative to traditional passwords. Managing them is super easy at Nebula Bloc
 - **Nebula Block Account:** Ensure you have an account on the [Nebula Block](https://www.nebulablock.com).
 
 ## Pricing and Billing
-- SSH keys management is free of charge, so add as many as you want! 
+- SSH keys management is free of charge, so add as many as you want!
+
+## See Also
+- [Glossary](../glossary.md)
+- [API Reference - SSH Keys](../API_Reference/SSH_Keys/Create_SSH_Key.md) 

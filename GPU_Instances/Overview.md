@@ -1,3 +1,5 @@
+> [!NOTE]
+> This section describes GPU Instances, their use cases, and how to manage them for compute-intensive workloads.
 
 # Overview
 Welcome to Nebula Block's GPU Instances, the ideal solution for high-performance computing tasks 
@@ -20,4 +22,8 @@ NVIDIA H100, A100, L40s, and RTX series GPUs.
 
 ## Pricing and Billing
 - **Pay-As-You-Go:** Billing is based on the selected hardware and duration of use.
-- Check the [pricing page](https://www.nebulablock.com/pricing) for details. 
+- Check the [pricing page](https://www.nebulablock.com/pricing) for details.
+
+## See Also
+- [Glossary](../glossary.md)
+- [API Reference - GPU Instances](../API_Reference/Instances/List_images.md) 
