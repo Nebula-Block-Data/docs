@@ -12,15 +12,18 @@ To add a payment card, simply navigate to the "Add a New Card" button on the bil
 If the card meets the following requirements, it is added to your account successfully:
 - Has valid card credentials (CVV, address, card number, etc.)
 - Doesn't exist on another account
-- Has enough funds (the $0.98 USD charge will be credited to your account)
+- Has enough funds available
 
-Nebula Block accepts all types of payment cards. Note that a small charge of **$0.98 USD** will be applied to your card to validate
-that it has funds. This amount will be credited as credits to your account on our platform. 
+Nebula Block accepts all types of payment cards. Note that your card may be validated for authenticity, but you will not be charged any amount during this process.
+
+## Redeeming a Promotion Code
+
+You can redeem a promotion code on the billing page. Simply enter your code in the "Add Promotion Code" section and click "Redeem" to apply the promotion to your account.
 
 ## Managing Payment Methods
 
 Managing payment methods is simple via our customer portal. To change your default payment method, simply configure this 
-in the **Payment Method** section of the billing page.
+in the [**Payment Method**](https://www.nebulablock.com/billing) section of the billing page.
 
 ## Purchasing Credits
 
@@ -31,9 +34,9 @@ or with a new card.
 ## Invoices
 
 Transactions made on your account (e.g. when you are billed for usage) will be documented as downloadable invoices and 
-listed in the **Transaction** section of the billing page. 
+listed in the [**Transaction**](https://www.nebulablock.com/billing) section of the billing page.
 
 ## Usage
 
-To see the usage rate of your products, see the **Usages** section of the billing page.
+To see the usage rate of your products, see the [**Usages**](https://www.nebulablock.com/billing) section of the billing page.
 

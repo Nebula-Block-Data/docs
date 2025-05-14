@@ -1,10 +1,10 @@
 # Glossary
 
 **Inference API**
-: OpenAI-compatible API for running generative AI inference (text, vision, image, embeddings) at https://inference.nebulablock.com/v1.
+OpenAI-compatible API for running generative AI inference (text, vision, image, embeddings) at https://inference.nebulablock.com/v1.
 
 **GPU Instances**
-: Virtual machines equipped with GPUs for compute-intensive tasks such as machine learning and AI workloads.
+Virtual machines equipped with GPUs for compute-intensive tasks such as machine learning and AI workloads.
 
 **Object Storage**
 : A scalable storage solution for storing and retrieving large amounts of unstructured data, such as datasets and model outputs.
