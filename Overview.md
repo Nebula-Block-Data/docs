@@ -1,5 +1,4 @@
-> [!NOTE]
-> This section provides a high-level overview of the platform's architecture, main concepts, and user journeys. Use this as your starting point to understand the system and how to get started.
+> **Note:** This section provides a high-level overview of the platform's architecture, main concepts, and user journeys. Use this as your starting point to understand the system and how to get started.
 
 # Overview
 

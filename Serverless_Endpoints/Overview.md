@@ -1,5 +1,4 @@
-> [!NOTE]
-> This section covers the Inference API (OpenAI compatible), which provides serverless endpoints for running generative AI models without managing infrastructure. Find guides, supported models, and usage examples below.
+> **Note:** This section covers the Inference API (OpenAI compatible), which provides serverless endpoints for running generative AI models without managing infrastructure. Find guides, supported models, and usage examples below.
 
 # Inference API (Serverless Endpoints)
 Welcome to Nebula Block's Inference API, the easiest way to integrate powerful generative AI 
