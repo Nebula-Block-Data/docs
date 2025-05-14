@@ -1,4 +1,4 @@
-> [!NOTE]
+> **Note:**
 > This section describes GPU Instances, their use cases, and how to manage them for compute-intensive workloads.
 
 # Overview

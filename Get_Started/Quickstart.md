@@ -1,7 +1,6 @@
 # Quickstart
 
-> [!NOTE]
-> This quickstart guide will help you set up your account and deploy your first model on the platform.
+> **Note:** This quickstart guide will help you set up your account and deploy your first model on the platform.
 
 Getting started is easy! 
 

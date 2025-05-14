@@ -31,6 +31,12 @@ To purchase credits, which are the sole currency that you use to make payments f
 amount you wish to purchase on the billing page, then make the purchase, which will be done with your default payment card
 or with a new card.
 
+## Configuring Auto-Pay
+
+You can enable automatic billing (Auto-Pay) on the billing page. By adding a card to your account and configuring your Auto-Pay settings, your balance will be automatically reloaded when it nears your specified threshold. When your account balance falls below your chosen threshold, your default saved card will be charged the amount you set for Auto-Pay (maximum once per hour). 
+
+To set up Auto-Pay, simply toggle the Auto-Pay switch, set your threshold and reload amount, and save your settings. This ensures you never run out of credits for your usage.
+
 ## Invoices
 
 Transactions made on your account (e.g. when you are billed for usage) will be documented as downloadable invoices and 
