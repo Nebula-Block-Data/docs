@@ -1,9 +1,9 @@
 ---
-# title: Generate Serverless Images 
-description: Generate Serverless Images.
+# title: Generate Images 
+description: Generate Images.
 ---
 
-# Generate Serverless Images
+# Generate Images
 
 Return the generated image based on the given inputs. 
 
@@ -11,7 +11,7 @@ Return the generated image based on the given inputs.
 
 `POST` `{API_URL}/images/generation`
 
-where `API_URL = https://api.nebulablock.com/api/v1`. For more details on the parameters, see the [Serverless Endpoints](../../Serverless_Endpoints/Image_Generation.md) section.
+where `API_URL = https://api.nebulablock.com/api/v1`. For more details on the parameters, see the [Inference Models](../../Inference_Models/Image_Generation.md) section.
 
 ## Response Attributes
 
@@ -97,4 +97,4 @@ see the image.
 }
 ```
 
-For more examples, see the [Serverless Endpoints](../../Serverless_Endpoints/Image_Generation.md) section.
+For more examples, see the [Inference Models](../../Inference_Models/Image_Generation.md) section.

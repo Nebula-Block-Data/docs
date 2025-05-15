@@ -12,15 +12,18 @@ To add a payment card, simply navigate to the "Add a New Card" button on the bil
 If the card meets the following requirements, it is added to your account successfully:
 - Has valid card credentials (CVV, address, card number, etc.)
 - Doesn't exist on another account
-- Has enough funds (the $0.98 USD charge will be credited to your account)
+- Has enough funds available
 
-Nebula Block accepts all types of payment cards. Note that a small charge of **$0.98 USD** will be applied to your card to validate
-that it has funds. This amount will be credited as credits to your account on our platform. 
+Nebula Block accepts all types of payment cards. Note that your card may be validated for authenticity, but you will not be charged any amount during this process.
+
+## Redeeming a Promotion Code
+
+You can redeem a promotion code on the billing page. Simply enter your code in the "Add Promotion Code" section and click "Redeem" to apply the promotion to your account.
 
 ## Managing Payment Methods
 
 Managing payment methods is simple via our customer portal. To change your default payment method, simply configure this 
-in the **Payment Method** section of the billing page.
+in the [**Payment Method**](https://www.nebulablock.com/billing) section of the billing page.
 
 ## Purchasing Credits
 
@@ -28,12 +31,18 @@ To purchase credits, which are the sole currency that you use to make payments f
 amount you wish to purchase on the billing page, then make the purchase, which will be done with your default payment card
 or with a new card.
 
+## Configuring Auto-Pay
+
+You can enable automatic billing (Auto-Pay) on the billing page. By adding a card to your account and configuring your Auto-Pay settings, your balance will be automatically reloaded when it nears your specified threshold. When your account balance falls below your chosen threshold, your default saved card will be charged the amount you set for Auto-Pay (maximum once per hour). 
+
+To set up Auto-Pay, simply toggle the Auto-Pay switch, set your threshold and reload amount, and save your settings. This ensures you never run out of credits for your usage.
+
 ## Invoices
 
 Transactions made on your account (e.g. when you are billed for usage) will be documented as downloadable invoices and 
-listed in the **Transaction** section of the billing page. 
+listed in the [**Transaction**](https://www.nebulablock.com/billing) section of the billing page.
 
 ## Usage
 
-To see the usage rate of your products, see the **Usages** section of the billing page.
+To see the usage rate of your products, see the [**Usages**](https://www.nebulablock.com/billing) section of the billing page.
 

@@ -133,4 +133,4 @@ A successful response body will return the embeddings in this format:
 > **NOTE:** Notice that there are 2 embeddings, each with its own index number. These embeddings correspond to the given input sentences, 
 > of which there are 2. You can choose how many sentences to create embeddings for, this is just an example. 
 
-Feel free to explore refer to the [API Reference](../API_Reference/Serverless_Endpoints/Generate_Embeddings.md) for more details.
+Feel free to explore refer to the [API Reference](../API_Reference/Inference_Models/Generate_Embeddings.md) for more details.

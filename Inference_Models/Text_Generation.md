@@ -18,7 +18,7 @@ Available text models:
 
 1. Go to the [Nebula Block](https://www.nebulablock.com) website.
 2. Log in, and ensure you have enough credits. 
-3. Click on the "Serverless Endpoints" tab and select your model.
+3. Click on the "Inference Models" tab and select your model.
 4. Select your parameters, enter your text (and image, if applicable) and just press Enter! 
 
 The parameters you can tweak are outlined below: 
@@ -183,4 +183,5 @@ This represents the entire generated response from the inference. Alternatively,
 
 where the content of each response will contain the generated token. These tokens put together form the complete response.
 
-Feel free to explore refer to the [API Reference](../API_Reference/Serverless_Endpoints/Generate_Text.md) for more details.
+Feel free to explore refer to the [API Reference](../API_Reference/Inference_Models/Generate_Text.md) for more details.
+cat Inference_Models/Text_Generation.md 

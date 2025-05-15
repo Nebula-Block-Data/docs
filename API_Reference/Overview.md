@@ -26,8 +26,7 @@ Nebula Block provides two main APIs:
 - **BASE URL:** `https://inference.nebulablock.com/v1`
 - **OpenAI compatible**: Use OpenAI SDKs and tools.
 
-> [!NOTE]
-> This section provides detailed reference for all API endpoints, including authentication, usage, and request/response formats.
+> **Note:** This section provides detailed reference for all API endpoints, including authentication, usage, and request/response formats.
 
 ## See Also
 - [Glossary](../glossary.md)

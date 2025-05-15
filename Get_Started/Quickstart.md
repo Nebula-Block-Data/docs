@@ -1,7 +1,6 @@
 # Quickstart
 
-> [!NOTE]
-> This quickstart guide will help you set up your account and deploy your first model on the platform.
+> **Note:** This quickstart guide will help you set up your account and deploy your first model on the platform.
 
 Getting started is easy! 
 
@@ -10,7 +9,7 @@ You'll receive a 1$ free credit (and up to 9\$ extra credits if you have a refer
 
 Using our products then depends on your account tier. In short: 
 
-- [Serverless Endpoints](../Serverless_Endpoints/Overview.md) are available to all tiers (request and token limits increasing with tier level)
+- [Inference Models](../Inference_Models/Overview.md) are available to all tiers (request and token limits increasing with tier level)
 - [GPU Instances](../GPU_Instances/Overview.md) require a 10$ credit purchase 
 
 For more details on how the tier system works, please see the [Tier](../Tier/Overview.md) section. 
