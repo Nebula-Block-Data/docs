@@ -8,7 +8,7 @@ The Inference API provides OpenAI-compatible endpoints for running generative AI
 Use this API for all inference operations, such as text generation, image generation, and embeddings.
 
 ## See Also
-- [Model List](Serverless_Endpoints/List_Serverless_Models.md)
-- [Text Generation](Serverless_Endpoints/Generate_Text.md)
-- [Image Generation](Serverless_Endpoints/Generate_Images.md)
+- [Model List](Inference_Models/List_Models.md)
+- [Text Generation](Inference_Models/Generate_Text.md)
+- [Image Generation](Inference_Models/Generate_Images.md)
 - [Glossary](../glossary.md) 

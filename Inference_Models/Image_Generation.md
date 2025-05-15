@@ -54,7 +54,7 @@ Our website UI is the easiest and fastest way to use our endpoints.
 
 1. Go to the [Nebula Block](https://www.nebulablock.com) website.
 2. Log in, and ensure you have enough credits. 
-3. Click on the "Serverless Endpoints" tab and select your model.
+3. Click on the "Inference Models" tab and select your model.
 4. Choose your parameters, enter your prompt (and image + mask if applicable) and just press Enter!
 
 > **NOTE:** We support JPG, JPEG, PNG, and WebP image formats. 
@@ -260,4 +260,4 @@ A successful response body will return the image in this format:
 
 > **NOTE:** You'll need to use an image b64 decoder to view the result. Just pass in the b64_json value to the decoder of your choice.
 
-Feel free to explore refer to the [API Reference](../API_Reference/Serverless_Endpoints/Generate_Images.md) for more details.
+Feel free to explore refer to the [API Reference](../API_Reference/Inference_Models/Generate_Images.md) for more details.
