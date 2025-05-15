@@ -3,7 +3,7 @@
 description: Generate Embeddings From Text.
 ---
 
-# Generate Serverless Embeddings
+# Generate Embeddings
 
 Return the generated embeddings based on the given inputs. 
 
@@ -16,7 +16,7 @@ where `API_URL = https://inference.nebulablock.com/v1`. The body requires:
 - `model`: The model to use for generating embeddings.
 - `input`: A list of strings to generate embeddings from.
 
-For authentication, see the [Authentication](../Authentication.md) section. For an example, see the [Serverless Endpoints](../../Serverless_Endpoints/Embedding_Generation.md) section.
+For authentication, see the [Authentication](../Authentication.md) section. For an example, see the [Inference Models](../../Inference_Models/Embedding_Generation.md) section.
 
 ## Response Attributes
 
@@ -98,4 +98,4 @@ a generated token. The entire collection of dictionaries represents the complete
 }
 ```
 
-For more examples, see the [Serverless Endpoints](../../Serverless_Endpoints/Embedding_Generation.md) section.
+For more examples, see the [Inference Models](../../Inference_Models/Embedding_Generation.md) section.

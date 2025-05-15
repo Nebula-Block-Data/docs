@@ -1,11 +1,11 @@
 ---
-# title: Generate Serverless Text (Vision)
-description: Generate Serverless Text (Vision).
+# title: Generate Text 
+description: Generate Text.
 ---
 
-# Generate Serverless Text (Vision)
+# Generate Text
 
-Return the generated text based on the given textual and image inputs. 
+Return the generated text based on the given inputs. 
 
 ## HTTP Request
 
@@ -15,14 +15,7 @@ where the `API_URL = https://inference.nebulablock.com/v1`. The body has the fol
 
 - **messages** `array`: An array of message objects. Each object should have:
   - **role** `string`: The role of the message sender (e.g., "user").
-  - **content** `list`: A list containing the different inputs (recall an input can be either text or image). Each input is represented as a dict with the following key-value pairs: 
-    - **type** `string`: The type of input (e.g., "text" or "image_url").
-    - **image_url** `dict`: If type is "image_url", this contains a dict representing the URL of the image with the following key-value pair: 
-      - **url** `string`: The URL of the image. 
-    - **text** `string`: If type is "text", the text input.
-
-Note that only one of `url` or `text` can be provided in the input dict, and depends on the `type`.
-
+  - **content** `string`: The content of the message.
 - **model** `string`: The model to use for generating the response.
 - **max_tokens** `integer or null`: The maximum number of tokens to generate. If null, the model's default will be used.
 - **temperature** `float`: Sampling temperature. Higher values make the output more random, while lower values make it more focused and deterministic.
@@ -73,33 +66,35 @@ An array containing the log probabilities of the tokens in the prompt, if availa
 ## Example
 
 #### Request
+
 ```bash
-curl -X POST "https://inference.nebulablock.com/v1/chat/completions" \
-    -H "Content-Type: application/json" \
-    -H "Authorization: Bearer $NEBULA_API_KEY" \
-    --data-raw '{
-        "messages": [
-			{"role":"user","content":[
-			{"type":"image_url","image_url":
-			{"url":"https://qianwen-res.oss-cn-beijing.aliyuncs.com/Qwen-VL/assets/demo.jpeg"}},
-			{"type":"text","text":"What is this image?"}
-		]}],
-        "model": "Qwen/Qwen2.5-VL-7B-Instruct",
-        "max_tokens": null, 
-        "temperature": 1,
-        "top_p": 0.9,
-        "stream": false
-    }'
+curl -X GET '{API_URL}/api/v1/chat/completions' \
+-H 'Authorization: Bearer {TOKEN/KEY}' \
+-H 'Content-Type: application/json' \
+-d '{
+    "messages": [
+        {
+            "role": "user",
+            "content": "insert your prompt here"
+        }
+    ],
+    "model": "meta-llama/Llama-3.1-8B-Instruct",
+    "max_tokens": null,
+    "temperature": 1,
+    "top_p": 0.9,
+    "stream": true
+}'
 ```
 
 #### Response
-A successful generation response (non-streaming) will contain a `chat.completion` object, and should look like this:
+
+Here's an example of a successful response in the non-streaming option. This response contains a `chat.completion` object and represents the entire generated text: 
 
 ```json
-    {
-    "id": "chatcmpl-7ba48f119a564f4ea02b6a41386a3e40",
-    "created": 1740689977,
-    "model": "Qwen/Qwen2.5-VL-7B-Instruct",
+{
+    "id": "chatcmpl-ec0014bc38e2cad1e45d47f7f01f6569",
+    "created": 1740432179,
+    "model": "meta-llama/Llama-3.1-8B-Instruct",
     "object": "chat.completion",
     "system_fingerprint": null,
     "choices": [
@@ -107,7 +102,7 @@ A successful generation response (non-streaming) will contain a `chat.completion
             "finish_reason": "stop",
             "index": 0,
             "message": {
-                "content": "This image shows ....",
+                "content": "Yes! Montreal is the home of cutting edge ... research.",
                 "role": "assistant",
                 "tool_calls": null,
                 "function_call": null
@@ -115,9 +110,9 @@ A successful generation response (non-streaming) will contain a `chat.completion
         }
     ],
     "usage": {
-        "completion_tokens": 91,
-        "prompt_tokens": 3604,
-        "total_tokens": 3695,
+        "completion_tokens": 695,
+        "prompt_tokens": 42,
+        "total_tokens": 737,
         "completion_tokens_details": null,
         "prompt_tokens_details": null
     },
@@ -126,27 +121,41 @@ A successful generation response (non-streaming) will contain a `chat.completion
 }
 ```
 
-As is the case with text generation, if you set `stream` to True you can get the entire generated completion in 1 `chat.completion` object: 
+Alternatively, if you set `stream` to True you'll get a stream of `chat.completion.chunk` objects. The entire collection of chunks represents the complete generated response.
 
 ```json
 {
-    "id": "chatcmpl-3812731562554b23a32dd80fbb7d0d09",
-    "created": 1740692435,
-    "model": "Qwen/Qwen2.5-VL-7B-Instruct",
+    "id": "chatcmpl-3061dfd6d9170825ba0fb54086c4dad3",
+    "created": 1740081592,
+    "model": "meta-llama/Llama-3.1-8B-Instruct",
     "object": "chat.completion.chunk",
     "choices": [
         {
             "index": 0,
             "delta": {
-                "content": " setting"
+                "content": "It",
+                "role": "assistant"
             }
         }
     ]
 }
-{ 
-  ...
+{
+    "id": "chatcmpl-3061dfd6d9170825ba0fb54086c4dad3",
+    "created": 1740081592,
+    "model": "meta-llama/Llama-3.1-8B-Instruct",
+    "object": "chat.completion.chunk",
+    "choices": [
+        {
+            "index": 0,
+            "delta": {
+                "content": " looks"
+            }
+        }
+    ]
 }
 ...
+[DONE]
 ```
 
-For more examples, see the [Serverless Endpoints](../../Serverless_Endpoints/Vision.md) section.
+
+For more examples, see the [Inference_Models](../../Inference_Models/Text_Generation.md) section.

@@ -1,11 +1,11 @@
 ---
-# title: List Available Serverless Models
-description: List Available Serverless Models.
+# title: List Available Models
+description: List Available Inference Models.
 ---
 
-# List Serverless Models
+# List Models
 
-Return a list of all available serverless models and their details. 
+Return a list of all available models and their details. 
 
 ## HTTP Request
 
