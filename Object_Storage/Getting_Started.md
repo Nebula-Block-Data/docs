@@ -1,6 +1,6 @@
 # Starting Your Object Storage 
 
-1. Navigate to the **Object Storage** tab **(1)**, and click **Deploy** **(2)**.
+1. Navigate to the **Object Storage** tab **(1)**, and click **Create** **(2)**.
 
     ![1.1](../assets/images/storage_tutorial/1.jpg)
 2. Select your configuration, a **unique name** and click **Create**.
