@@ -4,7 +4,7 @@ Retrieves a list of your API keys.
 
 ## HTTP Request
 
-`GET` `{API_URL}/api-keys`
+`GET` `{API_URL}/api_keys`
 
 ## Response Attributes
 
@@ -31,7 +31,7 @@ A description of the status of the request.
 #### Request
 
 ```bash
-curl -X GET '{API_URL}/api-keys' \
+curl -X GET '{API_URL}/api_keys' \
 -H 'Authorization: Bearer {TOKEN/KEY}'
 ```
 
