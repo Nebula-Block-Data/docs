@@ -12,7 +12,7 @@ Available text models:
 * DeepSeek-R1 (free): A state-of-the-art, high-efficiency LLM excelling in reasoning, math, and coding. Community-shared access, daily limits, great for testing and exploration
 * DeepSeek-R1-0528: The latest state-of-the-art LLM released by Deepseek excels in reasoning, math, and coding. Community-shared access, daily limits, great for testing and exploration
 * DeepSeek-R1: A state-of-the-art, high-efficiency LLM excelling in reasoning, math, and coding. Community-shared access, daily limits, great for testing and exploration
-* [Llama3.3-70B](https://www.nebulablock.com/blog/67c4e6bc7bef4a2d8c123392): Advanced conversational AI with extensive knowledge.
+* Llama3.3-70B: Advanced conversational AI with extensive knowledge.
 * Qwen-QwQ-32B: The AI model from the Qwen series, designed for reasoning and problem-solving.&#x20;
 
 ## Using the Models
