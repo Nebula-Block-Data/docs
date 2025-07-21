@@ -5,13 +5,15 @@ users have access to our serverless endpoints. The tiers dictate your request an
 whether you have access to GPU instances.
 
 ### **Tier Levels and Benefits**
-| Tier Level          | Requirement     | GPU Access | CPU Access | Request Rate | Token Rate  |
-|---------------------|-----------------|------------|------------|--------------|-------------|
-| **Engineer Tier 1** | Sign Up         | No         | No         | 60 RPM       | 60,000 TPM  |
-| **Engineer Tier 2** | Add Credit Card | No         | Yes        | 300 RPM      | 150,000 TPM |
-| **Engineer Tier 3** | Deposit $10     | Yes        | Yes        | 600 RPM      | 200,000 TPM |
-| **Expert Tier 1**   | Spend $30       | Yes        | Yes        | 1,500 RPM    | 500,000 TPM |
-| **Expert Tier 2**   | Spend $50       | Yes        | Yes        | 3,000 RPM    | 800,000 TPM |
+
+
+| **Tier**            | **Requirement** | **GPU** | **CPU** | **RPM** | **TPM** | **RPD**   |
+|---------------------|-----------------|---------|---------|---------|---------|-----------|
+| **Engineer Tier 1** | Sign Up         | ✖       | ✖       | 60      | 60,000  | 200       |
+| **Engineer Tier 2** | Add Credit Card | ✖       | ✔       | 300     | 150,000 | 1,000     |
+| **Engineer Tier 3** | Deposit $10     | ✔       | ✔       | 600     | 200,000 | 2,000     |
+| **Expert Tier 1**   | Spend $30       | ✔       | ✔       | 1,500   | 500,000 | Unlimited |
+| **Expert Tier 2**   | Spend $50       | ✔       | ✔       | 3,000   | 800,000 | Unlimited |
 
 
 
@@ -19,33 +21,38 @@ whether you have access to GPU instances.
 
 1. **Engineer Tier 1**
    - Available to all users upon sign-up.
-   - Provides a request rate limit of **60 requests per minute (RPM)** for using serverless endpoints.
-   - Token Rate: **60,000 tokens per minute (TPM)** for using serverless endpoints.
+   - Requests Per Minute (RPM): **60 requests per minute** for using serverless endpoints.
+   - Tokens Per Minute (TPM): **60,000 tokens per minute** for using serverless endpoints.
+   - Requests Per Day (RPD): **200 requests per day** for using serverless endpoints.
    - No CPU and GPU access.
 
 2. **Engineer Tier 2**
    - Requires adding a credit card.
-   - Increases request rate to **300 RPM**.
-   - Token Rate: **150,000 TPM**.
+   - Increase Requests Per Minute (RPM) to **300**.
+   - Increase Tokens Per Minute (TPM) to **150,000**.
+   - Increase Requests Per Day (RPD) to **1000**.
    - No GPU access.
 
 3. **Engineer Tier 3**
    - Requires a **$10 deposit**.
    - Grants GPU access.
-   - Increases request rate to **600 RPM**.
-   - Token Rate: **200,000 TPM**.
+   - Increase Requests Per Minute (RPM) to **600**.
+   - Increase Tokens Per Minute (TPM) to **200,000**.
+   - Increase Requests Per Day (RPD) to **2000**.
 
 4. **Expert Tier 1**
    - Requires a **$30 spend**.
    - Grants GPU access.
-   - Increases request rate to **1,500 RPM**.
-   - Token Rate: **500,000 TPM**.
+   - Increase Requests Per Minute (RPM) to **1,500**.
+   - Increase Tokens Per Minute (TPM) to **500,000**.
+   - Unlimited Requests Per Day (RPD).
 
 5. **Expert Tier 2**
    - Requires a **$50 spend**.
-   - Grants GPU access.o
-   - Highest request rate of **3,000 RPM**.
-   - Token Rate: **800,000 TPM**.
+   - Grants GPU access.
+   - Increase Requests Per Minute (RPM) to **3,000**.
+   - Increase Tokens Per Minute (TPM) to **800,000**.
+   - Unlimited Requests Per Day (RPD).
 
 ### **Upgrade Process**
 - Users can upgrade their tier by meeting the respective requirements.
