@@ -7,7 +7,7 @@ whether you have access to GPU instances.
 ### **Tier Levels and Benefits**
 
 
-| **Tier**            | **Requirement&nbsp;** | **GPU** | **CPU** | **RPM** | **TPM** | **RPD**   |
+| **Tier**            | **Requirements&nbsp;** | **GPU** | **CPU** | **RPM** | **TPM** | **RPD**   |
 |---------------------|-----------------|---------|---------|---------|---------|-----------|
 | **Engineer Tier 1** | Sign Up         | ✖       | ✖       | 60      | 60,000  | 200       |
 | **Engineer Tier 2** | Add Credit Card | ✖       | ✔       | 300     | 150,000 | 1,000     |
