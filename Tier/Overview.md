@@ -6,53 +6,17 @@ whether you have access to GPU instances.
 
 ### **Tier Levels and Benefits**
 
-<style>
-  .table-container {
-    overflow-x: auto;
-    max-width: 100%;
-  }
-
-  table {
-    border-collapse: collapse;
-    width: 800px; /* Fixed table width */
-    table-layout: fixed; /* Prevents column resizing */
-  }
-
-  th, td {
-    padding: 8px 12px;
-    text-align: left;
-    white-space: nowrap; /* Prevents wrapping */
-    border: 1px solid #ddd;
-  }
-
-  th {
-    background-color: #f5f5f5;
-    font-weight: bold;
-  }
-
-  /* Fixed column widths */
-  th:nth-child(1) { width: 200px; }
-  th:nth-child(2) { width: 180px; }
-  th:nth-child(3), th:nth-child(4) { width: 60px; }
-  th:nth-child(5) { width: 80px; }
-  th:nth-child(6), th:nth-child(7) { width: 100px; }
-
-  tr:nth-child(even) {
-    background-color: #fafafa;
-  }
-</style>
-
-<div class="table-container">
+<div style="overflow-x:auto;">
   <table>
     <thead>
       <tr>
-        <th>Tier</th>
-        <th>Requirement</th>
-        <th>GPU</th>
-        <th>CPU</th>
-        <th>RPM</th>
-        <th>TPM</th>
-        <th>RPD</th>
+        <th style="width: 200px; text-align: left;">Tier</th>
+        <th style="width: 180px; text-align: left;">Requirement</th>
+        <th style="width: 60px; text-align: left;">GPU</th>
+        <th style="width: 60px; text-align: left;">CPU</th>
+        <th style="width: 80px; text-align: left;">RPM</th>
+        <th style="width: 100px; text-align: left;">TPM</th>
+        <th style="width: 100px; text-align: left;">RPD</th>
       </tr>
     </thead>
     <tbody>
