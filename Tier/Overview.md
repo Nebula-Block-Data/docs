@@ -11,7 +11,7 @@ whether you have access to GPU instances.
   <thead>
     <tr>
       <th style="width: 200px; text-align: left;">Tier</th>
-      <th style="width: 180px; text-align: left;">Requirement</th>
+      <th style="width: 180px; text-align: left;">Requirements</th>
       <th style="width: 60px; text-align: left;">GPU</th>
       <th style="width: 60px; text-align: left;">CPU</th>
       <th style="width: 80px; text-align: left;">RPM</th>
