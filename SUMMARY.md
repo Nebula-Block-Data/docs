@@ -8,11 +8,11 @@
   * [Deploy Products](Get_Started/Deploy_Products.md)
 * [Core Services](core-services/README.md)
   * [Inference Models](Inference_Models/Overview.md)
+    * [Model List](Inference_Models/Model_List.md)
     * [Text Generation](Inference_Models/Text_Generation.md)
     * [Text Generation (Vision)](Inference_Models/Vision.md)
     * [Image Generation](Inference_Models/Image_Generation.md)
     * [Embedding Generation](Inference_Models/Embedding_Generation.md)
-    * [Model List](Inference_Models/Model_List.md)
   * [GPU Instances](GPU_Instances/Overview.md)
     * [Quickstart](GPU_Instances/Quickstart.md)
   * [Object Storage](Object_Storage/Overview.md)
@@ -30,7 +30,6 @@
   * [Platform API](API_Reference/Platform_API.md)
     * [Authentication](API_Reference/Authentication.md)
     * [Instances](API_Reference/Instances/List_images.md)
-      *
       * [List Products](API_Reference/Instances/List_Products.md)
       * [Create GPU Instance](API_Reference/Instances/Create_GPU_Instance.md)
       * [List User Instances](API_Reference/Instances/List_User_Instances.md)
@@ -41,16 +40,13 @@
       * [Stop GPU Instance](API_Reference/Instances/Stop_GPU_Instance.md)
       * [Reboot GPU Instance](API_Reference/Instances/Reboot_GPU_Instance.md)
     * [SSH Keys](API_Reference/SSH_Keys/Create_SSH_Key.md)
-      *
       * [List SSH Keys](API_Reference/SSH_Keys/List_SSH_Keys.md)
       * [Rename SSH Key](API_Reference/SSH_Keys/Rename_SSH_Key.md)
       * [Delete SSH Key](API_Reference/SSH_Keys/Delete_SSH_Key.md)
     * [API Keys](API_Reference/API_Keys/Create_API_Key.md)
-      *
       * [List API Keys](API_Reference/API_Keys/List_API_Keys.md)
       * [Delete API Key](API_Reference/API_Keys/Delete_API_Key.md)
     * [Billing](API_Reference/Billing/Get_Credit_Balance.md)
-      *
       * [List Invoices](API_Reference/Billing/List_Invoices.md)
       * [Download Invoice](API_Reference/Billing/Download_Invoice.md)
       * [Get Payment History](API_Reference/Billing/Get_Payment_History.md)

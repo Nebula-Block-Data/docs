@@ -6,7 +6,6 @@ whether you have access to GPU instances.
 
 ### **Tier Levels and Benefits**
 
-
 <table>
   <thead>
     <tr>
@@ -67,8 +66,6 @@ whether you have access to GPU instances.
     </tr>
   </tbody>
 </table>
-
-
 
 
 ### **Tier Descriptions**

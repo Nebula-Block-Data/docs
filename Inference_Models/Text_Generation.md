@@ -6,37 +6,39 @@ Use these models to generate text, whether it's to review code, write a story, e
 
 Available text models:
 
-- DeepSeek-V3-0324: The leading non-reasoning model.
-- DeepSeek-R1-Distill-Llama-70B: High-quality text generation for complex queries.
-- DeepSeek-R1-Distill-Qwen-32B: Efficient text generation with lower resource usage.
-- Llama3.3-70B: Advanced conversational AI with extensive knowledge.
-- Qwen-QwQ-32B: The AI model from the Qwen series, designed for reasoning and problem-solving.
-- Qwen2.5-Coder-32B: Specialized in code generation and completion.
-
+* DeepSeek-R1-0528 (free): The latest state-of-the-art LLM released by Deepseek excels in reasoning, math, and coding. Community-shared access, daily limits, great for testing and exploration
+* DeepSeek-V3-0324 (free): The most powerful AI-driven LLM with 685B parameters released by Deepseek. Community-shared access, daily limits, great for testing and exploration
+* DeepSeek-V3-0324: DeepSeek V3, a 685B-parameter, mixture-of-experts model, is the latest iteration of the flagship chat model family from the DeepSeek team..
+* DeepSeek-R1 (free): A state-of-the-art, high-efficiency LLM excelling in reasoning, math, and coding. Community-shared access, daily limits, great for testing and exploration
+* DeepSeek-R1-0528: The latest state-of-the-art LLM released by Deepseek excels in reasoning, math, and coding. Community-shared access, daily limits, great for testing and exploration
+* DeepSeek-R1: A state-of-the-art, high-efficiency LLM excelling in reasoning, math, and coding. Community-shared access, daily limits, great for testing and exploration
+* Llama3.3-70B: Advanced conversational AI with extensive knowledge.
+* Qwen-QwQ-32B: The AI model from the Qwen series, designed for reasoning and problem-solving.&#x20;
 
 ## Using the Models
 
 1. Go to the [Nebula Block](https://www.nebulablock.com) website.
-2. Log in, and ensure you have enough credits. 
+2. Log in, and ensure you have enough credits.
 3. Click on the "Inference Models" tab and select your model.
-4. Select your parameters, enter your text (and image, if applicable) and just press Enter! 
+4. Select your parameters, enter your text (and image, if applicable) and just press Enter!
 
-The parameters you can tweak are outlined below: 
+The parameters you can tweak are outlined below:
 
-- Messages: The current dialogue between the user and the model. 
-- System Prompt: Set of instructions, guidelines, and contextual information, which tell the AI how to respond to the queries.
-- Output Length: The maximum number of tokens that will be generated for each response. 
-- Temperature: Temperature controls randomness. Higher values increase diversity.
-- Top P: A higher value will result in more diverse outputs, while a lower value will result in more repetitive outputs.
-- Stream: If set to `true`, the response will be streamed in chunks. If False, the entire generation will be returned in one response.
+* Messages: The current dialogue between the user and the model.
+* System Prompt: Set of instructions, guidelines, and contextual information, which tell the AI how to respond to the queries.
+* Output Length: The maximum number of tokens that will be generated for each response.
+* Temperature: Temperature controls randomness. Higher values increase diversity.
+* Top P: A higher value will result in more diverse outputs, while a lower value will result in more repetitive outputs.
+* Stream: If set to `true`, the response will be streamed in chunks. If False, the entire generation will be returned in one response.
 
 ### Through API Endpoint
 
 This option is to use our API endpoint directly in your projects. Below are some code snippets to get you started!
 
-> **NOTE:**  Don't forget to use **your** API key. See the [API Reference](../API_Reference/Authentication.md) and the [Overview](../API_Key/Overview.md) for more details on authentication.
+> **NOTE:** Don't forget to use **your** API key. See the [API Reference](../API_Reference/Authentication.md) and the [Overview](../API_Key/Overview.md) for more details on authentication.
 
 #### Using cURL
+
 ```bash
 curl -X POST "https://inference.nebulablock.com/v1/chat/completions" \
     -H "Content-Type: application/json" \
@@ -54,6 +56,7 @@ curl -X POST "https://inference.nebulablock.com/v1/chat/completions" \
 ```
 
 #### Using Python
+
 ```python
 import requests 
 import os
@@ -81,6 +84,7 @@ print(response.json())
 ```
 
 #### Using JavaScript
+
 ```javascript
 const url = "https://inference.nebulablock.com/v1/chat/completions";
 
@@ -112,20 +116,54 @@ fetch(url, {
     .catch(error => console.error('Error:', error));
 ```
 
-#### Selecting a Model 
+#### Selecting a Model
 
-To specify the desired model, use this mapping for the `model_name`: 
+To specify the desired model, use this mapping for the `model_name`:
 
-- DeepSeek-V3-0324: `deepseek-ai/DeepSeek-V3-0324`
-- DeepSeek-R1-Distill-Llama-70B: `deepseek-ai/DeepSeek-R1-Distill-Llama-70B`
-- DeepSeek-R1-Distill-Qwen-32B: `deepseek-ai/DeepSeek-R1-Distill-Qwen-32B`
-- Llama3.3-70B: `meta-llama/Llama-3.3-70B-Instruct`
-- Qwen-QwQ-32B: `Qwen/QwQ-32B`
-- Qwen2.5-Coder-32B: `Qwen/Qwen2.5-Coder-32B-Instruct`
+*   DeepSeek-R1-0528 (free):&#x20;
 
-#### Response Example 
+    ```python
+    deepseek-ai/DeepSeek-R1-0528-Free
+    ```
+*   DeepSeek-V3-0324 (free):
 
-A successful generation response (non-streaming) will contain a `chat.completion` object, and should look like this: 
+    ```python
+    deepseek-ai/DeepSeek-V3-0324-Free
+    ```
+*   DeepSeek-V3-0324:&#x20;
+
+    ```python
+    deepseek-ai/DeepSeek-V3-0324
+    ```
+*   DeepSeek-R1 (free):&#x20;
+
+    ```python
+    deepseek-ai/DeepSeek-R1-Free
+    ```
+*   DeepSeek-R1-0528:&#x20;
+
+    ```python
+    deepseek-ai/DeepSeek-R1-0528
+    ```
+*   DeepSeek-R1:&#x20;
+
+    ```python
+    deepseek-ai/DeepSeek-R1
+    ```
+*   Llama3.3-70B:&#x20;
+
+    ```python
+    meta-llama/Llama-3.3-70B-Instruct
+    ```
+*   Qwen-QwQ-32B:
+
+    ```python
+    Qwen/QwQ-32B
+    ```
+
+#### Response Example
+
+A successful generation response (non-streaming) will contain a `chat.completion` object, and should look like this:
 
 ```json
 {
@@ -158,7 +196,7 @@ A successful generation response (non-streaming) will contain a `chat.completion
 }
 ```
 
-This represents the entire generated response from the inference. Alternatively, the streaming option (`stream: true` in the request body) will return several responses, each containing a `chat.completion.chunk` object, and will look like this: 
+This represents the entire generated response from the inference. Alternatively, the streaming option (`stream: true` in the request body) will return several responses, each containing a `chat.completion.chunk` object, and will look like this:
 
 ```json
 {
@@ -183,5 +221,5 @@ This represents the entire generated response from the inference. Alternatively,
 
 where the content of each response will contain the generated token. These tokens put together form the complete response.
 
-Feel free to explore refer to the [API Reference](../API_Reference/Inference_Models/Generate_Text.md) for more details.
-cat Inference_Models/Text_Generation.md 
+Feel free to explore refer to the [API Reference](../API_Reference/Inference_Models/Generate_Text.md) for more details.\
+cat Inference\_Models/Text\_Generation.md
