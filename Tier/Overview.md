@@ -7,13 +7,66 @@ whether you have access to GPU instances.
 ### **Tier Levels and Benefits**
 
 
-| **Tier**            | **Requirement** | **GPU** | **CPU** | **RPM** | **TPM** | **RPD**   |
-|---------------------|-----------------|---------|---------|---------|---------|-----------|
-| **Engineer Tier 1** | Sign Up         | ✖       | ✖       | 60      | 60,000  | 200       |
-| **Engineer Tier 2** | Add Credit Card | ✖       | ✔       | 300     | 150,000 | 1,000     |
-| **Engineer Tier 3** | Deposit $10     | ✔       | ✔       | 600     | 200,000 | 2,000     |
-| **Expert Tier 1**   | Spend $30       | ✔       | ✔       | 1,500   | 500,000 | Unlimited |
-| **Expert Tier 2**   | Spend $50       | ✔       | ✔       | 3,000   | 800,000 | Unlimited |
+<table>
+  <thead>
+    <tr>
+      <th style="width: 200px;">Tier</th>
+      <th style="width: 180px;">Requirement</th>
+      <th style="width: 60px;">GPU</th>
+      <th style="width: 60px;">CPU</th>
+      <th style="width: 80px;">RPM</th>
+      <th style="width: 100px;">TPM</th>
+      <th style="width: 100px;">RPD</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><b>Engineer Tier 1</b></td>
+      <td>Sign Up</td>
+      <td>✖</td>
+      <td>✖</td>
+      <td>60</td>
+      <td>60,000</td>
+      <td>200</td>
+    </tr>
+    <tr>
+      <td><b>Engineer Tier 2</b></td>
+      <td>Add Credit Card</td>
+      <td>✖</td>
+      <td>✔</td>
+      <td>300</td>
+      <td>150,000</td>
+      <td>1,000</td>
+    </tr>
+    <tr>
+      <td><b>Engineer Tier 3</b></td>
+      <td>Deposit $10</td>
+      <td>✔</td>
+      <td>✔</td>
+      <td>600</td>
+      <td>200,000</td>
+      <td>2,000</td>
+    </tr>
+    <tr>
+      <td><b>Expert Tier 1</b></td>
+      <td>Spend $30</td>
+      <td>✔</td>
+      <td>✔</td>
+      <td>1,500</td>
+      <td>500,000</td>
+      <td>Unlimited</td>
+    </tr>
+    <tr>
+      <td><b>Expert Tier 2</b></td>
+      <td>Spend $50</td>
+      <td>✔</td>
+      <td>✔</td>
+      <td>3,000</td>
+      <td>800,000</td>
+      <td>Unlimited</td>
+    </tr>
+  </tbody>
+</table>
 
 
 
