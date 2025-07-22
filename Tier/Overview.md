@@ -10,13 +10,13 @@ whether you have access to GPU instances.
 <table>
   <thead>
     <tr>
-      <th align="left">Tier</th>
-      <th align="left">Requirement</th>
-      <th align="center">GPU</th>
-      <th align="center">CPU</th>
-      <th align="right">RPM</th>
-      <th align="right">TPM</th>
-      <th align="right">RPD</th>
+      <th style="width: 200px; text-align: left;">Tier</th>
+      <th style="width: 180px; text-align: left;">Requirement</th>
+      <th style="width: 60px; text-align: left;">GPU</th>
+      <th style="width: 60px; text-align: left;">CPU</th>
+      <th style="width: 80px; text-align: left;">RPM</th>
+      <th style="width: 100px; text-align: left;">TPM</th>
+      <th style="width: 100px; text-align: left;">RPD</th>
     </tr>
   </thead>
   <tbody>
@@ -67,6 +67,7 @@ whether you have access to GPU instances.
     </tr>
   </tbody>
 </table>
+
 
 
 
