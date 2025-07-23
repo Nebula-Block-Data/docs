@@ -169,15 +169,3 @@ We provide the following list of countries and territories where **Nebula Block*
 ### 🔒 Access Disclaimer
 
 Nebula Block services may be geo-restricted due to local regulations or infrastructure limitations. Attempting to use the service through VPNs, proxies, or other IP-masking techniques in unsupported regions is a violation of our Terms of Service.
-
-***
-
-### 🔄 Need Help?
-
-* Why can’t I access Nebula Block from my country?
-* How do I check if my region is supported?
-* Contact Support
-
-***
-
-Would you like me to turn this into a Markdown or GitBook `.md` file for upload or create a GitBook-ready page layout with links and formatting suggestions?
