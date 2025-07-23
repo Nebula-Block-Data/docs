@@ -1,6 +1,7 @@
 # Table of contents
 
 * [Overview](README.md)
+* [FAQ](faq.md)
 * [Getting Started](Get_Started/Quickstart.md)
   * [Quickstart](Get_Started/Quickstart.md)
   * [Account Setup](Get_Started/Manage_Accounts.md)
