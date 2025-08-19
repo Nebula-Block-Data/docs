@@ -4,8 +4,7 @@
 
 Getting started is easy! 
 
-The first step is to create an [account](https://www.nebulablock.com/register) (for more details, see our [docs](./Manage_Accounts.md)). 
-You'll receive a 1$ free credit (and up to 9\$ extra credits if you have a referral code!).
+The first step is to create an [account](https://www.nebulablock.com/register) (for more details, see our [docs](./Manage_Accounts.md)).
 
 Using our products then depends on your account tier. In short: 
 
