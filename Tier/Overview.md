@@ -77,6 +77,7 @@ whether you have access to GPU instances.
    - Tokens Per Minute (TPM): **60,000 tokens per minute** for using serverless endpoints.
    - Requests Per Day (RPD): **200 requests per day** for using serverless endpoints.
    - No CPU and GPU access.
+   - No free Deepseek models access.
 
 2. **Engineer Tier 2**
    - Requires adding a credit card.
