@@ -75,7 +75,7 @@ whether you have access to GPU instances.
    - Available to all users upon sign-up.
    - Requests Per Minute (RPM): **60 requests per minute** for using serverless endpoints.
    - Tokens Per Minute (TPM): **60,000 tokens per minute** for using serverless endpoints.
-   - Requests Per Day (RPD): **200 requests per day** for using serverless endpoints.
+   - Requests Per Day (RPD): **200 requests per day** for using serverless endpoints. Resets at 00:00 (midnight) UTC time.
    - No CPU and GPU access.
    - No free Deepseek models access.
 
