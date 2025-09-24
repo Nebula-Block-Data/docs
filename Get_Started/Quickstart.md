@@ -4,7 +4,7 @@
 
 Getting started is easy! 
 
-The first step is to create an [account](https://www.nebulablock.com/register) (for more details, see our [docs](./Manage_Accounts.md)).
+The first step is to create an [account](https://console.nebulablock.com/register) (for more details, see our [docs](./Manage_Accounts.md)).
 
 Using our products then depends on your account tier. In short: 
 

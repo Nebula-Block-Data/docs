@@ -6,7 +6,7 @@ This example demonstrates how to connect to Nebula Block (an S3-compatible servi
 
 Before running the code, ensure you have the following:
 
-1. Create an object storage bucket on the [Nebula Block](https://www.nebulablock.com/object-storage) platform, then navigate to the corresponding page to obtain the storage access credentials.
+1. Create an object storage bucket on the [Nebula Block](https://console.nebulablock.com/object-storage) platform, then navigate to the corresponding page to obtain the storage access credentials.
 ![1.1](../../assets/images/storage_linux_tutorial/7.png)
 2. **Python** installed.
 3. **boto3** and **python-dotenv** libraries installed. You can install them using pip:

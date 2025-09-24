@@ -30,7 +30,7 @@ If you've been invited to join a team:
 1. Accept the invitation link sent by a team owner
 2. Select Accept Invitation on the invitation page
 
-Note: If you haven't registered yet, please[ sign up here](https://nebulablock.com/signup) first. Once registered, return to the invitation link to complete the process.
+Note: If you haven't registered yet, please[ sign up here](https://console.nebulablock.com/register) first. Once registered, return to the invitation link to complete the process.
 
 <figure><img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXfuP7Oj0_5384o4VhpjRlNKfBRZ_sUl60cFrVmF05yx9-gP3CTqet4LnP1YjCl6LbCeklMU4-ovTXqB1qoEMU-ZDUX6rIGtl6rJyCKv-HvWf-Nciz5M13536xC2MWJkk2tGGhdS?key=yzy_KMFdUhXYf7v7avkTOg" alt=""><figcaption></figcaption></figure>
 
