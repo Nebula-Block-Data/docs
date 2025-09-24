@@ -5,10 +5,10 @@
 - If you’re new to Nebula Block, create an account for free.
 
 ## Creating an SSH Key
-1. Head over to the [SSH Public Key](https://nebulablock.com/sshKey) tab
+1. Head over to the [SSH Public Key](https://console.nebulablock.com/sshKey) tab
 2. Click "Create".
 3. Enter the SSH key name and key data.
 4. Click "Save" and you're done! 
 
 ## Using SSH Keys
-Use the [SSH Public Key](https://nebulablock.com/sshKey) tab to manage your SSH keys. You can view, create and delete keys as needed.
+Use the [SSH Public Key](https://console.nebulablock.com/sshKey) tab to manage your SSH keys. You can view, create and delete keys as needed.

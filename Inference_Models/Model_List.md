@@ -6,7 +6,6 @@ For models that have a corresponding blog post, we've linked it in the model's t
 
 ## Multimodal
 
-* Claude-Sonnet-4: Anthropic's mid-size model with superior intelligence for high-volume uses in coding, in-depth research, agents, & more
 * Gemini-2.5-Flash-Preview-05-20: Gemini 2.5 Flash is Google's state-of-the-art workhorse model, specifically designed for advanced reasoning, coding, mathematics, and scientific tasks.
 * Gemini-2.5-Pro-Preview-06-05: Gemini 2.5 Pro is Google’s state-of-the-art AI model designed for advanced reasoning, coding, mathematics, and scientific tasks.
 * Gemini-2.5-Pro-Preview-05-06: Gemini 2.5 Pro is Google’s state-of-the-art AI model designed for advanced reasoning, coding, mathematics, and scientific tasks

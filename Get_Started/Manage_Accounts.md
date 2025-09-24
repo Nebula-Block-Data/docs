@@ -2,7 +2,7 @@
 
 ## Create an Account
 
-Sign up on the [Nebula Block website](https://nebulablock.com/) to create an account by clicking on [Sign up](https://nebulablock.com/register)
+Sign up on the [Nebula Block website](https://nebulablock.com/) to create an account by clicking on [Sign up](https://console.nebulablock.com/register)
 in the top right corner of your screen and sign up with either email + password or through Google.
 
 ## Activate Account
@@ -14,12 +14,12 @@ page to resend the activation email.
 ## Updating Account Information
 
 It is recommended once you create and activate your account to fill out as much information about yourself
-for the best experience of using our platform. To update your account information, go to the [Account](https://nebulablock.com/profile)
-tab in the [customer portal](https://nebulablock.com/home) and click "Edit Profile".
+for the best experience of using our platform. To update your account information, go to the [Account](https://console.nebulablock.com/profile)
+tab in the [customer portal](https://console.nebulablock.com/home) and click "Edit Profile".
 
 ## Reset Password
 
-If you forget your password, you can reset it via the [reset password page](https://nebulablock.com/forgot).
+If you forget your password, you can reset it via the [reset password page](https://console.nebulablock.com/forgot).
 
 ## Having Multiple Accounts
 

@@ -4,7 +4,7 @@
 
 Payments are simple- you can purchase credits, which are then deducted by your product usage billing (e.g hourly usage from
 your GPU instances). [Invoices](#invoices) are generated automatically for each credit purchase, and all other billing 
-information is handled in the [Billing](https://nebulablock.com/billing) tab.
+information is handled in the [Billing](https://console.nebulablock.com/billing) tab.
 
 ## Adding a Payment Card
 
@@ -23,7 +23,7 @@ You can redeem a promotion code on the billing page. Simply enter your code in t
 ## Managing Payment Methods
 
 Managing payment methods is simple via our customer portal. To change your default payment method, simply configure this 
-in the [**Payment Method**](https://www.nebulablock.com/billing) section of the billing page.
+in the [**Payment Method**](https://console.nebulablock.com/billing) section of the billing page.
 
 ## Purchasing Credits
 
@@ -40,9 +40,9 @@ To set up Auto-Pay, simply toggle the Auto-Pay switch, set your threshold and re
 ## Invoices
 
 Transactions made on your account (e.g. when you are billed for usage) will be documented as downloadable invoices and 
-listed in the [**Transaction**](https://www.nebulablock.com/billing) section of the billing page.
+listed in the [**Transaction**](https://console.nebulablock.com/billing) section of the billing page.
 
 ## Usage
 
-To see the usage rate of your products, see the [**Usages**](https://www.nebulablock.com/billing) section of the billing page.
+To see the usage rate of your products, see the [**Usages**](https://console.nebulablock.com/billing) section of the billing page.
 
