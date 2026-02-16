@@ -22,7 +22,7 @@ NVIDIA H100, A100, L40s, and RTX series GPUs.
 
 ## Pricing and Billing
 - **Pay-As-You-Go:** Billing is based on the selected hardware and duration of use.
-- Check the [pricing page](https://www.nebulablock.com/pricing) for details.
+- Check the [pricing page](https://www.nebulablock.com/pricing/serverless-ai) for details.
 
 ## See Also
 - [Glossary](../glossary.md)
