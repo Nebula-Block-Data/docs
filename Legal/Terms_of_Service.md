@@ -25,7 +25,7 @@ You agree not to use the Services to: violate any applicable law or regulation; 
 
 ## Payment and Billing
 
-You agree to pay all fees associated with your use of the Services in accordance with the pricing and billing terms in effect at the time of purchase. All fees are quoted in U.S. Dollars unless otherwise stated. Nebula Block reserves the right to modify pricing with thirty (30) days' prior notice. Failure to pay outstanding balances may result in suspension or termination of your account.
+You agree to pay all fees associated with your use of the Services in accordance with the pricing and billing terms in effect at the time of purchase. All fees are quoted in U.S. Dollars unless otherwise stated. Nebula Block reserves the right to modify pricing. Failure to pay outstanding balances may result in suspension or termination of your account.
 
 ## Service Level and Availability
 
