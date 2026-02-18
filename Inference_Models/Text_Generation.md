@@ -6,10 +6,7 @@ Use these models to generate text, whether it's to review code, write a story, e
 
 Available text models:
 
-* DeepSeek-R1-0528 (free): The latest state-of-the-art LLM released by Deepseek excels in reasoning, math, and coding. Community-shared access, daily limits, great for testing and exploration
-* DeepSeek-V3-0324 (free): The most powerful AI-driven LLM with 685B parameters released by Deepseek. Community-shared access, daily limits, great for testing and exploration
 * DeepSeek-V3-0324: DeepSeek V3, a 685B-parameter, mixture-of-experts model, is the latest iteration of the flagship chat model family from the DeepSeek team..
-* DeepSeek-R1 (free): A state-of-the-art, high-efficiency LLM excelling in reasoning, math, and coding. Community-shared access, daily limits, great for testing and exploration
 * DeepSeek-R1-0528: The latest state-of-the-art LLM released by Deepseek excels in reasoning, math, and coding. Community-shared access, daily limits, great for testing and exploration
 * DeepSeek-R1: A state-of-the-art, high-efficiency LLM excelling in reasoning, math, and coding. Community-shared access, daily limits, great for testing and exploration
 * Llama3.3-70B: Advanced conversational AI with extensive knowledge.
